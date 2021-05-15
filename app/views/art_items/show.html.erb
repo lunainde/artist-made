@@ -1,0 +1,12 @@
+<div class="container">
+  <h1><%= @art_item.art.title %></h1>
+  <h5><%= @art_item.format %></h5>
+  <p>Quantity: <%= @art_item.quantity %></p>
+  <p><%= @art_item.price %></p>
+  <p>by <%= @art_item.art.artist.first_name %> <%= @art_item.art.artist.last_name %></p>
+    <%= simple_form_for [@art_item, @shopping_cart_item] do |f| %>
+      <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
+      <%= f.button :submit %>
+    <% end %>
+
+</div>

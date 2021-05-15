@@ -11,8 +11,15 @@ class ApplicationController < ActionController::Base
  #   flash[:alert] = "You are not authorized to perform this action."
  #   redirect_to(root_path)
  # end
-
+#  before_action :find_shopping_cart
+#  @users_shopping_cart = ShoppingCart.where(user: current_user).find_by(paid: false) if current_user
  private
+
+  # def find_shopping_cart
+  #   if current_user
+  #     @users_shopping_cart = ShoppingCart.where(user: current_user).find_by(paid: false)
+  #   end
+  # end
 
  def skip_pundit?
    devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
