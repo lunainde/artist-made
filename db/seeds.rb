@@ -5,3 +5,36 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'csv'
+Artist.destroy_all
+Art.destroy_all
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'am-artists-seed.csv'))
+csv = CSV.parse(csv_text, :headers => true, header_converters: :symbol)
+csv.each do |row|
+    t = Artist.new
+    t.first_name = row[:first_name]
+    t.last_name = row[:last_name]
+    t.art_type = row[:art_type]
+    t.url_artists_photo = row[:url_artists_photo]
+    t.save
+    puts "#{t.first_name} #{t.last_name} saved"
+  end
+  
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'am-art-seed.csv'))
+csv = CSV.parse(csv_text, :headers => true, header_converters: :symbol)
+csv.each do |row|
+    t = Art.new
+    t.title = row[:title]
+    t.description = row[:description]
+    t.category = row[:category]
+    t.img_url = row[:img_url]
+    t.artist = Artist.all.sample
+    t.save
+    puts "#{t.title} saved"
+  end
+  
+  puts "There are now #{Artist.count} rows in the artists table"
+  puts "There are now #{Art.count} rows in the arts table"
+
