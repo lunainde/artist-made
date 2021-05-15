@@ -9,7 +9,7 @@ class ShoppingCartItemsController < ApplicationController
     authorize @shopping_cart_item
     if @shopping_cart_item.save
       # raise
-      redirect_to shopping_cart_path(shopping_cart),
+      redirect_to art_path(@art_item.art),
       alert: "#{ @shopping_cart_item.quantity } x #{@shopping_cart_item.art_item.art.title} - #{ @shopping_cart_item.art_item.format } added to shopping cart!"
       # @message = "Added #{ @shopping_cart_item.quantity } #{ @shopping_cart_item.art_item.art.title } to Shopping cart"
       # render 'art_items/show.html.erb'
