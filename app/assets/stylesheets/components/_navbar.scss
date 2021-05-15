@@ -1,12 +1,57 @@
 .navbar-lewagon {
+  display: flex;
   justify-content: space-between;
+  color: black;
   background: white;
+  flex-direction: row;
+  padding-left: 30px;
+  padding-right: 30px
+}
+a:hover{
+  opacity: .6;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-btn {
+  justify-content: center;
+  align-content: center;
+  margin-left: auto;
 }
+
+.navbar .fa-user {
+  color: black;
+  font-size: 24px;
+}
+
+.navbar .fa-heart {
+  color: black;
+  font-size: 24px;
+}
+
+.navbar .fa-shopping-bag {
+  color: black;
+  font-size: 24px;
+  padding-right: 10px;
+}
+
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.nav-link a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.nav-link a:hover {
+  opacity: 1;
+}
+
+
