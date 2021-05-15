@@ -3,7 +3,7 @@ class ShoppingCartItemsController < ApplicationController
   def create
     shopping_cart = current_user.shopping_carts.find_by(paid: false)
     @art_item = ArtItem.find(params[:art_item_id])
-    quantity = get_params[:quantity]
+    quantity = get_params[:quantity].to_i
     price = quantity * @art_item.price
     @shopping_cart_item = ShoppingCartItem.new(art_item: @art_item, shopping_cart: shopping_cart, quantity: quantity, price: price)
     authorize @shopping_cart_item
