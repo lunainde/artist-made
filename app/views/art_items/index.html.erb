@@ -1,0 +1,7 @@
+<h1>Art items</h1>
+
+<div class="container">
+  <% @art_items.each do |art_item| %>
+  <li><%= art_item.art.title %> <%= art_item.format %></li>
+  <% end %>
+</div>

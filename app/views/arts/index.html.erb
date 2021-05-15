@@ -1,1 +1,7 @@
 <h1>ARTS</h1>
+
+<div class="container">
+  <% @arts.each do |art| %>
+  <li><%=link_to art.title, art_path(art) %></li>
+  <% end %>
+</div>
