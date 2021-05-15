@@ -1,0 +1,5 @@
+<div class="container">
+  <% @shopping_cart.shopping_cart_items.each do |shopping_cart_item| %>
+  <li><%= shopping_cart_item.quantity %> times <%= shopping_cart_item.art_item.art.title %> for a price of <%= shopping_cart_item.price %></li>
+  <% end %>
+</div>

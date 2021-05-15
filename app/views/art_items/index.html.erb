@@ -2,6 +2,6 @@
 
 <div class="container">
   <% @art_items.each do |art_item| %>
-  <li><%= art_item.art.title %> <%= art_item.format %></li>
+  <li><%= link_to "Gifts for: #{art_item.art.title}", art_item_path(art_item)  %> <%= art_item.format %></li>
   <% end %>
 </div>

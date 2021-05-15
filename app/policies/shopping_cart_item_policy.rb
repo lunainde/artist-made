@@ -4,4 +4,7 @@ class ShoppingCartItemPolicy < ApplicationPolicy
       scope.all
     end
   end
+  def create?
+    user
+  end
 end
