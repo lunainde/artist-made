@@ -16,11 +16,12 @@ a:hover{
 }
 
 .nav-btn {
+  flex-direction: row;
   justify-content: center;
   align-content: center;
   margin-left: auto;
 }
-
+/* avatar / icons */
 .navbar .fa-user {
   color: black;
   font-size: 24px;
@@ -29,6 +30,7 @@ a:hover{
 .navbar .fa-heart {
   color: black;
   font-size: 24px;
+  padding-left: 48px;
 }
 
 .navbar .fa-shopping-bag {
@@ -37,21 +39,41 @@ a:hover{
   padding-right: 10px;
 }
 
-
-.nav-link {
+.search-container {
   display: flex;
-  align-items: center;
-  color: black;
-}
-.nav-link a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-.nav-link a:hover {
-  opacity: 1;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
 }
 
+.search-form-control {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 24px;
+}
+
+.search-form-control .btn-flat {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  margin-right: 24px;
+}
+
+.search-form-control .form-control {
+  height: 2.6rem;
+  border: 1px solid #E7E7E7;
+  justify-content: stretch;
+}
+
+.search-form-control .form-group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.form_control {
+  justify-content: stretch;
+}
 

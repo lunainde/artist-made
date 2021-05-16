@@ -33,6 +33,7 @@
 }
 
 /* Create four equal columns that sits next to each other */
+
 .column {
   flex: 25%;
   max-width: 33.3%;
@@ -49,7 +50,6 @@
   transition: 0.3s linear;
   opacity: 1;
 }
-
 
 .column img:hover {
 filter: grayscale(1) brightness(0.5);

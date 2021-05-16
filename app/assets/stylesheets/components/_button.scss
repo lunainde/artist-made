@@ -10,3 +10,49 @@
   background: black;
   color: white;
 }
+
+/* Icons for Cards - Add to cart */
+.btn-cart {
+  position: absolute;
+  top: 16px;
+  right: 8px;
+  color: white;
+  padding: 4px 10px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.btn-cart:hover {
+  opacity: 1;
+  color: white;
+}
+
+/* Icons for Cards - Favorite */
+.btn-fav {
+  position: absolute;
+  top: 16px;
+  right: 36px;
+  color: white;
+  padding: 4px 10px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.btn-fav:hover {
+  opacity: 1;
+  color: white;
+}
+
+.btn-ghost {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+}
