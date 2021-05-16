@@ -1,18 +1,21 @@
 
-<div class="page-container">
-  <div class="container">
-
-  <h1>Digital Artwork</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="column">
+      <br>
+    <h4>Digital Artwork</h4>
 
     <div class="cards">
        <% @arts.each do |art| %>
-        <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-          <div class="card-trip-infos">
-          </div>
-        </div>
-       <% end %>
+       <div class="image">
+        <%= image_tag art.img_url %>
+        <h5><%= art.title %></h5>
+        <p><%= art.description %></p>
+       </div>
+      <% end %>
     </div>
+
   </div>
  </div>
 </div>
+
