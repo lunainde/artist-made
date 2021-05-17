@@ -28,7 +28,7 @@
       <div class="cards">
          <% @arts.each do |art| %>
          <div class="image">
-          <%= image_tag art.img_url %>
+          <%= image_tag art.img_url unless art.img_url.nil? %>
 
           <%= link_to root_path, class: "btn btn-fav" do %>
             <i class="far fa-heart"></i>
