@@ -8,12 +8,6 @@ class ArtistsController < ApplicationController
   def show
     @artist = Artist.find(params[:id])
     authorize @artist
-    # @art = Art.find(params[:art_id])
   end
-
- # def artist_params
- #    params.require(:artist).permit(:first_name, :last_name, :art_type, :url_artists_photo)
- #    authorize @artist
- #  end
 end
 
