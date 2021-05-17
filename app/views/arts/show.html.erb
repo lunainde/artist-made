@@ -1,6 +1,60 @@
 <div class="container">
-  <h1><%= @art.title %></h1>
-  <h5><%= @art.category %></h5>
-  <p><%= @art.description %></p>
-  <p>by <%= @art.artist.first_name %> <%= @art.artist.last_name %></p>
+
+  <div class="row">
+
+    <div class="col-8 mt-3">
+
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1283&q=80)">
+
+    </div>
+
+
+
+
+    </div>
+
+    <div class="col-4 mt-3">
+      <div class="item mt-3">
+        <div class="card-product-info">
+
+          <div class="item-title">
+            <h2><%= @art.title %></h2>
+          </div>
+            <h5><%= @art.category %></h5>
+            <p><%= @art.description %></p>
+            <p>by <%= @art.artist.first_name %> <%= @art.artist.last_name %></p>
+          </div>
+      </div>
+
+      <div class="social-media">
+
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-telegram-plane"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-2 mt-3">
+        <div class="card-mockup" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1283&q=80)"></div>
+      </div>
+      <div class="col-2 mt-3">
+        <div class="card-mockup" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1539975611936-f0d1221cfd16?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1875&q=80)"></div>
+      </div>
+      <div class="col-2 mt-3">
+        <div class="card-mockup" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1558882224-dda166733046?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2249&q=80)"></div>
+      </div>
+      <div class="col-2 mt-3">
+        <div class="card-mockup" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1532504209154-ea691b9c5a62?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80)"></div>
+      </div>
+    </div>
+  </div>
+
+  </div>
 </div>

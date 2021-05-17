@@ -1,45 +1,40 @@
+/* ART/ ARTISTS INDEX CARD */
 .cards {
   position: absolute;
   column-count: 3;
   flex-direction: column;
 }
 
-/* Container holding the image and the text */
+/* Cards w/imgs and text*/
 .image {
   position: relative;
   width: 100%;
   color: white;
 }
-
 .column h5 {
   position: absolute;
   bottom: 32px;
   left: 5px;
   opacity: 0.9;
 }
-
 .column p {
   position: absolute;
   bottom: 0;
   left: 5px;
   opacity: 0.9;
 }
-
-
 .row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
-
+/* Equal columns */
 .column {
   flex: 25%;
   max-width: 33.3%;
   padding: 0 4px;
 }
-
 .column img {
   margin-top: 8px;
   vertical-align: middle;
@@ -50,7 +45,6 @@
   transition: 0.3s linear;
   opacity: 1;
 }
-
 .column img:hover {
 filter: grayscale(1) brightness(0.5);
 color: white;
@@ -64,7 +58,7 @@ opacity: 0.9;
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Responsive layout */
 @media screen and (max-width: 600px) {
   .column {
     flex: 100%;
@@ -73,5 +67,43 @@ opacity: 0.9;
   .column img {
     filter: grayscale(0) brightness(1);
   }
+}
+
+/* ART SHOW CARD background */
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+}
+.social-media a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0px 10px;
+}
+.social-media a:hover {
+  opacity: 1;
+}
+
+.card-mockup {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
