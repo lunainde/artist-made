@@ -30,11 +30,11 @@
          <div class="image">
           <%= image_tag art.img_url %>
 
-          <%= link_to arts_path, class: "btn btn-fav" do %>
+          <%= link_to root_path, class: "btn btn-fav" do %>
             <i class="far fa-heart"></i>
           <% end %>
 
-          <%= link_to shopping_cart_path(current_user.shopping_carts.find_by(paid: false)), class: "btn btn-cart" do %>
+          <%= link_to root_path, class: "btn btn-cart" do %>
             <i class="fas fa-plus"></i>
           <% end %>
 
