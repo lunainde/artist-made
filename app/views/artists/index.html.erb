@@ -27,12 +27,14 @@
     <div class="column">
       <div class="cards">
          <% @artists.each do |artist| %>
-         <div class="image">
-          <%= image_tag artist.url_artists_photo %>
+         <%= link_to artist_path(artist) do %>
+           <div class="image">
+            <%= image_tag artist.url_artists_photo unless artist.url_artists_photo.nil? %>
 
-          <h5><%= artist.last_name %></h5>
-          <p><%= artist.art_type %></p>
-         </div>
+            <h5><%= artist.last_name %></h5>
+            <p><%= artist.art_type %></p>
+           </div>
+          <% end %>
         <% end %>
       </div>
     </div>
