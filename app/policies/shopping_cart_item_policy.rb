@@ -5,6 +5,9 @@ class ShoppingCartItemPolicy < ApplicationPolicy
     end
   end
   def create?
-    user
+    user ? true : false
+  end
+  def update?
+    user ? true : false
   end
 end

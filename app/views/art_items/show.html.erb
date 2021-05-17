@@ -4,9 +4,17 @@
   <p>Quantity: <%= @art_item.quantity %></p>
   <p><%= @art_item.price %></p>
   <p>by <%= @art_item.art.artist.first_name %> <%= @art_item.art.artist.last_name %></p>
+  <% if @existing_shopping_cart_item %>
+    <%= simple_form_for [@art_item, @existing_shopping_cart_item] do |f| %>
+      <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
+      <%= f.button :submit %>
+    <% end %>
+  <% else %>
     <%= simple_form_for [@art_item, @shopping_cart_item] do |f| %>
       <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
       <%= f.button :submit %>
     <% end %>
-
+  <% end %>
 </div>
+
+
