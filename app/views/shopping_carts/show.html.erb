@@ -1,5 +1,58 @@
-<div class="container">
-  <% @shopping_cart.shopping_cart_items.each do |shopping_cart_item| %>
-  <li><%= shopping_cart_item.quantity %> times <%= shopping_cart_item.art_item.art.title %> for a price of <%= shopping_cart_item.price %></li>
-  <% end %>
+<div class="menu-bar">
+  <h4>Your collection cart</h4>
+
+  <ul class="list-inline tabs-underlined">
+    <li>
+      <%= link_to "art", arts_path, class: "tab-underlined active" %>
+    </li>
+    <li>
+      <%= link_to "artist", artists_path, class: "tab-underlined" %>
+    </li>
+
+    <li>
+      <%= link_to "theme", root_path, class: "tab-underlined" %>
+    </li>
+    <li>
+      <%= link_to "form", root_path, class: "tab-underlined" %>
+    </li>
+    <li>
+      <%= link_to "price", root_path, class: "tab-underlined" %>
+    </li>
+  </ul>
+
+</div>
+
+<div class="row">
+  <div class="col-8 mt-3">
+    <div class="cart-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="cart-product-infos">
+        <h2>Product name</h2>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
+    </div>
+    <div class="cart-product mt-4">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="cart-product-infos">
+        <h2>Product name</h2>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
+    </div>
+    <div class="cart-product mt-4">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="cart-product-infos">
+        <h2>Product name</h2>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+    </div>
+
+  </div>
+</div>
+
+    <div class="col-4 mt-3">
+    <div class="booking">
+       <% @shopping_cart.shopping_cart_items.each do |shopping_cart_item| %>
+        <li><%= shopping_cart_item.quantity %> times <%= shopping_cart_item.art_item.art.title %> for a price of <%= shopping_cart_item.price %></li>
+      <% end %>
+    </div>
+  </div>
 </div>
