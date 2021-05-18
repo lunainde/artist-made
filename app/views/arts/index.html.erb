@@ -27,19 +27,21 @@
     <div class="column">
       <div class="cards">
          <% @arts.each do |art| %>
-         <div class="image">
-          <%= image_tag art.img_url unless art.img_url.nil? %>
+          <%= link_to art_path(art) do %>
+            <div class="image">
+              <%= image_tag art.img_url unless art.img_url.nil? %>
 
-          <%= link_to root_path, class: "btn btn-fav" do %>
-            <i class="far fa-heart"></i>
-          <% end %>
-          <%= link_to root_path, class: "btn btn-cart" do %>
-            <i class="fas fa-plus"></i>
-          <% end %>
+              <%= link_to root_path, class: "btn btn-fav" do %>
+                <i class="far fa-heart"></i>
+              <% end %>
+              <%= link_to root_path, class: "btn btn-cart" do %>
+                <i class="fas fa-plus"></i>
+              <% end %>
 
-          <h5><%= art.title %></h5>
-          <p><%= art.description %></p>
-         </div>
+              <h5><%= art.title %></h5>
+              <p><%= art.description %></p>
+            </div>
+         <% end %>
         <% end %>
       </div>
     </div>
