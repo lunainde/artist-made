@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_15_135109) do
+ActiveRecord::Schema.define(version: 2021_05_18_175855) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,18 @@ ActiveRecord::Schema.define(version: 2021_05_15_135109) do
     t.index ["artist_id"], name: "index_arts_on_artist_id"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.decimal "amount", precision: 8, scale: 2
+    t.string "checkout_session_id"
+    t.bigint "user_id", null: false
+    t.bigint "shopping_cart_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["shopping_cart_id"], name: "index_orders_on_shopping_cart_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
   create_table "shopping_cart_items", force: :cascade do |t|
     t.decimal "price", precision: 8, scale: 2
     t.integer "quantity"
@@ -111,6 +123,8 @@ ActiveRecord::Schema.define(version: 2021_05_15_135109) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "art_items", "arts"
   add_foreign_key "arts", "artists"
+  add_foreign_key "orders", "shopping_carts"
+  add_foreign_key "orders", "users"
   add_foreign_key "shopping_cart_items", "art_items"
   add_foreign_key "shopping_cart_items", "shopping_carts"
   add_foreign_key "shopping_carts", "users"

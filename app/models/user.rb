@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :shopping_carts
+  has_many :orders
   after_create :initialize_empty_shopping_cart
 
   # not private, because we want to re-use it, when we set an old shopping cart to paid
