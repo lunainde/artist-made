@@ -9,6 +9,7 @@
 require 'csv'
 Artist.destroy_all
 Art.destroy_all
+ArtItem.destroy_all
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'am-artists-seed.csv'))
 csv = CSV.parse(csv_text, :headers => true, header_converters: :symbol)
 csv.each do |row|
