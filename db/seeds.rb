@@ -32,6 +32,9 @@ csv.each do |row|
     t.img_url = row[:img_url]
     t.artist = Artist.all.sample
     t.save
+    #--creating corrosponding art_item for art
+    ArtItem.create(art: t, format: "digital", price: rand(100.00..10000.00) , quantity: rand(1..10))
+    #--created corrosponding art_item for art
     puts "#{t.title} saved"
   end
   
