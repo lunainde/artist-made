@@ -3,6 +3,7 @@
   position: absolute;
   column-count: 3;
   flex-direction: column;
+  padding: 16px;
 }
 
 /* Cards w/imgs and text*/
@@ -26,7 +27,7 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 4 4px;
 }
 
 /* Equal columns */
@@ -36,19 +37,19 @@
   padding: 0 4px;
 }
 .column img {
-  margin-top: 8px;
+  margin-top: 16px;
   vertical-align: middle;
   width: 100%;
   filter: grayscale(0);
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
   transition: 0.3s linear;
   opacity: 1;
 }
 .column img:hover {
-filter: grayscale(1) brightness(0.5);
-color: white;
-opacity: 0.9;
+  filter: grayscale(1) brightness(0.5);
+  color: white;
+  opacity: 0.9;
 }
 
 @media screen and (max-width: 800px) {
@@ -77,10 +78,11 @@ opacity: 0.9;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 3px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+/* ART SHOW CARD Info */
 .social-media {
   display: flex;
   align-items: center;
@@ -96,6 +98,7 @@ opacity: 0.9;
   opacity: 1;
 }
 
+/* ART SHOW CARD Mockup */
 .card-mockup {
   background-size: cover;
   background-position: center;
@@ -103,7 +106,7 @@ opacity: 0.9;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 3px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 

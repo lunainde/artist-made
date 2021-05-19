@@ -50,8 +50,6 @@ a:hover{
 .search-form-control {
   position: relative;
   width: 100%;
-  margin: 0 auto;
-  padding-right: 24px;
 }
 
 .search-form-control .btn-flat {
@@ -59,11 +57,10 @@ a:hover{
   top: 0px;
   bottom: 0px;
   right: 0px;
-  margin-right: 24px;
 }
 
 .search-form-control .form-control {
-  height: 2.6rem;
+  height: 2.7rem;
   border: 1px solid #E7E7E7;
   justify-content: stretch;
 }
@@ -78,3 +75,7 @@ a:hover{
   justify-content: stretch;
 }
 
+#btn-padding {
+  padding-left: 48px;
+
+}
