@@ -1,27 +1,111 @@
-<h1>Art items</h1>
+<div class="menu-bar">
+  <h4>Select <strong>the perfect Gift</strong></h4>
+  <ul class="list-inline tabs-underlined">
+    <li><%= link_to "art", arts_path, class: "tab-underlined" %></li>
+    <li><%= link_to "artist", artists_path, class: "tab-underlined" %></li>
+    <li><%= link_to "theme", root_path, class: "tab-underlined" %></li>
+    <li><%= link_to "form", root_path, class: "tab-underlined" %></li>
+    <li><%= link_to "price", root_path, class: "tab-underlined" %></li>
+  </ul>
+</div>
 
 <div class="container">
   <div class="row">
 
-    <div class="col-4 mt-3">
-      <% @art_items.each do |art_item| %>
-      <li><%= link_to "Gifts for: #{art_item.art.title}", art_item_path(art_item)  %> <%= art_item.format %></li>
-      <% end %>
-    </div>
+    <div class="col-4">
 
-    <div class="col-8 mt-3">
-      <div class="cards">
-
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-          Breakfast
+        <div class=".card-form-item">
+        <% @art_items.each do |art_item| %>
+        <li><%= link_to "Gifts for: #{art_item.art.title}", art_item_path(art_item)  %> <%= art_item.format %></li>
+        <% end %>
         </div>
 
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-          Lunch
+    <div class="card-form">
+      <div class="card-head">
+        <div class="product-detail">
+          <br>
+           <h5>Personalize your gifts</h5> Support emerging artists with every single order
         </div>
+        <span class="back-text">
+          artist-made
+        </span>
+      </div>
 
+      <div class="card-body">
+        <div class="product-desc">
+          <span class="product-title">
+            <b>ITEM NAME</b>
+          </span>
+          <span class="product-caption">
+            Description
+          </span>
+          <span class="product-rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star grey"></i>
+          </span>
+        </div>
+        <div class="product-properties">
+          <span class="product-size">
+              <h4>Size</h4>
+            <ul class="ul-size">
+              <li><a href="#">XS</a></li>
+              <li><a href="#">S</a></li>
+              <li><a href="#">M</a></li>
+              <li><a href="#" class="active">L</a></li>
+              <li><a href="#">XL</a></li>
+            </ul>
+          </span>
+          <span class="product-color">
+              <h4>Colour</h4>
+            <ul class="ul-color">
+              <li><a href="#" class="black active"></a></li>
+              <li><a href="#" class="grey"></a></li>
+              <li><a href="#" class="white"></a></li>
+            </ul>
+          </span>
+          <span class="product-price">
+            EU<b>23,453</b>
+          </span>
+        </div>
       </div>
     </div>
+  </div>
+
+
+  <div class="col-8">
+    <div class="container-fluid">
+      <div class="cards-items">
+        <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80)">
+          t-shirts
+        </div>
+        <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1591758692400-3f50620da5b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2447&q=80)">
+          t-shirts
+        </div>
+        <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2166&q=80)">
+          hoodies
+        </div>
+        <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1578237493287-8d4d2b03591a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1181&q=80)">
+          bags
+        </div>
+        <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1569229569803-69384f5efa83?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80)">
+          postcards
+        </div>
+        <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1603460689763-cae435c723cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1834&q=80)">
+          posters
+        </div>
+        <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1610602699116-95aab7d9290b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3150&q=80)">
+          cellphones
+        </div>
+        <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1589739900266-43b2843f4c12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1278&q=80)">
+          tablets
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   </div>
 </div>
