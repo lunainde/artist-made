@@ -3,9 +3,9 @@
 
     <div class="col-8 mt-3">
 
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1539975611936-f0d1221cfd16?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1875&q=80)">
-        <div class="card-trip-infos">
-            <img src="<%= image_path @art.img_url  %>" class="card-trip-user .mockup-square" />
+      <div class="card-category" id="main-art-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path @art.img_url  %>)">
+        <div class="card-trip-infos" id="art-card-overlay">
+            <img src="<%= image_path @art.img_url  %>" id="art-card-picture-shape" class="card-trip-user .mockup-square" />
         </div>
       </div>
 
@@ -39,16 +39,16 @@
   <div class="container">
     <div class="row mb-4">
       <div class="col-2 mt-3">
-        <div class="card-mockup" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path @art.img_url %>)"></div>
+        <div class="card-mockup main" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path @art.img_url %>)"></div>
       </div>
       <div class="col-2 mt-3">
-        <div class="card-mockup" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1539975611936-f0d1221cfd16?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1875&q=80)"></div>
+        <div class="card-mockup portrait" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1539975611936-f0d1221cfd16?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1875&q=80)"></div>
       </div>
       <div class="col-2 mt-3">
-        <div class="card-mockup" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1558882224-dda166733046?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2249&q=80)"></div>
+        <div class="card-mockup square" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1558882224-dda166733046?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2249&q=80)"></div>
       </div>
       <div class="col-2 mt-3">
-        <div class="card-mockup" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1532504209154-ea691b9c5a62?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80)"></div>
+        <div class="card-mockup circle" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1532504209154-ea691b9c5a62?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80)"></div>
       </div>
     </div>
   </div>

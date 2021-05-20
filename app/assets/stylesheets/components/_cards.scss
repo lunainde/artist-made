@@ -124,6 +124,24 @@ opacity: 0.9;
   border: rgba(52,37,25,0.6) 6px solid;
 }
 
+.card-trip-user-square {
+  position: absolute;
+  right: 193px;
+  top: 200px;
+  width: 395px;
+  height: 396px;
+  border: rgba(52,37,25,0.6) 6px solid;
+}
+
+.card-trip-user-circle {
+  position: absolute;
+  border-radius: 50%;
+  right: 315px;
+  top: 390px;
+  width: 360px;
+  height: 320px;
+  border: rgba(52,37,25,0.6) 6px solid;
+}
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;
@@ -137,4 +155,7 @@ opacity: 0.9;
   border: black 6px solid;
 }
 
+#art-card-overlay {
+  visibility: hidden;
+}
 
