@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(version: 2021_05_20_172253) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "checkout_session_id"
-    t.string "state"
+    t.string "state", default: "pending"
     t.index ["user_id"], name: "index_shopping_carts_on_user_id"
   end
 

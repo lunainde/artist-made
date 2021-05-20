@@ -54,7 +54,7 @@
         <li><%= shopping_cart_item.quantity %> times <%= shopping_cart_item.art_item.art.title %> for a price of <%= shopping_cart_item.price %></li>
       <% end %>    
 
-
+<% unless @shopping_cart.paid %>
       <div class="container">
         <div class="row py-4">
           <div class="col-md-3"><%= image_tag @shopping_cart.shopping_cart_items.first.art_item.art.img_url, width: '100%' %></div>
@@ -81,7 +81,7 @@
         </div>
       </div>
 
-
+<% end %>
 
     </div>
   </div>
