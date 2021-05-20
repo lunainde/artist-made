@@ -7,3 +7,9 @@ margin-top: 48px;
 .mission-container {
 margin-top: 48px;
 }
+
+.container {
+  @media (min-width: 1600px) {
+    max-width: 1550px;
+  }
+}

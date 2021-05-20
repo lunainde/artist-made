@@ -115,9 +115,10 @@
 
 // BODY / bottom
 .card-body {
-  height: 762px;
   background: #fff;
   border-radius: 3px;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-title {
@@ -254,15 +255,11 @@
   margin-top: -5px;
 }
 .add-to-card {
-  position: relative;
-  top: 10px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
 }
 .btn-flat h4 {
   text-align: center;
   font-size: 14px;
+  margin: 0;
 }
 
 // DROPDOWN MENUS...................................
@@ -285,7 +282,7 @@
 .dropdownmenu li {
   float: left;
   position: relative;
-  width:auto;
+  width: 100%;
 }
 .dropdownmenu a {
   background: grey;
@@ -293,7 +290,7 @@
   display: block;
   font-size: 12px;
   padding: 10px 25px;
-  text-align: left;
+  text-align: center;
   border-radius: 3px;
   text-decoration: none;
   -webkit-transition: all .25s ease;
@@ -327,6 +324,10 @@ li:hover ul#submenu {
 }
 #submenu a {
   background-color:#000000;
+}
+.devices {
+  display: flex;
+  flex-direction: column;
 }
 
 
