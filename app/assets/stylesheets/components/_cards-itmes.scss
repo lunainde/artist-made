@@ -52,7 +52,6 @@
   }
 }
 
-
 .card-form-item {
   height: 400px;
   display: flex;
@@ -65,10 +64,6 @@
 }
 
 // PRODUCT PERSONALIZATION CARD
-
-.card-form {
-  border-radius: 3px;
-}
 
 .card-head {
   position: relative;
@@ -107,8 +102,20 @@
   opacity: 0.1;
 }
 
+.art-info h4 {
+  font-size: 14px;
+  color: white;
+  padding: 0 20px;
+}
+.art-info h5 {
+  font-size: 14px;
+  color: white;
+  padding: 0 20px;
+}
+
+// BODY / bottom
 .card-body {
-  height: 600px;
+  height: 762px;
   background: #fff;
   border-radius: 3px;
 }
@@ -199,13 +206,14 @@
 
 .product-color h4 {
   font-size: 11px;
-  padding: 0 21px;
+  padding: 21px;
   margin-top: 20px;
   padding-bottom: 20px;
   text-transform: uppercase;
 }
 
 .ul-color {
+
   margin-left: 27px;
 }
 
@@ -245,20 +253,80 @@
   margin-left: -5px;
   margin-top: -5px;
 }
-
-.product-price {
-  position: absolute;
-  background: black;
-  padding: 12px;
+.add-to-card {
+  position: relative;
+  top: 10px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+.btn-flat h4 {
   text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 200;
-  color: #fff;
-  border-radius: 3px;
-  box-shadow: -3px 5px 5px -3px grey;
+  font-size: 14px;
 }
 
-.product-price b {
-  margin-left: 5px;
+// DROPDOWN MENUS...................................
+
+.dropdownmenu {
+  border-radius: 3px;
+  margin: 5px 10px 5px 10px;
 }
+
+.dropdownmenu ul, .dropdownmenu li {
+  margin: 0;
+  padding: 0;
+}
+.dropdownmenu ul {
+  background: gray;
+  list-style: none;
+  width: 100%;
+
+}
+.dropdownmenu li {
+  float: left;
+  position: relative;
+  width:auto;
+}
+.dropdownmenu a {
+  background: grey;
+  color: #FFFFFF;
+  display: block;
+  font-size: 12px;
+  padding: 10px 25px;
+  text-align: left;
+  border-radius: 3px;
+  text-decoration: none;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+.dropdownmenu li:hover a {
+  background: #000000;
+}
+#submenu {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 35px;
+  visibility: hidden;
+  z-index: 1;
+}
+li:hover ul#submenu {
+  opacity: 1;
+  top: 40px;  /* adjust this as per top nav padding top & bottom comes */
+  visibility: visible;
+}
+#submenu li {
+  float: none;
+  width: 100%;
+}
+#submenu a:hover {
+  background: #DF4B05;
+}
+#submenu a {
+  background-color:#000000;
+}
+
+
