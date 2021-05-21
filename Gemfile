@@ -35,6 +35,8 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'cloudinary', '~> 1.16.0'
 gem 'stripe'
+gem 'stripe_event'
+
 gem 'omniauth-facebook'
 gem "omniauth-rails_csrf_protection"
 
