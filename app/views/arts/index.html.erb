@@ -19,11 +19,11 @@
             <div class="image">
               <%= image_tag art.img_url unless art.img_url.nil? %>
 
-              <%= link_to root_path, class: "btn btn-cart" do %>
-                <i class="fas fa-gift px-4"></i>
+              <%= link_to root_path, class: "btn btn-gift" do %>
+                <i class="fas fa-gift"></i>
               <% end %>
               <%= link_to root_path, class: "btn btn-fav" do %>
-                <i class="far fa-heart px-4"></i>
+                <i class="far fa-heart"></i>
               <% end %>
               <%= link_to root_path, class: "btn btn-cart" do %>
                 <i class="fas fa-plus"></i>

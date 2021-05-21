@@ -11,38 +11,6 @@
   color: white;
 }
 
-/* Icons for Cards - Add to cart */
-.btn-cart {
-  position: absolute;
-  top: 16px;
-  right: 8px;
-  color: white;
-  padding: 4px 10px;
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
-}
-
-.btn-cart:hover {
-  opacity: 1;
-  color: white;
-}
-
-/* Icons for Cards - Favorite */
-.btn-fav {
-  position: absolute;
-  top: 16px;
-  right: 36px;
-  color: white;
-  padding: 4px 10px;
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
-}
-
-.btn-fav:hover {
-  opacity: 1;
-  color: white;
-}
-
 .btn-ghost {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
@@ -55,4 +23,46 @@
 
 .btn-ghost:hover {
   opacity: 1;
+}
+
+/* ICONS FOR CARD - Take to Gifts */
+.btn-gift {
+  position: absolute;
+  top: 16px;
+  right: 70px;
+  color: white;
+  padding: 4px 10px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+.btn-gift:hover {
+  opacity: 1;
+  color: white;
+}
+/* Icons for Cards - Add to favorites */
+.btn-fav {
+  position: absolute;
+  top: 16px;
+  right: 36px;
+  color: white;
+  padding: 4px 10px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+.btn-fav:hover {
+  opacity: 1;
+  color: white;
+}
+/* Icons for Cards - Add to cart */
+.btn-cart {
+  position: absolute;
+  top: 16px;
+  right: 8px;
+  color: white;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+.btn-cart:hover {
+  opacity: 1;
+  color: white;
 }
