@@ -2,7 +2,7 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   config.action_mailer.default_url_options = { host: "http://localhost:3000" }
-  config.hosts << /[a-z0-9]+\.ngrok\.io/
+  # config.hosts << /[a-z0-9]+\.ngrok\.io/     #uncomment for testing payment (stripe) on localhost:3000 with ngrok-url, otherwise webhook won't work, also set webhook to ngrok url @stripe dashboard for testing
 
   # Settings specified here will take precedence over those in config/application.rb.
 
