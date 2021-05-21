@@ -6,7 +6,7 @@ class ShoppingCartsController < ApplicationController
     if @shopping_cart.paid
       #redirect
     else
-      create_stripe_session
+      create_stripe_session if @shopping_cart.shopping_cart_items.first
     end
   end
   private
