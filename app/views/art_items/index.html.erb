@@ -19,8 +19,8 @@
              <h5>Personalize your gifts</h5> Support emerging artists with every single order
           </div>
           <span class="back-text ml-2">artist-made</span>
-          <div class="art-info"><h4>ART TITLE</h4></div>
-          <div class="art-info"><h5>ARTIST NAME</h5></div>
+          <div class="art-info"><h4><%= @art.title unless @art.nil?%></h4></div>
+          <div class="art-info"><h5><%= "by #{@art.artist.first_name}"  unless @art.nil? %> <%= @art.artist.last_name unless @art.nil? %></h5></div>
         </div>
 
         <div class="card-body">
