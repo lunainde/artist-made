@@ -7,7 +7,14 @@ class ArtsController < ApplicationController
 
   def show
     @art = Art.find(params[:id])
+    @art_item = ArtItem.where(art_id: @art.id)
+    @shirt = ArtItem.where(art_id: @art.id, format: "t-shirt")[0].id
+    @hoodie = ArtItem.where(art_id: @art.id, format: "hoodie")[0].id
+    @bag = ArtItem.where(art_id: @art.id, format: "bag")[0].id
+    @postcard = ArtItem.where(art_id: @art.id, format: "postcards")[0].id
+    @poster = ArtItem.where(art_id: @art.id, format: "posters")[0].id
+    @cellphone = ArtItem.where(art_id: @art.id, format: "cellphones")[0].id
+    @tablet = ArtItem.where(art_id: @art.id, format: "tablets")[0].id
     authorize @art
   end
-
 end
