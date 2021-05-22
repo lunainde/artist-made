@@ -6,7 +6,7 @@ class ShoppingCartItemsController < ApplicationController
     @shopping_cart_item = ShoppingCartItem.new(art_item: @art_item, shopping_cart: @shopping_cart, quantity: @quantity, price: @price)
     authorize @shopping_cart_item
     if @shopping_cart_item.save
-      redirect_to art_path(@art_item.art),
+      redirect_to shopping_cart_path(@shopping_cart),
       alert: "You have #{ @shopping_cart_item.quantity } x #{ @shopping_cart_item.art_item.art.title} - #{ @shopping_cart_item.art_item.format } in your shopping cart!"
     else
       render 'art_items/show.html.erb'
@@ -20,7 +20,7 @@ class ShoppingCartItemsController < ApplicationController
     @shopping_cart_item.price += @price
     authorize @shopping_cart_item
     if @shopping_cart_item.save
-      redirect_to art_path(@art_item.art),
+      redirect_to shopping_cart_path(@shopping_cart),
       alert: "You have #{ @shopping_cart_item.quantity } x #{@shopping_cart_item.art_item.art.title} - #{ @shopping_cart_item.art_item.format } in your shopping cart!"
     else
       render 'art_items/show.html.erb'
