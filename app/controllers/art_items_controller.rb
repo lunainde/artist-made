@@ -3,6 +3,7 @@ class ArtItemsController < ApplicationController
 
   def index
     @art_items = policy_scope(ArtItem).order(created_at: :desc)
+    @art = Art.find(params[:art_id]) unless params[:art_id].nil?
   end
 
   def show

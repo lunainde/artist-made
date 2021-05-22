@@ -31,6 +31,9 @@
             <div class="image">
               <%= image_tag art.img_url unless art.img_url.nil? %>
 
+              <%= link_to art_items_path(art_id: art.art_items[0].art_id), class: "btn btn-gift" do %>
+                <i class="fas fa-gift"></i>
+              <% end %>
               <%= link_to root_path, class: "btn btn-fav" do %>
                 <i class="far fa-heart"></i>
               <% end %>

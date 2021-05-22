@@ -43,6 +43,21 @@
   color: white;
 }
 
+.btn-gift {
+  position: absolute;
+  top: 16px;
+  right: 64px;
+  color: white;
+  padding: 4px 10px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+
+  :hover {
+    opacity: 1;
+    color: white;
+  }
+}
+
 .btn-ghost {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
