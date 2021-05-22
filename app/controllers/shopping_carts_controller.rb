@@ -19,7 +19,7 @@ class ShoppingCartsController < ApplicationController
       line_items: [{
       name: "Order #{@shopping_cart.id}",
       images: [@shopping_cart.shopping_cart_items.first.art_item.art.img_url],
-      amount: (1 * 100).to_i,
+      amount: (@shopping_cart.total * 100).to_i,
       currency: 'eur',
       quantity: 1
       }],
