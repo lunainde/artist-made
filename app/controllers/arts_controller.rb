@@ -8,8 +8,12 @@ class ArtsController < ApplicationController
   def favor
     @art = Art.find(params[:art_id])
     authorize @art
-    current_user.favorite(@art)
-    # puts(current_user.all_favorites[1])
+    if current_user.favorited?(@art)
+      current_user.unfavorite(@art)
+    else
+      current_user.favorite(@art)
+    end
+      # puts(current_user.all_favorites[1])
   end
   def all_favorites
     art_ids = current_user.all_favorites.map do |favorite|
