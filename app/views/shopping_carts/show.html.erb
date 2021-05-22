@@ -52,11 +52,37 @@
     <div class="booking">
        <% @shopping_cart.shopping_cart_items.each do |shopping_cart_item| %>
         <li><%= shopping_cart_item.quantity %> times <%= shopping_cart_item.art_item.art.title %> for a price of <%= shopping_cart_item.price %></li>
-      <% end %>
-      <%= form_tag orders_path do %>
-      <%= hidden_field_tag 'shopping_cart_id', @shopping_cart.id %>
-      <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-      <% end %>     
+      <% end %>    
+
+<% unless @shopping_cart.paid || @shopping_cart.shopping_cart_items.empty? %>
+      <div class="container">
+        <div class="row py-4">
+          <div class="col-md-3"><%= image_tag @shopping_cart.shopping_cart_items.first.art_item.art.img_url, width: '100%' %></div>
+          <div class="col">
+            <h1>Checkout summary</h1>
+            <p>Purchase of 
+            <strong>
+            <% @shopping_cart.shopping_cart_items.each do |item| %>
+              <p> <%= item.art_item.art.title %> - <%= item.art_item.format %> </p>
+            <% end %>
+            </strong> for <strong><%= @shopping_cart.total %> €</strong></p>
+            <button id="pay" class="btn btn-primary">Pay</button>
+            <script src="https://js.stripe.com/v3/"></script>
+            <script>
+              const paymentButton = document.getElementById('pay');
+              paymentButton.addEventListener('click', () => {
+                const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+                stripe.redirectToCheckout({
+                  sessionId: '<%= @shopping_cart.checkout_session_id %>'
+                });
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+
+<% end %>
+
     </div>
   </div>
 

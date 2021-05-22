@@ -2,24 +2,12 @@
   <h4>am <strong>Artwork</strong></h4>
 
   <ul class="list-inline tabs-underlined">
-    <li>
-      <%= link_to "art", arts_path, class: "tab-underlined active" %>
-    </li>
-    <li>
-      <%= link_to "artist", artists_path, class: "tab-underlined" %>
-    </li>
-
-    <li>
-      <%= link_to "theme", root_path, class: "tab-underlined" %>
-    </li>
-    <li>
-      <%= link_to "form", root_path, class: "tab-underlined" %>
-    </li>
-    <li>
-      <%= link_to "price", root_path, class: "tab-underlined" %>
-    </li>
+    <li><%= link_to "art", arts_path, class: "tab-underlined active" %></li>
+    <li><%= link_to "artist", artists_path, class: "tab-underlined" %></li>
+    <li><%= link_to "theme", root_path, class: "tab-underlined" %></li>
+    <li><%= link_to "form", root_path, class: "tab-underlined" %></li>
+    <li><%= link_to "price", root_path, class: "tab-underlined" %></li>
   </ul>
-
 </div>
 
 <div class="container-fluid">
@@ -30,7 +18,6 @@
           <%= link_to art_path(art) do %>
             <div class="image">
               <%= image_tag art.img_url unless art.img_url.nil? %>
-
               <%= link_to art_items_path(art_id: art.art_items[0].art_id), class: "btn btn-gift" do %>
                 <i class="fas fa-gift"></i>
               <% end %>

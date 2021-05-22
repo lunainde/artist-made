@@ -4,8 +4,9 @@
   height: 400px;
   display: flex;
   justify-content: center;
+  vertical-align: bottom;
   color: white;
-  font-size: 24px;
+  font-size: 18px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 2px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -51,6 +52,18 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+// TEMPORATY + Btn FOR CARD.........................
+.fa-plus-square {
+  color: white;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+.fa-plus-square:hover {
+  opacity: 1;
+  color: white;
+}
+
 
 .card-form-item {
   height: 400px;
@@ -167,7 +180,7 @@
 .product-size h4 {
   font-size: 11px;
   padding: 0 21px;
-  margin-top: 15px;
+  margin-top: 25px;
   padding-bottom: 10px;
   text-transform: uppercase;
 }
@@ -234,13 +247,20 @@
 .ul-color li a.black {
   background: black;
 }
-
 .ul-color li a.grey {
   background: lightgrey;
 }
-
 .ul-color li a.white {
   background: #F1F1F1;
+}
+.ul-color li a.red {
+  background: #FF0100;
+}
+.ul-color li a.green {
+  background: green;
+}
+.ul-color li a.blue {
+  background: #314CCD;
 }
 
 .ul-color li a.active:after {
@@ -255,18 +275,19 @@
   margin-top: -5px;
 }
 .add-to-card {
+  margin-top: 60px;
 }
 .btn-flat h4 {
   text-align: center;
   font-size: 14px;
-  margin: 0;
+  margin-top: 0;
 }
 
 // DROPDOWN MENUS...................................
 
 .dropdownmenu {
   border-radius: 3px;
-  margin: 5px 10px 5px 10px;
+  margin: 80px 10px 5px 10px;
 }
 
 .dropdownmenu ul, .dropdownmenu li {
@@ -320,7 +341,7 @@ li:hover ul#submenu {
   width: 100%;
 }
 #submenu a:hover {
-  background: #DF4B05;
+  background: grey;
 }
 #submenu a {
   background-color:#000000;

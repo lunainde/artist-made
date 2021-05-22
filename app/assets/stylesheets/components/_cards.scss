@@ -70,7 +70,7 @@
   }
 }
 
-/* ART SHOW CARD background */
+/* ART SHOW CARD background - box-shadow: 0 0 15px rgba (0,0,0,0.2); */
 .card-category {
   background-size: cover;
   background-position: center;
@@ -79,7 +79,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 3px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
 }
 
 /* ART SHOW CARD Info */
@@ -98,7 +98,7 @@
   opacity: 1;
 }
 
-/* ART SHOW CARD Mockup */
+/* ART SHOW CARD Mockup //box-shadow: 0 0 15px rgba (0,0,0,0.2); */
 .card-mockup {
   background-size: cover;
   background-position: center;
@@ -107,7 +107,6 @@
   justify-content: center;
   align-items: center;
   border-radius: 3px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-trip .card-trip-infos {
@@ -124,7 +123,7 @@
   top: 160px;
   width: 270px;
   height: 435px;
-  border: rgba(52,37,25,0.6) 6px solid;
+  border: rgba(52,37,25,0.6) 4px solid;
 }
 
 .card-trip-user-square {
@@ -133,7 +132,7 @@
   top: 200px;
   width: 395px;
   height: 396px;
-  border: rgba(52,37,25,0.6) 6px solid;
+  border: rgba(52,37,25,0.6) 4px solid;
 }
 
 .card-trip-user-circle {
@@ -143,19 +142,17 @@
   top: 390px;
   width: 360px;
   height: 320px;
-  border: rgba(52,37,25,0.6) 6px solid;
+  border: rgba(52,37,25,0.6) 4px solid;
 }
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
 
 .mockup-square {
   border-radius: 2px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: black 6px solid;
+  border: rgba(52,37,25,0.6) 4px solid;
 }
 
 #art-card-overlay {
