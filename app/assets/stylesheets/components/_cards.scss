@@ -72,14 +72,29 @@
 
 /* ART SHOW CARD background - box-shadow: 0 0 15px rgba (0,0,0,0.2); */
 .card-category {
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
-  height: 900px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 3px;
 
+}
+
+.card-art-item {
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  vertical-align: bottom;
+  color: white;
+  font-size: 18px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 /* ART SHOW CARD Info */
@@ -119,29 +134,29 @@
 
 .card-trip-infos .card-trip-user {
   position: absolute;
-  right: 270px;
-  top: 160px;
-  width: 270px;
-  height: 435px;
+  right: 335px;
+  top: 75px;
+  width: 120px;
+  height: 200px;
   border: rgba(52,37,25,0.6) 4px solid;
 }
 
 .card-trip-user-square {
   position: absolute;
-  right: 193px;
-  top: 200px;
-  width: 395px;
-  height: 396px;
+  right: 293px;
+  top: 100px;
+  width: 200px;
+  height: 200px;
   border: rgba(52,37,25,0.6) 4px solid;
 }
 
 .card-trip-user-circle {
   position: absolute;
   border-radius: 50%;
-  right: 315px;
-  top: 390px;
-  width: 360px;
-  height: 320px;
+  right: 320px;
+  top: 270px;
+  width: 120px;
+  height: 120px;
   border: rgba(52,37,25,0.6) 4px solid;
 }
 .avatar-bordered {
@@ -159,3 +174,6 @@
   visibility: hidden;
 }
 
+.col.item {
+  margin-top: 40px;
+}
