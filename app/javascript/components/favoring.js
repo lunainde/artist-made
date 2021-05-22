@@ -11,8 +11,13 @@ const setFavorit = () => {
         headers: {'Content-Type' : 'application/json', 'X-CSRF-Token' : authToken[0].content},
         body: JSON.stringify( { art_id: heartElement.dataset.artid } )
         }).then(() => {
-            console.log(heartElement.dataset);
-            heartElement.style.color="red" 
+            // console.log(heartElement.dataset);
+            if (heartElement.style.color === "red") {
+              heartElement.style.color="black";
+            } else {
+              heartElement.style.color="red";
+            }
+             
             });
     });
   });  
