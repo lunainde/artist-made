@@ -1,3 +1,4 @@
+// 1-ITEMS-INDEX-PAGE
 .card-category-item {
   background-size: cover;
   background-position: center;
@@ -64,7 +65,6 @@
   color: white;
 }
 
-
 .card-form-item {
   height: 400px;
   display: flex;
@@ -75,8 +75,20 @@
   border-radius: 2px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+// 2. ITEMS-SHOW-PAGE
 
-// PRODUCT PERSONALIZATION CARD
+ .card-item-show {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+// 3. PRODUCT PERSONALIZATION CARDS
 
 .card-head {
   position: relative;
