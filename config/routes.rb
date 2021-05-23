@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   #   resources :payments, only: :new
   # end
   mount StripeEvent::Engine, at: '/stripe-webhooks'
-
+  post '/favorites', to: 'arts#favor', as: 'favorites'
+  get '/favorites', to: 'arts#all_favorites', as: 'all_favorites'
 end

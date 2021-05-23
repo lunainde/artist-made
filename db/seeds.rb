@@ -8,6 +8,8 @@
 
 require 'csv'
 Artist.destroy_all
+ArtItem.destroy_all
+Art.destroy_all
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'am-artists-seed.csv'))
 csv = CSV.parse(csv_text, :headers => true, header_converters: :symbol)
 csv.each do |row|
@@ -19,7 +21,7 @@ csv.each do |row|
     t.save
     puts "#{t.first_name} #{t.last_name} saved"
   end
-  
+
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'am-art-seed.csv'))
 csv = CSV.parse(csv_text, :headers => true, header_converters: :symbol)
@@ -36,7 +38,17 @@ csv.each do |row|
     #--created corrosponding art_item for art
     puts "#{t.title} saved"
   end
-  
+
+Art.all.each do |art|
+  ArtItem.create(art_id: art.id, format: "t-shirt", price: rand(10.00..25.99), quantity: rand(100..500))
+  ArtItem.create(art_id: art.id, format: "hoodie", price: rand(25.00..59.99), quantity: rand(100..500))
+  ArtItem.create(art_id: art.id, format: "bag", price: rand(50.00..149.99), quantity: rand(100..500))
+  ArtItem.create(art_id: art.id, format: "postcards", price: rand(4.00..9.99), quantity: rand(100..500))
+  ArtItem.create(art_id: art.id, format: "posters", price: rand(15.00..99.99), quantity: rand(100..500))
+  ArtItem.create(art_id: art.id, format: "cellphones", price: rand(35.00..99.99), quantity: rand(100..500))
+  ArtItem.create(art_id: art.id, format: "tablets", price: rand(10.00..25.99), quantity: rand(100..500))
+end
   puts "There are now #{Artist.count} rows in the artists table"
   puts "There are now #{Art.count} rows in the arts table"
+  puts "There are now #{ArtItem.count} rows in the arts_items table"
 
