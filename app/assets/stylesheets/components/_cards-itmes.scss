@@ -1,3 +1,4 @@
+// 1-ITEMS-INDEX-PAGE
 .card-category-item {
   background-size: cover;
   background-position: center;
@@ -79,7 +80,6 @@
   color: white;
 }
 
-
 .card-form-item {
   height: 400px;
   display: flex;
@@ -90,8 +90,20 @@
   border-radius: 2px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+// 2. ITEMS-SHOW-PAGE
 
-// PRODUCT PERSONALIZATION CARD
+ .card-item-show {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+// 3. PRODUCT PERSONALIZATION CARDS
 
 .card-head {
   position: relative;
@@ -108,7 +120,6 @@
 }
 
 .product-detail {
-  padding: 0 20px;
   font-size: 11px;
   color: #fff;
 }
@@ -150,7 +161,7 @@
 }
 
 .product-title {
-  padding: 20px 20px 5px 20px;
+  padding: 0px 20px 5px 20px;
   display: block;
   font-size: 17px;
   font-weight: 500;
@@ -302,7 +313,8 @@
 
 .dropdownmenu {
   border-radius: 3px;
-  margin: 80px 10px 5px 10px;
+  margin-top: 30px;
+  color: black;
 }
 
 .dropdownmenu ul, .dropdownmenu li {
@@ -310,10 +322,9 @@
   padding: 0;
 }
 .dropdownmenu ul {
-  background: gray;
+  background: white;
   list-style: none;
   width: 100%;
-
 }
 .dropdownmenu li {
   float: left;
@@ -321,8 +332,8 @@
   width: 100%;
 }
 .dropdownmenu a {
-  background: grey;
-  color: #FFFFFF;
+  background: white;
+  color: black;
   display: block;
   font-size: 12px;
   padding: 10px 25px;
@@ -334,9 +345,11 @@
   -ms-transition: all .25s ease;
   -o-transition: all .25s ease;
   transition: all .25s ease;
+  border: 1px solid grey;
 }
 .dropdownmenu li:hover a {
-  background: #000000;
+  background: lightgrey;
+  border: 1px solid grey;
 }
 #submenu {
   left: 0;
@@ -356,14 +369,40 @@ li:hover ul#submenu {
   width: 100%;
 }
 #submenu a:hover {
-  background: grey;
+  background: lightgrey;
 }
 #submenu a {
-  background-color:#000000;
+  background-color:white;
 }
 .devices {
   display: flex;
   flex-direction: column;
 }
+#hidden {
+  color: white;
+}
 
+// MOCKUP OVERLAY...................................
+.card-category-ipad {
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  opacity: 0.9;
 
+}
+.card-category-ipad img {
+  background-color: rgba(0,0,0,0.5);
+  position: relative;
+  right: -12px;
+  top: -2px;
+  height: 493px;
+  width: 382px;
+  /* border: rgba(0,0,0,0.4) 6px solid; */
+  border-radius: 28px;
+  opacity: 0.9;
+}
