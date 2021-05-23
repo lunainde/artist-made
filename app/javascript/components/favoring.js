@@ -13,7 +13,7 @@ const setFavorit = () => {
         }).then(() => {
             // console.log(heartElement.dataset);
             if (heartElement.style.color === "red") {
-              heartElement.style.color="black";
+              heartElement.style.color="white";
             } else {
               heartElement.style.color="red";
             }
