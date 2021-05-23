@@ -9,25 +9,30 @@
   </ul>
 </div>
 
+
+
+
+
+
 <div class="container">
   <div class="row">
 
     <div class="col-4">
-        <div class="card-head">
+        <div class="card-head p-3">
           <div class="product-detail">
             <br>
              <h5>Personalize your gifts</h5> Support emerging artists with every single order
           </div>
           <span class="back-text ml-2">artist-made</span>
-          <div class="art-info"><h4><%= @art.title unless @art.nil?%></h4></div>
-          <div class="art-info"><h5><%= "by #{@art.artist.first_name}"  unless @art.nil? %> <%= @art.artist.last_name unless @art.nil? %></h5></div>
+          <div class="art-info"><h3><%= @art.title unless @art.nil?%></h3>
+            <p><%= "by #{@art.artist.first_name}"  unless @art.nil? %> <%= @art.artist.last_name unless @art.nil? %></p>
+          </div>
         </div>
 
-        <div class="card-body">
-
+        <div class="card-body p-4">
           <div class="product-desc">
-            <span class="product-title"><h5>Item Category</h5></span>
-            <span class="product-caption">Description</span>
+            <span class="product-title"><h5>GIFTS</h5></span>
+            <span class="product-caption">What people think</span>
             <span class="product-rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -74,7 +79,6 @@
             <li><a href="#" class="blue"></a></li>
           </ul>
         </div>
-        <br>
 
         <div class="prints">
             <nav class="dropdownmenu">
@@ -114,6 +118,18 @@
                 </li>
               </ul>
             </nav>
+
+            <nav class="dropdownmenu">
+              <ul>
+                <li><a href="#">TABLET CASES ▾</a>
+                  <ul id="submenu">
+                    <li><a href="#">iPad </a></li>
+                    <li><a href="#">iPad Pro</a></li>
+                    <li><a href="#">iPad Air</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
         </div>
 
         <div class="add-to-card">
@@ -127,7 +143,6 @@
     <div class="col-8">
       <div class="container-fluid">
         <div class="cards-items">
-
           <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80)">
             T-SHIRTS</div>
           <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1591758692400-3f50620da5b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2447&q=80)">

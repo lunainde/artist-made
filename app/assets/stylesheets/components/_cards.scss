@@ -75,10 +75,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 600px;
   border-radius: 3px;
 
 }
@@ -117,7 +114,8 @@
 .card-mockup {
   background-size: cover;
   background-position: center;
-  height: 200px;
+  height: 60px;
+  width: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,17 +132,17 @@
 
 .card-trip-infos .card-trip-user {
   position: absolute;
-  right: 335px;
-  top: 75px;
-  width: 120px;
-  height: 200px;
+  right: 314px;
+  top: 135px;
+  width: 165px;
+  height: 213px;
   border: rgba(52,37,25,0.6) 4px solid;
 }
 
 .card-trip-user-square {
   position: absolute;
   right: 293px;
-  top: 100px;
+  top: 167px;
   width: 200px;
   height: 200px;
   border: rgba(52,37,25,0.6) 4px solid;
@@ -153,10 +151,10 @@
 .card-trip-user-circle {
   position: absolute;
   border-radius: 50%;
-  right: 320px;
-  top: 270px;
-  width: 120px;
-  height: 120px;
+  right: 310px;
+  top: 327px;
+  width: 150px;
+  height: 150px;
   border: rgba(52,37,25,0.6) 4px solid;
 }
 .avatar-bordered {
