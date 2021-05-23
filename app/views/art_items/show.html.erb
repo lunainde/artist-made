@@ -1,21 +1,3 @@
-<div class="container">
-  <h1><%= @art_item.art.title %></h1>
-  <h5><%= @art_item.format %></h5>
-  <p>Quantity: <%= @art_item.quantity %></p>
-  <p><%= @art_item.price %></p>
-  <p>by <%= @art_item.art.artist.first_name %> <%= @art_item.art.artist.last_name %></p>
-  <% if @existing_shopping_cart_item %>
-    <%= simple_form_for [@art_item, @existing_shopping_cart_item] do |f| %>
-      <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
-      <%= f.button :submit %>
-    <% end %>
-  <% else %>
-    <%= simple_form_for [@art_item, @shopping_cart_item] do |f| %>
-      <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
-      <%= f.button :submit %>
-    <% end %>
-  <% end %>
-</div>
 
 <div class="menu-bar">
   <h4>Select <strong>the perfect Gift</strong></h4>
@@ -32,21 +14,20 @@
   <div class="row">
 
     <div class="col-4">
-        <div class="card-head">
+        <div class="card-head p-3">
           <div class="product-detail">
             <br>
              <h5>Personalize your gifts</h5> Support emerging artists with every single order
           </div>
           <span class="back-text ml-2">artist-made</span>
-          <div class="art-info"><h4>ART TITLE</h4></div>
-          <div class="art-info"><h5>ARTIST NAME</h5></div>
+          <div class="art-info"><h3><%= @art_item.art.title %></h3>
+          <p>by <%= @art_item.art.artist.first_name %> <%= @art_item.art.artist.last_name %></p></div>
         </div>
 
-        <div class="card-body">
-
+        <div class="card-body p-4">
           <div class="product-desc">
-            <span class="product-title"><h5>Item Category</h5></span>
-            <span class="product-caption">Description</span>
+            <span class="product-title"><h5><%= @art_item.format %></h5></span>
+            <span class="product-caption">What people think</span>
             <span class="product-rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -54,6 +35,22 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star grey"></i>
             </span>
+          </div>
+
+          <div class="p-3">
+            <p id="hidden">Quantity: <%= @art_item.quantity %></p>
+            <span><p><i class="fas fa-euro-sign"></i></span> <span><%= @art_item.price %></p></span>
+            <% if @existing_shopping_cart_item %>
+              <%= simple_form_for [@art_item, @existing_shopping_cart_item] do |f| %>
+                <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
+                <%= f.submit "+", :class => "btn btn-flat" %>
+              <% end %>
+            <% else %>
+              <%= simple_form_for [@art_item, @shopping_cart_item] do |f| %>
+                <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
+                <%= f.submit "+", :class => "btn btn-flat" %>
+              <% end %>
+            <% end %>
           </div>
 
         <div>
@@ -140,17 +137,14 @@
         </div>
 
       </div>
-
     </div>
 
     <div class="col-8">
-      <div class="container-fluid">
-        <div class="cards-items">
-          <div class="card-item-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1589739900266-43b2843f4c12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1278&q=80)">
-            TABLES<i class="far fa-plus-square pt-1"></i></div>
-        </div>
+      <div class="card-category-ipad" id="main-art-picture" style="background-image: url(https://images.unsplash.com/photo-1589739900266-43b2843f4c12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1278&q=80)">
+        <img src="<%= image_path @art_item.art.img_url  %>" />
       </div>
     </div>
 
   </div>
+</div>
 </div>
