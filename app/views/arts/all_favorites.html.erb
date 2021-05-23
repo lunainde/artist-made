@@ -16,7 +16,7 @@
       <div class="cards">
          <% @arts.each do |art| %>
             <% if current_user.favorited?(art) %>
-                <% current_user.favorited?(art) ? @heart_color = "color: red" : @heart_color = "color: black"%>
+                <% current_user.favorited?(art) ? @heart_color = "color: red" : @heart_color = "color: white"%>
                 <%= link_to art_path(art) do %>
                     <div class="image">
                     <%= image_tag art.img_url unless art.img_url.nil? %>
