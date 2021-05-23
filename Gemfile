@@ -40,6 +40,8 @@ gem 'stripe_event'
 gem 'omniauth-facebook'
 gem "omniauth-rails_csrf_protection"
 
+gem 'acts_as_favoritor'
+
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'

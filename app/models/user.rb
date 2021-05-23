@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
   has_many :shopping_carts
   has_many :orders
+  acts_as_favoritor
+  
   after_create :initialize_empty_shopping_cart
 
   # not private, because we want to re-use it, when we set an old shopping cart to paid
