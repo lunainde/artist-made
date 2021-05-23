@@ -21,7 +21,8 @@
           </div>
           <span class="back-text ml-2">artist-made</span>
           <div class="art-info"><h3><%= @art_item.art.title %></h3>
-          <p>by <%= @art_item.art.artist.first_name %> <%= @art_item.art.artist.last_name %></p></div>
+            <p>by <%= @art_item.art.artist.first_name %> <%= @art_item.art.artist.last_name %></p>
+          </div>
         </div>
 
         <div class="card-body p-4">
@@ -37,7 +38,7 @@
             </span>
           </div>
 
-          <div class="p-3">
+         <div class="p-3">
             <p id="hidden">Quantity: <%= @art_item.quantity %></p>
             <span><p><i class="fas fa-euro-sign"></i></span> <span><%= @art_item.price %></p></span>
             <% if @existing_shopping_cart_item %>
@@ -90,7 +91,6 @@
             <li><a href="#" class="blue"></a></li>
           </ul>
         </div>
-        <br>
 
         <div class="prints">
             <nav class="dropdownmenu">
@@ -126,6 +126,18 @@
                     <li><a href="#">MacBook Air</a></li>
                     <li><a href="#">MacBook Pro 13"</a></li>
                     <li><a href="#">MacBook Pro 15"</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+
+             <nav class="dropdownmenu">
+              <ul>
+                <li><a href="#">TABLET CASES ▾</a>
+                  <ul id="submenu">
+                    <li><a href="#">iPad </a></li>
+                    <li><a href="#">iPad Pro</a></li>
+                    <li><a href="#">iPad Air</a></li>
                   </ul>
                 </li>
               </ul>
