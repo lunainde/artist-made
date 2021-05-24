@@ -16,7 +16,7 @@
       <div class="cards">
          <% @arts.each do |art| %>
          <% @heart_color = "visibility: hidden"
-            if current_user 
+            if current_user
               current_user.favorited?(art) ? @heart_color = "color: red; visibility: visible" : @heart_color = "color: white ; visibility: visible"
             end %>
           <%= link_to art_path(art) do %>
