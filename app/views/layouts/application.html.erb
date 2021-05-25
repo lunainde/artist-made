@@ -13,9 +13,11 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-    <%= render 'shared/footer' %>
+    <%= render 'shared/navbar' unless action_name == "home" %>
+    <div class="page-container">
+      <%= render 'shared/flashes' %>
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer' unless action_name == "index" && ["artists", "arts"].include?(controller_name) %>
   </body>
 </html>
