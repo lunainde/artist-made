@@ -16,15 +16,15 @@
       <div class="cards">
          <% @arts.each do |art| %>
             <% if current_user.favorited?(art) %>
-                <% current_user.favorited?(art) ? @heart_color = "color: red" : @heart_color = "color: white"%>
+                <% current_user.favorited?(art) ? @heart_icon = "<i class=\"fas fa-heart\"></i>" : @heart_icon = "<i class=\"far fa-heart\"></i>" %>
                 <%= link_to art_path(art) do %>
                     <div class="image">
                     <%= image_tag art.img_url unless art.img_url.nil? %>
                     <%= link_to art_items_path(art_id: art.art_items[0].art_id), class: "btn btn-gift" do %>
                         <i class="fas fa-gift"></i>
                     <% end %>
-                    <%= link_to "#", class: "btn btn-fav", style: @heart_color, data: { artid: art.id } do %>
-                        <i class="far fa-heart"></i>
+                    <%= link_to "#", class: "btn btn-fav", data: { artid: art.id } do %>
+                        <%= sanitize @heart_icon %>
                     <% end %>
                     <%= link_to root_path, class: "btn btn-cart" do %>
                         <i class="fas fa-plus"></i>
