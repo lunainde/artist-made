@@ -12,10 +12,16 @@ const setFavorit = () => {
         body: JSON.stringify( { art_id: heartElement.dataset.artid } )
         }).then(() => {
             // console.log(heartElement.dataset);
-            if (heartElement.style.color === "red") {
-              heartElement.style.color="white";
+            if (heartElement.innerHTML.trim() ===  "<i class=\"far fa-heart\"></i>") {
+              // heartElement.style.color="white";
+              heartElement.innerHTML = "<i class=\"fas fa-heart\"></i>";
+              console.log("test")
             } else {
-              heartElement.style.color="red";
+              // heartElement.style.color="red";
+              console.log(heartElement.innerHTML)
+              heartElement.innerHTML = "<i class=\"far fa-heart\"></i>";
+              
+              // console.log("test")
             }
              
             });

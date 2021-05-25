@@ -13,3 +13,7 @@ margin-top: 48px;
     max-width: 1550px;
   }
 }
+
+.page-container {
+  min-height: calc(100vh - 179px);
+}
