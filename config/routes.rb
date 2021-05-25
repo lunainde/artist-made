@@ -11,8 +11,12 @@ Rails.application.routes.draw do
     resources :shopping_cart_items, only: [:create, :update]
   end
   resources :shopping_carts, only: [:show]
+  get '/paid_shopping_carts/', to: 'shopping_carts#paid_shopping_carts', as: 'paid_shopping_carts'
+
   # resources :orders, only: [:show, :create] do
   #   resources :payments, only: :new
   # end
-
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
+  post '/favorites', to: 'arts#favor', as: 'favorites'
+  get '/favorites', to: 'arts#all_favorites', as: 'all_favorites'
 end

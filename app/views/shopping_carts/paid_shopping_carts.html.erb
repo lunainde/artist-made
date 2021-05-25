@@ -1,0 +1,19 @@
+
+<% @paid_shopping_carts.each do |paid_shopping_cart| %>
+    <div class="container">
+            <div class="row py-4">
+              <div class="col-md-3">
+                <%= image_tag paid_shopping_cart.shopping_cart_items.first.art_item.art.img_url, width: '100%' %>
+              </div>
+              <div class="col">
+                <h1>Checkout summary</h1>
+                <p>Purchase of 
+                <strong>
+                <% paid_shopping_cart.shopping_cart_items.each do |item| %>
+                <p> <%= item.art_item.art.title %> - <%= item.art_item.format %> </p>
+                <% end %>
+                </strong> for <strong><%= paid_shopping_cart.total %> €</strong></p>
+              </div>
+            </div>
+    </div>
+<% end %>

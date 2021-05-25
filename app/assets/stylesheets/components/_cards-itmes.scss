@@ -1,11 +1,29 @@
+// 1-ITEMS-INDEX-PAGE
 .card-category-item {
   background-size: cover;
   background-position: center;
   height: 400px;
   display: flex;
+  align-items: center;
   justify-content: center;
+  vertical-align: bottom;
   color: white;
-  font-size: 24px;
+  font-size: 18px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-art-item {
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  // vertical-align: bottom;
+  align-items: center;
+  color: white;
+  font-size: 12px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 2px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -52,6 +70,17 @@
   }
 }
 
+// TEMPORATY + Btn FOR CARD.........................
+.fa-plus-square {
+  color: white;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+.fa-plus-square:hover {
+  opacity: 1;
+  color: white;
+}
+
 .card-form-item {
   height: 400px;
   display: flex;
@@ -62,8 +91,20 @@
   border-radius: 2px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+// 2. ITEMS-SHOW-PAGE
 
-// PRODUCT PERSONALIZATION CARD
+ .card-item-show {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+// 3. PRODUCT PERSONALIZATION CARDS
 
 .card-head {
   position: relative;
@@ -80,7 +121,6 @@
 }
 
 .product-detail {
-  padding: 0 20px;
   font-size: 11px;
   color: #fff;
 }
@@ -122,7 +162,7 @@
 }
 
 .product-title {
-  padding: 20px 20px 5px 20px;
+  padding: 0px 20px 5px 20px;
   display: block;
   font-size: 17px;
   font-weight: 500;
@@ -167,7 +207,7 @@
 .product-size h4 {
   font-size: 11px;
   padding: 0 21px;
-  margin-top: 15px;
+  margin-top: 25px;
   padding-bottom: 10px;
   text-transform: uppercase;
 }
@@ -234,13 +274,20 @@
 .ul-color li a.black {
   background: black;
 }
-
 .ul-color li a.grey {
   background: lightgrey;
 }
-
 .ul-color li a.white {
   background: #F1F1F1;
+}
+.ul-color li a.red {
+  background: #FF0100;
+}
+.ul-color li a.green {
+  background: green;
+}
+.ul-color li a.blue {
+  background: #314CCD;
 }
 
 .ul-color li a.active:after {
@@ -255,18 +302,20 @@
   margin-top: -5px;
 }
 .add-to-card {
+  margin-top: 60px;
 }
 .btn-flat h4 {
   text-align: center;
   font-size: 14px;
-  margin: 0;
+  margin-top: 0;
 }
 
 // DROPDOWN MENUS...................................
 
 .dropdownmenu {
   border-radius: 3px;
-  margin: 5px 10px 5px 10px;
+  margin-top: 30px;
+  color: black;
 }
 
 .dropdownmenu ul, .dropdownmenu li {
@@ -274,10 +323,9 @@
   padding: 0;
 }
 .dropdownmenu ul {
-  background: gray;
+  background: white;
   list-style: none;
   width: 100%;
-
 }
 .dropdownmenu li {
   float: left;
@@ -285,8 +333,8 @@
   width: 100%;
 }
 .dropdownmenu a {
-  background: grey;
-  color: #FFFFFF;
+  background: white;
+  color: black;
   display: block;
   font-size: 12px;
   padding: 10px 25px;
@@ -298,9 +346,11 @@
   -ms-transition: all .25s ease;
   -o-transition: all .25s ease;
   transition: all .25s ease;
+  border: 1px solid grey;
 }
 .dropdownmenu li:hover a {
-  background: #000000;
+  background: lightgrey;
+  border: 1px solid grey;
 }
 #submenu {
   left: 0;
@@ -320,14 +370,40 @@ li:hover ul#submenu {
   width: 100%;
 }
 #submenu a:hover {
-  background: #DF4B05;
+  background: lightgrey;
 }
 #submenu a {
-  background-color:#000000;
+  background-color:white;
 }
 .devices {
   display: flex;
   flex-direction: column;
 }
+#hidden {
+  color: white;
+}
 
+// MOCKUP OVERLAY...................................
+.card-category-ipad {
+  background-size: cover;
+  background-position: center;
+  height: 669px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  opacity: 0.9;
+
+}
+.card-category-ipad img {
+  background-color: rgba(0,0,0,0.5);
+  position: relative;
+  right: -12px;
+  top: -2px;
+  height: 417px;
+  width: 324px;
+  border-radius: 16px;
+  opacity: 0.9;
+}
 

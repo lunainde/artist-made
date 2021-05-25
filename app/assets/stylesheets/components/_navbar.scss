@@ -41,6 +41,7 @@ a:hover{
 }
 
 .search-container {
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -60,9 +61,10 @@ a:hover{
 }
 
 .search-form-control .form-control {
-  height: 2.7rem;
+  height: 2.3rem;
   border: 1px solid #E7E7E7;
   justify-content: stretch;
+  margin-right: 200px;
 }
 
 .search-form-control .form-group {
@@ -76,6 +78,5 @@ a:hover{
 }
 
 #btn-padding {
-  padding-left: 48px;
-
+  padding-left: 40px;
 }

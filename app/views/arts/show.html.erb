@@ -1,57 +1,108 @@
+<div class="menu-bar">
+  <h4>Visualize your <strong>selection</strong></h4>
+  <ul class="list-inline tabs-underlined">
+    <li><%= link_to "art", arts_path, class: "tab-underlined" %></li>
+    <li><%= link_to "artist", artists_path, class: "tab-underlined" %></li>
+    <li><%= link_to "theme", root_path, class: "tab-underlined" %></li>
+    <li><%= link_to "form", root_path, class: "tab-underlined" %></li>
+    <li><%= link_to "price", root_path, class: "tab-underlined" %></li>
+  </ul>
+</div>
+
 <div class="container">
   <div class="row">
 
-    <div class="col-8 mt-3">
 
-      <div class="card-category" id="main-art-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path @art.img_url  %>)">
-        <div class="card-trip-infos" id="art-card-overlay">
+    <div class="col-8" id="card-main-mockup">
+        <div class="card-category" id="main-art-picture" style="background-image: url(<%= image_path @art.img_url  %>)">
+          <div class="card-trip-infos" id="art-card-overlay">
             <img src="<%= image_path @art.img_url  %>" id="art-card-picture-shape" class="card-trip-user .mockup-square" />
-        </div>
-      </div>
-
-    </div>
-
-    <div class="col-4 mt-3">
-      <div class="item mt-3">
-        <div class="card-product-info">
-
-          <div class="item-title">
-            <h2><%= @art.title %></h2>
           </div>
-            <h5><%= @art.category %></h5>
-            <p><%= @art.description %></p>
-            <p>by <%= @art.artist.first_name %> <%= @art.artist.last_name %></p>
+        </div>
+
+      <div class="row mb-4" id="card-mockup-container">
+        <div class="col-2">
+          <div class="card-mockup main" style="background-image: url(<%= image_path @art.img_url %>)"></div>
+        </div>
+        <div class="col-2">
+          <div class="card-mockup portrait" style="background-image: url(<%= image_url("art-show-2.png") %>)"></div>
+        </div>
+        <div class="col-2">
+          <div class="card-mockup square" style="background-image: url(<%= image_url("art-show-3.png") %>)"></div>
+        </div>
+        <div class="col-2">
+          <div class="card-mockup circle" style="background-image: url(<%= image_url("art-show-4.png") %>)"></div>
         </div>
       </div>
 
-      <div class="social-media">
 
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fab fa-telegram-plane"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <div class="col-4">
+
+      <div class="card-head p-3">
+        <div class="product-detail">
+          <br>
+          <h5><%= @art.title %></h5> Support emerging artists with every single order
+        </div>
+        <br>
+          <h5><%= @art.category %></h5>
+          <p><%= @art.description %></p>
+          <p>by <%= @art.artist.first_name %> <%= @art.artist.last_name %></p>
+      </div>
+
+
+      <div class="card-body p-4">
+        <div class="row">
+          <div class="col item" id="card-art-item-column">
+            <div class="container-fluid">
+                <div class="cards-items">
+                  <%= link_to art_item_path(@shirt) do %>
+                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80)">
+                      T-SHIRTS</div>
+                  <% end %>
+                  <%= link_to art_item_path(@shirt) do %>
+                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1591758692400-3f50620da5b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2447&q=80)">
+                      T-SHIRTS</div>
+                  <% end %>
+                  <%= link_to art_item_path(@hoodie) do %>
+                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2166&q=80)">
+                      HOODIES</div>
+                  <% end %>
+                  <%= link_to art_item_path(@bag) do %>
+                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1578237493287-8d4d2b03591a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1181&q=80)">
+                      BAGS</div>
+                  <% end %>
+                  <%= link_to art_item_path(@postcard) do %>
+                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1569229569803-69384f5efa83?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80)">
+                      POSTCARDS</div>
+                  <% end %>
+                  <%= link_to art_item_path(@poster) do %>
+                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1603460689763-cae435c723cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1834&q=80)">
+                      POSTERS</div>
+                  <% end %>
+                  <%= link_to art_item_path(@cellphone) do %>
+                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1610602699116-95aab7d9290b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3150&q=80)">
+                      CELLPHONES</div>
+                  <% end %>
+                  <%= link_to art_item_path(@tablet) do %>
+                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1589739900266-43b2843f4c12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1278&q=80)">
+                      TABLES</div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
+
     </div>
 
-  <div class="container">
-    <div class="row mb-4">
-      <div class="col-2 mt-3">
-        <div class="card-mockup main" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path @art.img_url %>)"></div>
-      </div>
-      <div class="col-2 mt-3">
-        <div class="card-mockup portrait" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1539975611936-f0d1221cfd16?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1875&q=80)"></div>
-      </div>
-      <div class="col-2 mt-3">
-        <div class="card-mockup square" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1558882224-dda166733046?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2249&q=80)"></div>
-      </div>
-      <div class="col-2 mt-3">
-        <div class="card-mockup circle" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1532504209154-ea691b9c5a62?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80)"></div>
-      </div>
-    </div>
-  </div>
 
   </div>
 </div>
+
+
+
+
+
+

@@ -4,10 +4,13 @@ class ShoppingCartsController < ApplicationController
     @shopping_cart = ShoppingCart.find(params[:id])
     authorize @shopping_cart
     if @shopping_cart.paid
-      #redirect
+      redirect_to paid_shopping_carts_path
     else
-      create_stripe_session
+      create_stripe_session if @shopping_cart.shopping_cart_items.first
     end
+  end
+  def paid_shopping_carts
+    @paid_shopping_carts = policy_scope(ShoppingCart).where(paid: true)
   end
   private
   def create_stripe_session
@@ -16,7 +19,7 @@ class ShoppingCartsController < ApplicationController
       line_items: [{
       name: "Order #{@shopping_cart.id}",
       images: [@shopping_cart.shopping_cart_items.first.art_item.art.img_url],
-      amount: (1 * 100).to_i,
+      amount: (@shopping_cart.total * 100).to_i,
       currency: 'eur',
       quantity: 1
       }],

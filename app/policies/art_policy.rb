@@ -4,6 +4,9 @@ class ArtPolicy < ApplicationPolicy
       scope.all
     end
   end
+  def favor?
+    true
+  end
   def show?
     true
   end

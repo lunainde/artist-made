@@ -9,25 +9,30 @@
   </ul>
 </div>
 
+
+
+
+
+
 <div class="container">
   <div class="row">
 
     <div class="col-4">
-        <div class="card-head">
+        <div class="card-head p-3">
           <div class="product-detail">
             <br>
              <h5>Personalize your gifts</h5> Support emerging artists with every single order
           </div>
           <span class="back-text ml-2">artist-made</span>
-          <div class="art-info"><h4>ART TITLE</h4></div>
-          <div class="art-info"><h5>ARTSIT NAME</h5></div>
+          <div class="art-info"><h3><%= @art.title unless @art.nil?%></h3>
+            <p><%= "by #{@art.artist.first_name}"  unless @art.nil? %> <%= @art.artist.last_name unless @art.nil? %></p>
+          </div>
         </div>
 
-        <div class="card-body">
-
+        <div class="card-body p-4">
           <div class="product-desc">
-            <span class="product-title"><h5>Item Category</h5></span>
-            <span class="product-caption">Description</span>
+            <span class="product-title"><h5>GIFTS</h5></span>
+            <span class="product-caption">What people think</span>
             <span class="product-rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -38,14 +43,14 @@
           </div>
 
         <div>
-
           <nav class="dropdownmenu">
             <ul>
-              <li><a href="#">Clothes ▾</a>
+              <li><a href="#">TEXTILE ▾</a>
                 <ul id="submenu">
-                  <li><a href="#">t-shirt (w)</a></li>
-                  <li><a href="#">t-shirt (m)</a></li>
-                  <li><a href="#">tote bags</a></li>
+                  <li><a href="#">T-shirt (w)</a></li>
+                  <li><a href="#">T-shirt (m)</a></li>
+                  <li><a href="#">Hoddies</a></li>
+                  <li><a href="#">Tote Bags</a></li>
                 </ul>
               </li>
             </ul>
@@ -69,13 +74,30 @@
             <li><a href="#" class="black active"></a></li>
             <li><a href="#" class="grey"></a></li>
             <li><a href="#" class="white"></a></li>
+            <li><a href="#" class="red"></a></li>
+            <li><a href="#" class="green"></a></li>
+            <li><a href="#" class="blue"></a></li>
           </ul>
         </div>
-        <br>
+
+        <div class="prints">
+            <nav class="dropdownmenu">
+              <ul>
+                <li><a href="#">PRINTS ▾</a>
+                  <ul id="submenu">
+                    <li><a href="#">Small Prints</a></li>
+                    <li><a href="#">Postcards</a></li>
+                    <li><a href="#">Posters</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+        </div>
+
         <div class="devices">
             <nav class="dropdownmenu">
               <ul>
-                <li><a href="#">Cellphone Cases ▾</a>
+                <li><a href="#">CELLPHONE CASES ▾</a>
                   <ul id="submenu">
                     <li><a href="#">iPhone X</a></li>
                     <li><a href="#">iPhone 12</a></li>
@@ -87,7 +109,7 @@
 
             <nav class="dropdownmenu">
               <ul>
-                <li><a href="#">Laptop Cases ▾</a>
+                <li><a href="#">LAPTOP CASES ▾</a>
                   <ul id="submenu">
                     <li><a href="#">MacBook Air</a></li>
                     <li><a href="#">MacBook Pro 13"</a></li>
@@ -96,37 +118,47 @@
                 </li>
               </ul>
             </nav>
+
+            <nav class="dropdownmenu">
+              <ul>
+                <li><a href="#">TABLET CASES ▾</a>
+                  <ul id="submenu">
+                    <li><a href="#">iPad </a></li>
+                    <li><a href="#">iPad Pro</a></li>
+                    <li><a href="#">iPad Air</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
         </div>
 
         <div class="add-to-card">
-          <button class="btn-flat w-100 mt-4"><h4>Add to Collection</h4></button>
+          <button class="btn-flat w-100"><h4>Add to Collection</h4></button>
         </div>
 
       </div>
 
     </div>
 
-
-
     <div class="col-8">
       <div class="container-fluid">
         <div class="cards-items">
           <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80)">
-            t-shirts</div>
+            T-SHIRTS</div>
           <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1591758692400-3f50620da5b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2447&q=80)">
-            t-shirts</div>
+            T-SHIRTS</div>
           <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2166&q=80)">
-            hoodies</div>
+            HOODIES</div>
           <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1578237493287-8d4d2b03591a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1181&q=80)">
-            bags</div>
+            BAGS</div>
           <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1569229569803-69384f5efa83?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80)">
-            postcards</div>
+            POSTCARDS</div>
           <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1603460689763-cae435c723cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1834&q=80)">
-            posters</div>
+            POSTERS</div>
           <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1610602699116-95aab7d9290b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3150&q=80)">
-            cellphones</div>
+            CELLPHONES</div>
           <div class="card-category-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1589739900266-43b2843f4c12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1278&q=80)">
-            tablets</div>
+            TABLETS<i class="far fa-plus-square pt-1"></i></div>
         </div>
       </div>
     </div>

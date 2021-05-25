@@ -70,15 +70,27 @@
   }
 }
 
-/* ART SHOW CARD background */
+/* ART SHOW CARD background - box-shadow: 0 0 15px rgba (0,0,0,0.2); */
 .card-category {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  border-radius: 3px;
+
+}
+
+.card-art-item {
   background-size: cover;
   background-position: center;
-  height: 900px;
+  height: 100px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  border-radius: 3px;
+  vertical-align: bottom;
+  color: white;
+  font-size: 18px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 2px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
@@ -98,16 +110,30 @@
   opacity: 1;
 }
 
-/* ART SHOW CARD Mockup */
+/* ART SHOW CARD Mockup //box-shadow: 0 0 15px rgba (0,0,0,0.2); */
 .card-mockup {
   background-size: cover;
   background-position: center;
-  height: 200px;
+  height: 120px;
+  width: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 3px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 0px 0px;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+#card-mockup-container {
+  justify-content: space-around;
+  padding-left: 16px;
+
+}
+#card-main-mockup {
+  background-color: white;
+  padding-top: 16px;
+  margin-top: 0px;
 }
 
 .card-trip .card-trip-infos {
@@ -120,45 +146,46 @@
 
 .card-trip-infos .card-trip-user {
   position: absolute;
-  right: 270px;
-  top: 160px;
-  width: 270px;
-  height: 435px;
-  border: rgba(52,37,25,0.6) 6px solid;
+  right: 314px;
+  top: 135px;
+  width: 165px;
+  height: 213px;
+  border: rgba(52,37,25,0.6) 4px solid;
 }
 
 .card-trip-user-square {
   position: absolute;
-  right: 193px;
-  top: 200px;
-  width: 395px;
-  height: 396px;
-  border: rgba(52,37,25,0.6) 6px solid;
+  right: 293px;
+  top: 167px;
+  width: 200px;
+  height: 200px;
+  border: rgba(52,37,25,0.6) 4px solid;
 }
 
 .card-trip-user-circle {
   position: absolute;
   border-radius: 50%;
-  right: 315px;
-  top: 390px;
-  width: 360px;
-  height: 320px;
-  border: rgba(52,37,25,0.6) 6px solid;
+  right: 310px;
+  top: 327px;
+  width: 150px;
+  height: 150px;
+  border: rgba(52,37,25,0.6) 4px solid;
 }
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
 
 .mockup-square {
   border-radius: 2px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: black 6px solid;
+  border: rgba(52,37,25,0.6) 4px solid;
 }
 
 #art-card-overlay {
   visibility: hidden;
 }
 
+.col.item {
+  margin-top: 40px;
+}
