@@ -5,6 +5,15 @@ const changeToMockupPicture = () => {
   const changingPicture = document.getElementById('main-art-picture')
   const makeMockupVisible = document.getElementById('art-card-overlay')
   const adjustMockupByShape= document.getElementById('art-card-picture-shape')
+  const activeClass = document.getElementsByClassName('active')
+
+  const removeActiveClass = () => {
+    mockupPictures.forEach(element => {
+      element.classList.remove("active")
+    });
+
+}
+
 
   mockupPictures.forEach(picture => {
 
@@ -14,44 +23,31 @@ const changeToMockupPicture = () => {
 
       changingPicture.style.backgroundImage = picture.style.backgroundImage;
 
+      removeActiveClass();
+      e.currentTarget.classList.add("active");
 
-      // console.log(e.currentTarget)
-      // e.currentTarget.style.filter = 'opacity(1)';
-
-      picture.classList.remove("active");
-
-      if (picture.className === 'card-mockup main') {
+      if (picture.className === 'card-mockup main active') {
         makeMockupVisible.style.visibility = 'hidden';
 
       }
-      else if (picture.className === 'card-mockup square')
+      else if (picture.className === 'card-mockup square active')
         { adjustMockupByShape.className = 'card-trip-user-square';
         makeMockupVisible.style.visibility = 'visible';
-        picture.classList.add("active");
+
 
         }
-      else if (picture.className === 'card-mockup portrait')
+      else if (picture.className === 'card-mockup portrait active')
         { adjustMockupByShape.className = 'card-trip-user';
         makeMockupVisible.style.visibility = 'visible';
-        picture.classList.add("active");
+
         }
-      else if (picture.className === 'card-mockup circle')
+      else if (picture.className === 'card-mockup circle active')
         { adjustMockupByShape.className = 'card-trip-user-circle';
         makeMockupVisible.style.visibility = 'visible';
-        picture.classList.add("active");
+
       }
-      console.log(picture.classList);
-      // picture.classList.remove("active");
-      // console.log(picture.classList);
     });
   })
 }
 
-
-//   mockupPictures.addEventListener("click", (e) => {
-//     mockupPictures.classList.remove("active");
-//     e.currentTarget.classList.add("active");
-//     console.log(e.currentTarget);
-//   })
-// }
 export { changeToMockupPicture };
