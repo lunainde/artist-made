@@ -32,7 +32,7 @@
 .cards-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 10px;
 }
 
 // Smallest device
@@ -104,25 +104,20 @@
   border-radius: 3px;
 }
 
+
 // 3. PRODUCT PERSONALIZATION CARDS
 
 .card-head {
   position: relative;
   height: 252px;
-  background: black;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, black 8%, lightgrey 83%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, black 8%, lightgrey 83%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, black 8%, lightgrey 83%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  color: black;
+  background: white;
   border-radius: 3px 3px 0 0;
 }
 
 .product-detail {
   font-size: 11px;
-  color: #fff;
+  color: black;
 }
 
 .product-detail h2 {
@@ -134,6 +129,7 @@
 }
 
 .back-text {
+  color: black;
   display: inline-block;
   font-size: 50px;
   font-weight: 900;
@@ -254,7 +250,6 @@
 }
 
 .ul-color {
-
   margin-left: 27px;
 }
 
@@ -383,7 +378,34 @@ li:hover ul#submenu {
   color: white;
 }
 
+// MOCKUP ICONS/ ART-SHOW PAGE...................................
+
+.card-art-icon {
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 12px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 2px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.0);
+
+}
+.cards-icon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+.center {
+  text-align: center;
+}
+
 // MOCKUP OVERLAY...................................
+
 .card-category-ipad {
   background-size: cover;
   background-position: center;

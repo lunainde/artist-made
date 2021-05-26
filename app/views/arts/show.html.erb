@@ -1,18 +1,16 @@
 <div class="menu-bar">
-  <h4>Visualize your <strong>selection</strong></h4>
+  <h5>Visualize your <strong>selection</strong></h5>
   <ul class="list-inline tabs-underlined">
-    <li><%= link_to "art", arts_path, class: "tab-underlined" %></li>
-    <li><%= link_to "artist", artists_path, class: "tab-underlined" %></li>
-    <li><%= link_to "theme", root_path, class: "tab-underlined" %></li>
-    <li><%= link_to "form", root_path, class: "tab-underlined" %></li>
-    <li><%= link_to "price", root_path, class: "tab-underlined" %></li>
+    <li><%= link_to "ART", arts_path, class: "tab-underlined" %></li>
+    <li><%= link_to "ARTIST", artists_path, class: "tab-underlined" %></li>
+    <li><%= link_to "THEME", root_path, class: "tab-underlined" %></li>
+    <li><%= link_to "FORM", root_path, class: "tab-underlined" %></li>
+    <li><%= link_to "PRICE", root_path, class: "tab-underlined" %></li>
   </ul>
 </div>
 
 <div class="container">
   <div class="row">
-
-
     <div class="col-8" id="card-main-mockup">
         <div class="card-category" id="main-art-picture" style="background-image: url(<%= image_path @art.img_url  %>)">
           <div class="card-trip-infos" id="art-card-overlay">
@@ -34,27 +32,23 @@
           <div class="card-mockup circle" style="background-image: url(<%= image_url("art-show-4.png") %>)"></div>
         </div>
       </div>
-
-
     </div>
 
     <div class="col-4">
 
       <div class="card-head p-3">
         <div class="product-detail">
-          <br>
-          <h5><%= @art.title %></h5> Support emerging artists with every single order
+
+          <h4><%= @art.title %></h4>
         </div>
-        <br>
-          <h5><%= @art.category %></h5>
-          <p><%= @art.description %></p>
-          <p>by <%= @art.artist.first_name %> <%= @art.artist.last_name %></p>
+          <p><%= @art.category %></p>
+          <h5>by <%= @art.artist.first_name %> <%= @art.artist.last_name %></h5>
+          <p><%= @art.description %> In this craft or sullen art, exercised in the still night, when only the moon rages and the lovers lie abed, artists create singing light, not for ambition or bread, but from their most secrect heart for the lovers of art. </p>
       </div>
 
-
-      <div class="card-body p-4">
+      <div class="card-body p-2">
       <div class = "row text-center">
-        <div class = "col-6 mt-4"> 
+        <div class = "col-6 mt-4">
           <span><i class="fas fa-euro-sign"></i></span> <span><%= @digital_art_item.price %></span>
         </div>
         <div class = "col-6">
@@ -69,46 +63,46 @@
             <div class="container-fluid">
                 <div class="cards-items">
                   <%= link_to art_item_path(@shirt) do %>
-                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80)">
-                      T-SHIRTS</div>
+                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("t-shirt-w.png") %>)">
+                      T-SHIRTS (W)</div>
                   <% end %>
                   <%= link_to art_item_path(@shirt) do %>
-                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1591758692400-3f50620da5b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2447&q=80)">
-                      T-SHIRTS</div>
+                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("t-shirt-m.png") %>)">
+                      T-SHIRTS (M)</div>
                   <% end %>
                   <%= link_to art_item_path(@hoodie) do %>
-                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2166&q=80)">
+                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("hoodie.png") %>)">
                       HOODIES</div>
                   <% end %>
                   <%= link_to art_item_path(@bag) do %>
-                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1578237493287-8d4d2b03591a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1181&q=80)">
+                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("tote.png") %>)">
                       BAGS</div>
                   <% end %>
                   <%= link_to art_item_path(@postcard) do %>
-                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1569229569803-69384f5efa83?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80)">
+                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("postcard.png") %>)">
                       POSTCARDS</div>
                   <% end %>
                   <%= link_to art_item_path(@poster) do %>
-                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1603460689763-cae435c723cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1834&q=80)">
+                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("poster.png") %>)">
                       POSTERS</div>
                   <% end %>
                   <%= link_to art_item_path(@cellphone) do %>
-                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1610602699116-95aab7d9290b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3150&q=80)">
+                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("iphone.png") %>)">
                       CELLPHONES</div>
                   <% end %>
                   <%= link_to art_item_path(@tablet) do %>
-                    <div class="card-art-item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1589739900266-43b2843f4c12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1278&q=80)">
-                      TABLES</div>
+                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("ipad.png") %>)">
+                      TABLETS</div>
                   <% end %>
+                </div>
+                <div class="center mt-2">
+                <p style="font-size:10px">Support emerging artists with every single order</p>
                 </div>
               </div>
             </div>
         </div>
       </div>
-
     </div>
-
-
   </div>
 </div>
 
