@@ -33,5 +33,8 @@ class ArtsController < ApplicationController
     @cellphone = ArtItem.where(art_id: @art.id, format: "cellphones")[0].id
     @tablet = ArtItem.where(art_id: @art.id, format: "tablets")[0].id
     authorize @art
+
+    @digital_art_item = @art.art_items.find_by(format: "digital")
+    @shopping_cart_item = ShoppingCartItem.new
   end
 end
