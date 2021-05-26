@@ -111,6 +111,11 @@
 }
 
 /* ART SHOW CARD Mockup //box-shadow: 0 0 15px rgba (0,0,0,0.2); */
+
+.card-mini-visibe {
+  filter: opacity(1);
+}
+
 .card-mockup {
   background-size: cover;
   background-position: center;
@@ -123,6 +128,10 @@
   padding: 0px 0px;
   margin-top: 12px;
   cursor: pointer;
+  filter: opacity(0.6);
+}
+.card-mockup:hover {
+  filter: opacity(1);
 }
 
 #card-mockup-container {
@@ -182,8 +191,13 @@
   border: rgba(52,37,25,0.6) 4px solid;
 }
 
+.active {
+  filter: opacity(1);
+}
+
 #art-card-overlay {
   visibility: hidden;
+
 }
 
 .col.item {
