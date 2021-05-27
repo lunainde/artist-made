@@ -1,7 +1,5 @@
 const sliderToBanner = () => {
-console.log(document)
-window.addEventListener('load',(e) => {
-console.log("test")    
+window.addEventListener('load',(e) => { 
     let wrapper = document.getElementById('wrapper');
     let topLayer = wrapper.querySelector('.top');
     let handle = wrapper.querySelector('.handle');

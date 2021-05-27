@@ -1,40 +1,41 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1601227220800-2d174b088c1f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2527&q=80);">
-  <%= link_to image_tag('am-logo.png', width: 70), root_path, class: "home-logo" %>
-  <div class="container">
-    <div class="container">
-        <h1>Digital <strong>artwork</strong> + artist-made <strong>gift</strong> collection!</h1>
-        <p>Because art takes reality by surprise.</p>
-        <%= link_to "DISCOVER ART", arts_path, class: "btn btn-flat" %>
-        <%= link_to "SELECTIVE GIFT SHOP", art_items_path, class: "btn btn-flat" %>
-    </div>
-  </div>
-</div>
-
-<section id="wrapper">
-    <div class="layer bottom">
-      <div class="content-wrap">
-        <div class="content-body">
-          <h1>Art</h1>
-        </div>
-        <img src="https://images.unsplash.com/photo-1601227220800-2d174b088c1f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2527&q=80" alt="">
-      </div>
-    </div>
-
-    <div class="layer top">
-        <div class="content-wrap">
-          <div class="content-body">
-            <h1> Gifts</h1>
+  <section id="wrapper">
+      <div class="layer bottom">
+        <div class="content-wrap">          
+          <%= link_to image_tag('am-logo.png', width: 70), root_path, class: "home-logo" %>
+          <%= image_tag("home-art-2-flat.png", :alt => "rss feed") %>
+          <div class="container">
+            <div class="container">
+              <h1 class="title">Digital <strong>artwork</strong> + artist-made <strong>gift</strong> collection!</h1>
+              <p>Because art takes reality by surprise.</p>
+              <%= link_to "DISCOVER ART", arts_path, class: "btn btn-flat" %>
+              <%= link_to "SELECTIVE GIFT SHOP", art_items_path, class: "btn btn-flat" %>
+            </div>
           </div>
-          <img src="https://images.unsplash.com/photo-1503342452485-86b7f54527ef?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80" alt="">
-        </div>
-    </div>
+      </div>
 
-    <div class="handle">
-    </div>
-  </section>
+
+      <div class="layer top">
+          <div class="content-wrap">
+            <%= link_to image_tag('am-logo.png', width: 70), root_path, class: "home-logo" %>
+            <%= image_tag("home-dark.png", :alt => "rss feed") %>
+              <div class="container">
+                <div class="container">
+                  <h1 class="title">Digital <strong>artwork</strong> + artist-made <strong>gift</strong> collection!</h1>
+                  <p>Because art takes reality by surprise.</p>
+                  <%= link_to "DISCOVER ART", arts_path, class: "btn btn-flat" %>
+                  <%= link_to "SELECTIVE GIFT SHOP", art_items_path, class: "btn btn-flat" %>
+              </div>
+
+        </div>               
+        <div class="handle">
+        </div>   
+      </div>
+    </section>
+ 
 
 
 <div class="container">
+  <%= link_to image_tag('am-logo.png', width: 70), root_path, class: "home-logo" %>
   <div class="event" style="background-image: linear-gradient(rgba(75,46,21,0.4),rgba(255,255,255,0.4)), url(https://images.unsplash.com/photo-1512998844734-cd2cca565822?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1563&q=80);">
     <h4>Can you hear us now?</h4>
     <h5><strong>05.08</strong>  12:00  artist-made <strong>zoom</strong></h5>
