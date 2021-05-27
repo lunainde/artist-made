@@ -18,6 +18,8 @@
       <%= render 'shared/flashes' %>
       <%= yield %>
     </div>
-    <%= render 'shared/footer' unless action_name == "index" && ["artists", "arts"].include?(controller_name) %>
+    <%=
+    #render 'shared/footer' unless action_name == "index" && ["artists", "arts"].include?(controller_name)
+     %>
   </body>
 </html>
