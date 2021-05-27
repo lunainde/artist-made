@@ -5,14 +5,15 @@
   height: 50vh;
 }
 .home-logo {
-position:fixed;
+  position:fixed;
   top:4px;
   left:4px;
+  z-index: 20;
 }
 
 .title {
   margin: 0;
-  color: white;
+  color: black;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
@@ -48,6 +49,7 @@ position:fixed;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+
 #wrapper{
   position: relative;
   width:100%;
@@ -66,6 +68,9 @@ position:fixed;
   position: absolute;
   width:100vw;
   min-height: 55vw;
+  background-size: cover;
+  background-position: top;
+  padding: 150px 0;
 }
 
 .layer .content-body{
@@ -79,14 +84,21 @@ position:fixed;
 
 .layer img{
   position: absolute;
-  width:35%;
-  top:50%;
+  width:100%;
+  top: 50%;
   left: 50%;
   transform:translate(-50%, -50%);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
 .layer h1{
-  font-size:2em;
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px 3px rgba(0,0,0,1);
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .bottom{
@@ -94,12 +106,17 @@ position:fixed;
   z-index:1;
 }
 
+
 .bottom .content-body{
   right:5%;
 }
 
 .bottom h1{
-  color:white;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .top{
@@ -118,10 +135,8 @@ position:fixed;
   position: absolute;
   height: 100%;
   display: block;
-  width:5px;
   top:0;
-  left: 50%;
-  z-index:3;
+  z-index:-3;
 }
 
 
