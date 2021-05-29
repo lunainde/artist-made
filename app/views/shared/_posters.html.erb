@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-4">
+        <div class="card-body p-4">
+          <div class="product-detail">
+
+             <h5>Personalize your gifts</h5>
+          </div>
+          <div class="art-info"><h3><%= @art_item.art.title %></h3>
+            <p>by <%= @art_item.art.artist.first_name %> <%= @art_item.art.artist.last_name %></p>
+          </div>
+
+          <div class="product-desc">
+            <span class="product-title"><h5><%= @art_item.format %></h5></span>
+            <p>Description: Printed on 265 g natural art paper with a matt, uncoated finish and lightly textured surface, that ensures a rich and vibrant display of colours. Carefully wrapped in silk paper and packed in a protective cardboard tube. Worldwide shipping available.</p>
+            <span class="product-caption">What people think</span>
+            <span class="product-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star grey"></i>
+            </span>
+          </div>
+
+          <div class="p-3">
+
+            <span><p><i class="fas fa-euro-sign"></i></span> <span><%= @art_item.price %></p></span>
+            <% if @existing_shopping_cart_item %>
+              <%= simple_form_for [@art_item, @existing_shopping_cart_item] do |f| %>
+                <br>
+                <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
+
+                <%= f.submit "ADD TO COLLECTION",:class => "btn btn-flat center" %>
+              <% end %>
+            <% else %>
+            <%= simple_form_for [@art_item, @shopping_cart_item] do |f| %>
+
+              <div class="prints">
+                <nav class="dropdownmenu">
+                  <ul>
+                    <li><a href="#">SELECT SIZE ▾</a>
+                      <ul id="submenu">
+                        <li><a href="#">Small A4</a></li>
+                        <li><a href="#">30 x 40cm</a></li>
+                        <li><a href="#">50 x 70cm</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
+              <%= f.submit "ADD TO COLLECTION",:class => "btn btn-flat" %>
+              <% end %>
+            <% end %>
+          </div>
+
+        <P class="small-text">Support emerging artists with every single order</P>
+      </div>
+    </div>
+
+    <div class="col-8">
+      <div class="card-category-ipad" id="main-art-picture" style="background-image: url(<%= image_url("plain-poster.png") %>)">
+        <img src="<%= image_path @art_item.art.img_url  %>" />
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<!-- <p id="hidden">Quantity: <%= @art_item.quantity %></p> -->

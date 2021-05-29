@@ -48,7 +48,7 @@
       <div class="card-body p-2">
       <div class = "row text-center">
         <div class = "col-6 mt-4">
-          <span><i class="fas fa-euro-sign"></i></span> <span><%= @digital_art_item.price %></span>
+          <span><i class="fas fa-euro-sign"></i></span> <span id="price"><%= @digital_art_item.price %></span>
         </div>
         <div class = "col-6">
           <%= simple_form_for [@digital_art_item, @shopping_cart_item] do |f| %>
