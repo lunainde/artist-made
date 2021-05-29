@@ -37,21 +37,22 @@
             </span>
           </div>
 
-         <div class="p-3">
+          <div class="p-3">
             <p id="hidden">Quantity: <%= @art_item.quantity %></p>
             <span><p><i class="fas fa-euro-sign"></i></span> <span><%= @art_item.price %></p></span>
             <% if @existing_shopping_cart_item %>
               <%= simple_form_for [@art_item, @existing_shopping_cart_item] do |f| %>
                 <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
-                <%= f.submit "+", :class => "btn btn-flat" %>
+                <%= f.submit "Add to shopping cart",:class => "btn btn-flat" %>
               <% end %>
             <% else %>
-              <%= simple_form_for [@art_item, @shopping_cart_item] do |f| %>
-                <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
-                <%= f.submit "+", :class => "btn btn-flat" %>
-              <% end %>
+            <%= simple_form_for [@art_item, @shopping_cart_item] do |f| %>
+              <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
+              <%= f.submit "Add to shopping cart",:class => "btn btn-flat" %>
+              <% end %>           
             <% end %>
           </div>
+
 
         <div>
           <nav class="dropdownmenu">
