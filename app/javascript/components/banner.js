@@ -1,5 +1,5 @@
 const sliderToBanner = () => {
-window.addEventListener('load',(e) => { 
+// window.addEventListener('load',(e) => {
     let wrapper = document.getElementById('wrapper');
     let topLayer = wrapper.querySelector('.top');
     let handle = wrapper.querySelector('.handle');
@@ -13,7 +13,7 @@ window.addEventListener('load',(e) => {
   
       topLayer.style.width= e.clientX + delta + 'px';
     });
-  });
+  // });
 
 }
 
