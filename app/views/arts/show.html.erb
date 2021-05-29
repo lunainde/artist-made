@@ -1,4 +1,5 @@
-<div class="menu-bar">
+<div class="container">
+  <div class="menu-bar">
   <h5>Visualize your <strong>selection</strong></h5>
   <ul class="list-inline tabs-underlined">
     <li><%= link_to "ART", arts_path, class: "tab-underlined" %></li>
@@ -8,8 +9,6 @@
     <li><%= link_to "PRICE", root_path, class: "tab-underlined" %></li>
   </ul>
 </div>
-
-<div class="container">
   <div class="row">
     <div class="col-8" id="card-main-mockup">
         <div class="card-category" id="main-art-picture" style="background-image: url(<%= image_path @art.img_url  %>)">
