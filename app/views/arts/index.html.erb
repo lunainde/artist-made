@@ -27,7 +27,12 @@
               <%= link_to art_items_path(art_id: art.art_items[0].art_id), class: "btn btn-gift" do %>
                 <i class="fas fa-gift"></i>
               <% end %>
-              <%= link_to root_path, class: "btn btn-cart" do %>
+              <%= link_to art_item_shopping_cart_items_path(art.art_items.find_by(format: "digital"), shopping_cart_item: { quantity: 1 }), class: "btn btn-cart", method: "post" do %>
+
+
+
+
+
                 <i class="fas fa-plus"></i>
               <% end %>
 

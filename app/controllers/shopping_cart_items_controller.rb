@@ -1,6 +1,5 @@
 class ShoppingCartItemsController < ApplicationController
 
-
   def create
     create_update_init
     @shopping_cart_item = ShoppingCartItem.new(art_item: @art_item, shopping_cart: @shopping_cart, quantity: @quantity, price: @price)
