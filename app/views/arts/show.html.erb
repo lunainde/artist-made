@@ -53,7 +53,7 @@
         <div class = "col-6">
           <%= simple_form_for [@digital_art_item, @shopping_cart_item] do |f| %>
             <%= f.input :quantity, as: :hidden, input_html: { value: 1 } %>
-            <%= f.submit "+", :class => "btn btn-flat" %>
+            <%= f.submit "Add to shopping cart", :class => "btn btn-flat" %>
           <% end %>
         </div>
       </div>
