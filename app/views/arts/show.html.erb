@@ -9,6 +9,8 @@
     <li><%= link_to "PRICE", root_path, class: "tab-underlined" %></li>
   </ul>
 </div>
+
+<!-- ----------IMAGE CARD----------- -->
   <div class="row">
     <div class="col-8" id="card-main-mockup">
         <div class="card-category" id="main-art-picture" style="background-image: url(<%= image_path @art.img_url  %>)">
@@ -33,72 +35,70 @@
       </div>
     </div>
 
-    <div class="col-4">
+<!-- ---------- FORM ----------- -->
+  <div class="col-4">
+    <div class="card-body p-4">
+      <h3><%= @art.title %></h3>
+      <h5>by <%= @art.artist.first_name %> <%= @art.artist.last_name %></h5>
+      <div class="product-desc">
+      <span class="product-title"><p><%= @art.category %></p></span>
+      <p class="small-text-14"><%= @art.description %> In this craft or sullen art, exercised in the still night, when only the moon rages and the lovers lie abed, artists create singing light, not for ambition or bread, but from their most secrect heart for the lovers of art. </p>
 
-      <div class="card-head p-3">
-        <div class="product-detail">
-
-          <h4><%= @art.title %></h4>
+        <div class = "price mt-2">
+          <p><i class="fas fa-euro-sign"></i>
+          <span id="price"><%= @digital_art_item.price %></span></p>
         </div>
-          <p><%= @art.category %></p>
-          <h5>by <%= @art.artist.first_name %> <%= @art.artist.last_name %></h5>
-          <p><%= @art.description %> In this craft or sullen art, exercised in the still night, when only the moon rages and the lovers lie abed, artists create singing light, not for ambition or bread, but from their most secrect heart for the lovers of art. </p>
-      </div>
 
-      <div class="card-body p-2">
-      <div class = "row text-center">
-        <div class = "col-6 mt-4">
-          <span><i class="fas fa-euro-sign"></i></span> <span><%= @digital_art_item.price %></span>
-        </div>
-        <div class = "col-6">
           <%= simple_form_for [@digital_art_item, @shopping_cart_item] do |f| %>
             <%= f.input :quantity, as: :hidden, input_html: { value: 1 } %>
-            <%= f.submit "Add to shopping cart", :class => "btn btn-flat" %>
+          <div class="center">
+            <%= f.submit "ADD TO COLLECTION", :class => "btn btn-flat" %>
+          </div>
           <% end %>
-        </div>
       </div>
-        <div class="row">
-          <div class="col item" id="card-art-item-column">
-            <div class="container-fluid">
-                <div class="cards-items">
-                  <%= link_to art_item_path(@shirt) do %>
-                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("t-shirt-w.png") %>)">
-                      T-SHIRTS (W)</div>
-                  <% end %>
-                  <%= link_to art_item_path(@shirt) do %>
-                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("t-shirt-m.png") %>)">
-                      T-SHIRTS (M)</div>
-                  <% end %>
-                  <%= link_to art_item_path(@hoodie) do %>
-                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("hoodie.png") %>)">
-                      HOODIES</div>
-                  <% end %>
-                  <%= link_to art_item_path(@bag) do %>
-                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("tote.png") %>)">
-                      BAGS</div>
-                  <% end %>
-                  <%= link_to art_item_path(@postcard) do %>
-                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("postcard.png") %>)">
-                      POSTCARDS</div>
-                  <% end %>
-                  <%= link_to art_item_path(@poster) do %>
-                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("poster.png") %>)">
-                      POSTERS</div>
-                  <% end %>
-                  <%= link_to art_item_path(@cellphone) do %>
-                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("iphone.png") %>)">
-                      CELLPHONES</div>
-                  <% end %>
-                  <%= link_to art_item_path(@tablet) do %>
-                    <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("ipad.png") %>)">
-                      TABLETS</div>
-                  <% end %>
-                </div>
-                <div class="center mt-2">
-                <p style="font-size:10px">Support emerging artists with every single order</p>
-                </div>
+<!-- ---------- GIFT ICONS ----------- -->
+      <div class="row">
+        <div class="col item" id="card-art-item-column">
+          <div class="container-fluid">
+            <div class="cards-items">
+              <%= link_to art_item_path(@shirt) do %>
+                <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("t-shirt-w.png") %>)">
+                    T-SHIRTS (W)</div>
+                <% end %>
+                <%= link_to art_item_path(@shirt) do %>
+                <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("t-shirt-m.png") %>)">
+                    T-SHIRTS (M)</div>
+                <% end %>
+                <%= link_to art_item_path(@hoodie) do %>
+                <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("hoodie.png") %>)">
+                    HOODIES</div>
+                <% end %>
+                <%= link_to art_item_path(@bag) do %>
+                <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("tote.png") %>)">
+                    BAGS</div>
+                <% end %>
+                <%= link_to art_item_path(@postcard) do %>
+                <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("postcard.png") %>)">
+                    POSTCARDS</div>
+                <% end %>
+                <%= link_to art_item_path(@poster) do %>
+                <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("poster.png") %>)">
+                    POSTERS</div>
+                <% end %>
+                <%= link_to art_item_path(@cellphone) do %>
+                <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("iphone.png") %>)">
+                    CELLPHONES</div>
+                <% end %>
+                <%= link_to art_item_path(@tablet) do %>
+                <div class="card-art-icon" style="background-image: linear-gradient(rgba(250,250,250,0.8), rgba(250,250,250,0.8)), url(<%= image_url("ipad.png") %>)">
+                    TABLETS</div>
+                <% end %>
+              </div>
+              <div class="center mt-2">
+              <p style="font-size:10px">Support emerging artists with every single order</p>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
