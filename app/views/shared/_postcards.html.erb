@@ -21,13 +21,10 @@
         <p><i class="fas fa-euro-sign"></i>
         <%= @art_item.price %></p>
       </div>
-
         <% if @existing_shopping_cart_item %>
         <%= simple_form_for [@art_item, @existing_shopping_cart_item] do |f| %>
         <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
-          <%= f.submit "ADD TO COLLECTION BAG",:class => "btn btn-flat" %>
-
-
+        <%= f.submit "ADD TO COLLECTION BAG",:class => "btn btn-flat" %>
         <% end %>
       <% else %>
       <%= simple_form_for [@art_item, @shopping_cart_item] do |f| %>
@@ -54,7 +51,7 @@
       <% end %>
       <% end %>
 
-      <P class="small-text-10 mt-4">Support emerging artists with every single order</P>
+      <P class="small-text-10 mt-2">Support emerging artists with every single order</P>
     </div>
   </div>
 

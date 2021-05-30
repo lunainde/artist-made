@@ -1,73 +1,37 @@
 <div class="row">
-    <div class="col-4">
-        <div class="card-head p-3">
-          <div class="product-detail">
-            <br>
-             <h5>Personalize your gifts</h5> Support emerging artists with every single order
-          </div>
-          <span class="back-text ml-2">artist-made</span>
-          <div class="art-info"><h3><%= @art_item.art.title %></h3>
-            <p>by <%= @art_item.art.artist.first_name %> <%= @art_item.art.artist.last_name %></p>
-          </div>
-        </div>
+  <div class="col-4">
+    <div class="card-body p-4">
+      <h3><%= @art_item.art.title %></h3>
+      <p>by <%= @art_item.art.artist.first_name %> <%= @art_item.art.artist.last_name %></p>
+      <div class="product-desc">
+      <span class="product-title">
+        <h5><%= @art_item.format %></h5></span>
+        <p class="small-text-14">Description: The T-shirt is perhaps the simplest yet most versatile item in a persons’s wardrobe. Explore our huge range of artwork to find pieces to fit your style. Worldwide shipping available.</p>
+        <span class="product-caption">What people think</span>
+        <span class="product-rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star grey"></i>
+        </span>
+      </div>
 
-        <div class="card-body p-4">
-          <div class="product-desc">
-            <span class="product-title"><h5><%= @art_item.format %></h5></span>
-            <span class="product-caption">What people think</span>
-            <span class="product-rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star grey"></i>
-            </span>
-          </div>
+      <div class="price mt-2">
+        <p><i class="fas fa-euro-sign"></i>
+        <%= @art_item.price %></p>
+      </div>
+        <% if @existing_shopping_cart_item %>
+          <%= simple_form_for [@art_item, @existing_shopping_cart_item] do |f| %>
+          <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
+          <%= f.submit "Add to shopping cart",:class => "btn btn-flat" %>
+          <% end %>
+        <% else %>
+        <%= simple_form_for [@art_item, @shopping_cart_item] do |f| %>
 
-          <div class="p-3">
-            <p id="hidden">Quantity: <%= @art_item.quantity %></p>
-            <span><p><i class="fas fa-euro-sign"></i></span> <span><%= @art_item.price %></p></span>
-            <% if @existing_shopping_cart_item %>
-              <%= simple_form_for [@art_item, @existing_shopping_cart_item] do |f| %>
-                <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
-                <%= f.submit "Add to shopping cart",:class => "btn btn-flat" %>
-              <% end %>
-            <% else %>
-            <%= simple_form_for [@art_item, @shopping_cart_item] do |f| %>
-              <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
-              <%= f.submit "Add to shopping cart",:class => "btn btn-flat" %>
-              <% end %>
-            <% end %>
-          </div>
-
-        <div>
-          <nav class="dropdownmenu">
-            <ul>
-              <li><a href="#">TEXTILE ▾</a>
-                <ul id="submenu">
-                  <li><a href="#">T-shirt (w)</a></li>
-                  <li><a href="#">T-shirt (m)</a></li>
-                  <li><a href="#">Hoddies</a></li>
-                  <li><a href="#">Tote Bags</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="product-size">
-            <h4>Size</h4>
-          <ul class="ul-size">
-            <li><a href="#">XS</a></li>
-            <li><a href="#">S</a></li>
-            <li><a href="#">M</a></li>
-            <li><a href="#" class="active">L</a></li>
-            <li><a href="#">XL</a></li>
-          </ul>
-        </div>
-
+<!-- ---------DROPDOWN MENU--------- -->
         <div class="product-color">
-            <h4>Colour</h4>
+            <h4>color</h4>
           <ul class="ul-color">
             <li><a href="#" class="black active"></a></li>
             <li><a href="#" class="grey"></a></li>
@@ -77,18 +41,48 @@
             <li><a href="#" class="blue"></a></li>
           </ul>
         </div>
-
+        <div class="product-size">
+            <h4>SIZE</h4>
+          <ul class="ul-size">
+            <li><a href="#">XS</a></li>
+            <li><a href="#">S</a></li>
+            <li><a href="#">M</a></li>
+            <li><a href="#" class="active">L</a></li>
+            <li><a href="#">XL</a></li>
+          </ul>
+        </div>
+        <div class="textile">
+          <nav class="dropdownmenu">
+            <ul>
+              <li><a href="#">SELECT W/M ▾</a>
+                <ul id="submenu">
+                  <li><a href="#">T-shirt (w)</a></li>
+                  <li><a href="#">T-shirt (m)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
         </div>
 
-      </div>
-    </div>
+        <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
+        <div class="center">
+          <%= f.submit "Add to shopping cart",:class => "btn btn-flat" %>
+        </div>
+        <% end %>
+        <% end %>
 
-    <div class="col-8">
-      <div class="card-category-ipad" id="main-art-picture" style="background-image: url(https://images.unsplash.com/photo-1589739900266-43b2843f4c12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1278&q=80)">
-        <img src="<%= image_path @art_item.art.img_url  %>" />
-      </div>
+      <P class="small-text-10 mt-2">Support emerging artists with every single order</P>
     </div>
-
   </div>
+
+<!-- ----------IMAGE CARD----------- -->
+  <div class="col-8">
+    <div class="card-category-tshirt" id="main-art-picture" style="background-image: url(<%= image_url("plain-tshirt-w.png") %>)">
+    <img src="<%= image_path @art_item.art.img_url  %>" />
+    </div>
+  </div>
+
 </div>
-</div>
+
+<!-- <p id="hidden">Quantity: <%= @art_item.quantity %></p> -->
+

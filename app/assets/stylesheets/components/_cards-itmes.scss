@@ -107,42 +107,42 @@
 
 // 3. PRODUCT PERSONALIZATION CARDS
 
-.card-head {
-  position: relative;
-  height: 252px;
-  color: black;
-  background: white;
-  border-radius: 3px 3px 0 0;
-}
+// .card-head {
+//   position: relative;
+//   height: 252px;
+//   color: black;
+//   background: white;
+//   border-radius: 3px 3px 0 0;
+// }
 
-.product-detail {
-  font-size: 11px;
-  color: black;
-}
+// .product-detail {
+//   font-size: 11px;
+//   color: black;
+// }
 
-.product-detail h2 {
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-}
+// .product-detail h2 {
+//   font-size: 18px;
+//   font-weight: 500;
+//   letter-spacing: 2px;
+//   padding-bottom: 10px;
+//   text-transform: uppercase;
+// }
 
-.back-text {
-  color: black;
-  display: inline-block;
-  font-size: 50px;
-  font-weight: 900;
-  align-content: center;
-  margin-top: 20px;
-  opacity: 0.1;
-}
+// .back-text {
+//   color: black;
+//   display: inline-block;
+//   font-size: 50px;
+//   font-weight: 900;
+//   align-content: center;
+//   margin-top: 20px;
+//   opacity: 0.1;
+// }
 
-.art-info h4 {
-  font-size: 14px;
-  color: white;
-  padding: 0 20px;
-}
+// .art-info h4 {
+//   font-size: 14px;
+//   color: white;
+//   padding: 0 20px;
+// }
 .art-info h5 {
   font-size: 14px;
   color: white;
@@ -204,9 +204,9 @@
 
 .product-size h4 {
   font-size: 11px;
-  padding: 0 21px;
-  margin-top: 25px;
-  padding-bottom: 10px;
+  // padding: 0 21px;
+  // margin-top: 25px;
+  // padding-bottom: 10px;
   text-transform: uppercase;
 }
 
@@ -216,7 +216,7 @@
 .ul-size li {
   list-style: none;
   float: left;
-  margin-right: 4px;
+  // margin-right: 4px;
 }
 
 .ul-size li a {
@@ -245,26 +245,27 @@
 
 .product-color h4 {
   font-size: 11px;
-  padding: 21px;
-  margin-top: 20px;
-  padding-bottom: 20px;
+  // padding: 21px;
+  // margin-top: 20px;
+  // padding-bottom: 20px;
   text-transform: uppercase;
 }
 
 .ul-color {
-  margin-left: 27px;
+  // margin-left: 27px;
 }
 
 .ul-color li {
   list-style: none;
   float: left;
-  margin-right: 20px;
+  padding: 6px;
+  // margin-right: 20px;
 }
 
 .ul-color li a {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   border-radius: 100%;
 }
 
@@ -292,11 +293,11 @@
   content: '';
   display: inline-block;
   border: 1px solid black;
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   border-radius: 100%;
-  margin-left: -5px;
-  margin-top: -5px;
+  margin-left: -3px;
+  margin-top: -3px;
 }
 .add-to-card {
   margin-top: 60px;
@@ -386,7 +387,7 @@ li:hover ul#submenu {
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -412,8 +413,8 @@ li:hover ul#submenu {
 .card-category-ipad {
   background-size: cover;
   background-position: center;
-  height: 669px;
-  width: 600px;
+  height: 700px;
+  width: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -424,12 +425,12 @@ li:hover ul#submenu {
 .card-category-ipad img {
   background-color: rgba(0,0,0,0.5);
   position: relative;
-  right: -12px;
+  right: -9px;
   top: -2px;
-  height: 417px;
-  width: 324px;
+  height: 487px;
+  width: 373px;
   border-radius: 16px;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .card-category-poster {
@@ -444,7 +445,6 @@ li:hover ul#submenu {
   opacity: 0.9;
 }
 .card-category-poster img {
-  // background-color: rgba(0,0,0,0.5);
   position: relative;
   right: 2px;
   top: 65px;
@@ -466,7 +466,6 @@ li:hover ul#submenu {
   opacity: 0.9;
 }
 .card-category-postcard img {
-  // background-color: rgba(0,0,0,0.5);
   position: relative;
   right: -1px;
   top: 36px;
@@ -488,12 +487,74 @@ li:hover ul#submenu {
   opacity: 0.9;
 }
 .card-category-bag img {
-  // background-color: rgba(0,0,0,0.5);
   position: relative;
   right: -5px;
   top: 79px;
   height: 270px;
   width: 270px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.card-category-cell {
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  opacity: 0.9;
+}
+.card-category-cell img {
+  position: relative;
+  right: 6px;
+  top: 60px;
+  height: 490px;
+  width: 243px;
+  border-radius: 40px;
+  opacity: 0.8;
+}
+
+.card-category-hoodie {
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  opacity: 0.9;
+}
+.card-category-hoodie img {
+  position: relative;
+  right: -5px;
+  top: 22px;
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.card-category-tshirt {
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  opacity: 0.9;
+}
+.card-category-tshirt img {
+  position: relative;
+  right: 3px;
+  top: 65px;
+  height: 165px;
+  width: 165px;
   border-radius: 50%;
   opacity: 0.8;
 }

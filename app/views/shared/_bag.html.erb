@@ -6,7 +6,7 @@
       <div class="product-desc">
       <span class="product-title">
         <h5><%= @art_item.format %></h5></span>
-        <p class="small-text-14">Description: 13x18 cm | 5⅛ x 7⅛ in printed on 265 g natural art paper with a matt, uncoated finish and lightly textured surface, or with high glossy finish ensuring a rich and vibrant display of colours. Carefully wrapped in silk paper and packed in a protective envelop. Worldwide shipping available.</p>
+        <p class="small-text-14">Description: 36 X 43 cm | Tote bags out of cotton, nylon, and canvas, also one of the biodegradable materials, with long straps for comfort. Worldwide shipping available.</p>
         <span class="product-caption">What people think</span>
         <span class="product-rating">
             <i class="fa fa-star"></i>
@@ -21,43 +21,38 @@
         <p><i class="fas fa-euro-sign"></i>
         <%= @art_item.price %></p>
       </div>
-
         <% if @existing_shopping_cart_item %>
         <%= simple_form_for [@art_item, @existing_shopping_cart_item] do |f| %>
         <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
-          <%= f.submit "ADD TO COLLECTION BAG",:class => "btn btn-flat" %>
-
-
+        <%= f.submit "ADD TO COLLECTION BAG",:class => "btn btn-flat" %>
         <% end %>
       <% else %>
       <%= simple_form_for [@art_item, @shopping_cart_item] do |f| %>
 
 <!-- ---------DROPDOWN MENU--------- -->
-      <div>
-          <nav class="dropdownmenu">
+        <div class="product-color">
+              <h4>Colour</h4>
+            <ul class="ul-color">
+              <li><a href="#" class="black"></a></li>
+              <li><a href="#" class="grey"></a></li>
+              <li><a href="#" class="white active"></a></li>
+              <li><a href="#" class="red"></a></li>
+              <li><a href="#" class="green"></a></li>
+              <li><a href="#" class="blue"></a></li>
+            </ul>
+          </div>
+        <div>
+        <nav class="dropdownmenu">
             <ul>
               <li><a href="#">TEXTILE ▾</a>
                 <ul id="submenu">
-                  <li><a href="#">T-shirt (w)</a></li>
-                  <li><a href="#">T-shirt (m)</a></li>
-                  <li><a href="#">Hoddies</a></li>
-                  <li><a href="#">Tote Bags</a></li>
+                  <li><a href="#">Cotton (w)</a></li>
+                  <li><a href="#">Canvas(m)</a></li>
+                  <li><a href="#">Nylon</a></li>
                 </ul>
               </li>
             </ul>
           </nav>
-        </div>
-
-        <div class="product-color">
-            <h4>Colour</h4>
-          <ul class="ul-color">
-            <li><a href="#" class="black active"></a></li>
-            <li><a href="#" class="grey"></a></li>
-            <li><a href="#" class="white"></a></li>
-            <li><a href="#" class="red"></a></li>
-            <li><a href="#" class="green"></a></li>
-            <li><a href="#" class="blue"></a></li>
-          </ul>
         </div>
 
       <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
@@ -67,7 +62,7 @@
       <% end %>
       <% end %>
 
-      <P class="small-text-10 mt-4">Support emerging artists with every single order</P>
+      <P class="small-text-10 mt-2">Support emerging artists with every single order</P>
     </div>
   </div>
 
