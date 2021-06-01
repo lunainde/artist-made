@@ -54,25 +54,39 @@
 <br>
 
 
-<div class="container">
-<div class="icons">
+<div class="container p-4">
+  <div class="icons">
 
-  <div class="card-category-how" style="background-image: url(<%= image_url("postcard.png") %>)">
-    Breakfast
-  </div>
+    <div class="center"> <%= image_tag( "i-dive.png", class: "card-category-how" ) %>
+      <p>Dive into selective digital artwork collection</p>
+    </div>
+    <div><%= image_tag( "i-heart.png", class: "card-category-how" ) %>
+      <p>Collect your favorite themes for prints or gifts</p>
+    </div>
+    <div> <%= image_tag( "i-gift.png", class: "card-category-how" ) %>
+      <p>Get the perfect gift by customizing them with art</p>
+    </div>
+    <div> <%= image_tag( "i-heart.png", class: "card-category-how" ) %>
+      <p>Add to your collection bag, enter destination and expect deliveries</p>
+    </div>
+    <div> <%= image_tag( "i-heart.png", class: "card-category-how" ) %>
+      <p>Stay-Tune and meet our artist-made creative minds online</p>
+    </div>
+    <div> <%= image_tag( "i-vote.png", class: "card-category-how" ) %>
+      <p>Engage with our team and audience and vote for the pieces you like</p>
+    </div>
+    <div> <%= image_tag( "i-heart.png", class: "card-category-how" ) %>
+      <p>Get notified when left limited editions will go to auction</p>
+    </div>
+    <div> <%= image_tag( "i-heart.png", class: "card-category-how" ) %>
+      <p>Make an artist-made artwork part of your daily life or investment assets</p>
+    </div>
 
-  <div class="card-category-how" style="background-image: url(<%= image_url("postcard.png") %>)">
-    Lunch
   </div>
-
-  <div class="card-category-how" style="background-image: url(<%= image_url("postcard.png") %>)">
-    Dinner
-  </div>
-  <div class="card-category-how" style="background-image: url(<%= image_url("postcard.png") %>)">
-    Dinner
-  </div>
-
 </div>
+
+<div>
+  <%= render 'shared/footer' %>
 </div>
 
 
