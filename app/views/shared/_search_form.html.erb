@@ -1,10 +1,63 @@
 <div class="d-flex">
   <ul class="list-inline tabs-underlined pt-3 mr-4">
-    <li><%= link_to "ART TYPE", artists_path, class: "tab-underlined" %></li>
-    <li><%= link_to "THEME", root_path, class: "tab-underlined" %></li>
-    <li><%= link_to "FORMAT", root_path, class: "tab-underlined" %></li>
-    <li><%= link_to "PRICE", root_path, class: "tab-underlined" %></li>
+
+    <li class="nav-item dropdown">
+      <%= link_to "ART TYPE", "#", class: "tab-underlined avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+      <%= link_to "photography", arts_path(art_type: "photography"), class: "dropdown-item" %>
+      <%= link_to "illustration", arts_path(art_type: "illustration"), class: "dropdown-item" %>
+      <%= link_to "mixed media", arts_path(art_type: "mixed"), class: "dropdown-item" %>
+    </div>
+    </li>
+
+    <li>
+
+
+    <li class="nav-item dropdown">
+      <%= link_to "THEME", "#", class: "tab-underlined avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+      <%= link_to "abstract", arts_path(theme: "abstract"), class: "dropdown-item" %>
+      <%= link_to "architecture", arts_path(theme: "architecture"), class: "dropdown-item" %>
+      <%= link_to "b&w", arts_path(theme: "b&w"), class: "dropdown-item" %>
+      <%= link_to "cities", arts_path(theme: "city"), class: "dropdown-item" %>
+
+      <%= link_to "color", arts_path(theme: "color"), class: "dropdown-item" %>
+
+      <%= link_to "flowers", arts_path(theme: "flower"), class: "dropdown-item" %>
+      <%= link_to "food", arts_path(theme: "food"), class: "dropdown-item" %>
+
+      <%= link_to "interiors", arts_path(theme: "interiors"), class: "dropdown-item" %>
+
+      <%= link_to "nature", arts_path(theme: "nature"), class: "dropdown-item" %>
+
+      <%= link_to "patterns", arts_path(theme: "patterns"), class: "dropdown-item" %>
+      <%= link_to "people", arts_path(theme: "people"), class: "dropdown-item" %>
+      <%= link_to "street", arts_path(theme: "street"), class: "dropdown-item" %>
+      <%= link_to "tech", arts_path(theme: "tech"), class: "dropdown-item" %>
+    </div>
+    </li>
+
+    <li class="nav-item dropdown">
+      <%= link_to "FORMAT", "#", class: "tab-underlined avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+      <%= link_to "portrait", arts_path(art_format: "portait"), class: "dropdown-item" %>
+      <%= link_to "landscape", arts_path(art_format: "lanscape"), class: "dropdown-item" %>
+      <%= link_to "square", arts_path(art_format: "square"), class: "dropdown-item" %>
+    </div>
+    </li>
+
+    <li class="nav-item dropdown">
+      <%= link_to "PRICE", "#", class: "tab-underlined avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+      <%= link_to "0€ up to 500€", arts_path(start_price: 0, end_price: 500), class: "dropdown-item" %>
+      <%= link_to "500€ up to 1.000€", arts_path(start_price: 500, end_price: 1000), class: "dropdown-item" %>
+      <%= link_to "1.000€ up to 5.000€", arts_path(start_price: 1000, end_price: 5000), class: "dropdown-item" %>
+      <%= link_to "5.000€ up to 10.000€", arts_path(start_price: 5000, end_price: 10000), class: "dropdown-item" %>
+      <%= link_to "10.000€ +", arts_path(start_price: 10000, end_price: 9999999999), class: "dropdown-item" %>
+    </div>
+    </li>
   </ul>
+
 
 <%= simple_form_for :search, method: :get, url: arts_path, wrapper: :inline_form, html: { class: "form-inline" }  do |f| %>
     <%= f.input :search_value, placeholder: "Search by Artist, Art or Theme", label: false %>
