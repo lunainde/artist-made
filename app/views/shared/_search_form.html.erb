@@ -1,0 +1,6 @@
+<%= simple_form_for :search, method: :get, url: arts_path, wrapper: :inline_form, html: { class: "form-inline" }  do |f| %>
+    <%= f.input :search_value, placeholder: "Search by Artist, Art or Theme", label: false %>
+    <button name="button" value="searched" type="submit" class="btn-flat ml-2">
+      <i class="fas fa-search"></i>
+    </button>
+<% end %>

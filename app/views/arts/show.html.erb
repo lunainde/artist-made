@@ -1,13 +1,8 @@
+
 <div class="container">
-  <div class="menu-bar">
+  <div class="menu-bar mb-4">
   <h5>Visualize your <strong>selection</strong></h5>
-  <ul class="list-inline tabs-underlined">
-    <li><%= link_to "ART", arts_path, class: "tab-underlined" %></li>
-    <li><%= link_to "ARTIST", artists_path, class: "tab-underlined" %></li>
-    <li><%= link_to "THEME", root_path, class: "tab-underlined" %></li>
-    <li><%= link_to "FORM", root_path, class: "tab-underlined" %></li>
-    <li><%= link_to "PRICE", root_path, class: "tab-underlined" %></li>
-  </ul>
+  <%= render "shared/search_form" %>
 </div>
 
 <!-- ----------IMAGE CARD----------- -->
