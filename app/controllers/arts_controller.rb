@@ -2,7 +2,7 @@ class ArtsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
-    if params[:button] == "searched"
+    if params[:button] == "searched" && params[:search][:search_value].present?
       @arts = policy_scope(Art).global_search(params[:search][:search_value])
       # raise
     else
