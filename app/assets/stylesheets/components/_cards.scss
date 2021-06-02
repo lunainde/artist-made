@@ -72,6 +72,7 @@
 
 /* ART SHOW CARD */
 .card-category {
+  position: relative;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -155,7 +156,7 @@
 
 .card-trip-infos .card-trip-user {
   position: absolute;
-  right: 314px;
+  right: 39%;
   top: 135px;
   width: 165px;
   height: 213px;
@@ -202,4 +203,21 @@
 
 .col.item {
   margin-top: 20px;
+}
+
+.home-icons {
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  min-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.home-footer {
+  bottom: 0px;
 }
