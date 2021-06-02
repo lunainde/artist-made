@@ -5,6 +5,18 @@ class ArtsController < ApplicationController
     if params[:button] == "searched" && params[:search][:search_value].present?
       @arts = policy_scope(Art).global_search(params[:search][:search_value])
       # raise
+    elsif params[:art_type]
+      @arts = policy_scope(Art).where(category: params[:art_type])
+      # raise
+    elsif params[:art_format]
+      @arts = policy_scope(Art).where(art_format: params[:art_format])
+    elsif params[:theme]
+      @arts = policy_scope(Art).where(art_theme: params[:theme])
+    elsif params[:start_price] && params[:end_price]
+      art_items = policy_scope(ArtItem).where(format: "digital").where(price: (params[:start_price]..params[:end_price])).order(:price)
+      @arts = art_items.map do |art_item|
+        art_item.art
+      end
     else
       @arts = policy_scope(Art).order(created_at: :desc)
     end
