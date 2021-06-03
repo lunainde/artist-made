@@ -6,6 +6,9 @@ class ShoppingCartsController < ApplicationController
     if @shopping_cart.paid
       redirect_to paid_shopping_carts_path
     else
+      art = Art.find_by(title: "MULTICOLORED ABSTRACT PAINTING")
+      @art_item = art.art_items.find_by(format: "tablets")
+      # raise
       create_stripe_session if @shopping_cart.shopping_cart_items.first
     end
   end

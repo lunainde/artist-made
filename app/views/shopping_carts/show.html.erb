@@ -87,7 +87,9 @@
         <div class="row align-items-center">
           <div class="col-2">
             <div class="card mb-2">
-            <%= image_tag 'g-handy.png', class: "card-img-top" %>
+            <%= link_to @art_item do %>
+              <%= image_tag 'multi_colored_abstract_painting_on_tablet.png', class: "card-img-top" %>
+            <% end %>
             </div>
           </div>
 
@@ -134,9 +136,31 @@
 
         <div class="row align-items-center">
 
-<div class="col-2">
+          <div class="col-2">
+            <div class="card mb-2">
+              <%= image_tag 'g-poster.png', class: "card-img-top" %>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <div class="card mb-2">
+              <%= image_tag 'g-tote.png', class: "card-img-top" %>
+            </div>
+          </div>
+
+          <div class="col-2">
             <div class="card mb-2">
             <%= image_tag 'g-handy.png', class: "card-img-top" %>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="col-2">
+            <div class="card mb-2">
+              <%= image_tag 'g-tables.png', class: "card-img-top" %>
             </div>
           </div>
 
@@ -152,23 +176,6 @@
             </div>
           </div>
 
-          <div class="col-2">
-            <div class="card mb-2">
-              <%= image_tag 'g-poster.png', class: "card-img-top" %>
-            </div>
-          </div>
-
-          <div class="col-2">
-            <div class="card mb-2">
-              <%= image_tag 'g-tote.png', class: "card-img-top" %>
-            </div>
-          </div>
-
-          <div class="col-2">
-            <div class="card mb-2">
-              <%= image_tag 'g-tables.png', class: "card-img-top" %>
-            </div>
-          </div>
 
         </div>
       </div>
