@@ -33,11 +33,13 @@
 <!-- ---------- FORM ----------- -->
   <div class="col-4">
     <div class="card-body p-4">
-      <h3><%= @art.title %></h3>
-      <h5>by <%= @art.artist.first_name %> <%= @art.artist.last_name %></h5>
+      <h5><%= @art.title %></h5>
+      <p>by <%= @art.artist.first_name %> <%= @art.artist.last_name %></p>
       <div class="product-desc">
       <span class="product-title"><p><%= @art.category %></p></span>
-      <p class="small-text-14"><%= @art.description %> In this craft or sullen art, exercised in the still night, when only the moon rages and the lovers lie abed, artists create singing light, not for ambition or bread, but from their most secrect heart for the lovers of art. </p>
+<!--       <p class="small-text-14"><%= @art.description %> In this craft or sullen art, exercised in the still night, when only the moon rages and the lovers lie abed, artists create singing light, not for ambition or bread, but from their most secrect heart for the lovers of art. </p>
+ -->
+      <p class="small-text-14">In this craft or sullen art, exercised in the still night, when only the moon rages and the lovers lie abed, artists create singing light, not for ambition or bread, but from their most secrect heart for the lovers of art. </p>
 
         <div class = "price mt-2">
           <p><i class="fas fa-euro-sign"></i>
@@ -47,11 +49,14 @@
           <%= simple_form_for [@digital_art_item, @shopping_cart_item] do |f| %>
             <%= f.input :quantity, as: :hidden, input_html: { value: 1 } %>
           <div class="center">
-            <%= f.submit "ADD TO COLLECTION", :class => "btn btn-flat" %>
+            <%= f.submit "ADD TO CART", :class => "btn btn-flat" %>
           </div>
           <% end %>
       </div>
+
 <!-- ---------- GIFT ICONS ----------- -->
+      <p class="small-text-14 mt-2">Explore our <strong>gift shop</strong> and <strong>customize</strong> the perfect gift with a touch of art</p>
+
       <div class="row">
         <div class="col item" id="card-art-item-column">
           <div class="container-fluid">
