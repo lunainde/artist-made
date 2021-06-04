@@ -1,42 +1,42 @@
-<div class="menu-bar">
-  <h5>Discover unique and limited <strong>Artwork</strong></h5>
+<div class="container">
+  <div class="menu-bar">
+    <h5>Discover unique and limited <strong>Artwork</strong></h5>
+    <%= render "shared/search_form" %>
+  </div>
 
-<%= render "shared/search_form" %>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="container">
+      <div class="column">
+        <div class="cards">
+           <% @arts.each do |art| %>
+            <%= cache art do %>
+               <% @heart_color = "visibility: hidden"
+                  if current_user
+                    current_user.favorited?(art) ? @heart_icon = "<i class=\"fas fa-heart\"></i>" : @heart_icon = "<i class=\"far fa-heart\"></i>"
+                  end %>
+              <%= link_to art_path(art) do %>
+                <div class="image">
+                  <%= image_tag art.img_url unless art.img_url.nil? %>
+                  <%= link_to "#", class: "btn btn-fav", data: { artid: art.id } do %>
+                    <%= sanitize @heart_icon %>
+                  <% end %>
+                  <%= link_to art_items_path(art_id: art.art_items[0].art_id), class: "btn btn-gift" do %>
+                    <i class="fas fa-gift"></i>
+                  <% end %>
+                  <%= link_to art_item_shopping_cart_items_path(art.art_items.find_by(format: "digital"), shopping_cart_item: { quantity: 1 }), class: "btn btn-cart", method: "post" do %>
+                    <i class="fas fa-plus"></i>
+                  <% end %>
 
-
-</div>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="column">
-      <div class="cards">
-         <% @arts.each do |art| %>
-          <%= cache art do %>
-             <% @heart_color = "visibility: hidden"
-                if current_user
-                  current_user.favorited?(art) ? @heart_icon = "<i class=\"fas fa-heart\"></i>" : @heart_icon = "<i class=\"far fa-heart\"></i>"
-                end %>
-            <%= link_to art_path(art) do %>
-              <div class="image">
-                <%= image_tag art.img_url unless art.img_url.nil? %>
-                <%= link_to "#", class: "btn btn-fav", data: { artid: art.id } do %>
-                  <%= sanitize @heart_icon %>
-                <% end %>
-                <%= link_to art_items_path(art_id: art.art_items[0].art_id), class: "btn btn-gift" do %>
-                  <i class="fas fa-gift"></i>
-                <% end %>
-                <%= link_to art_item_shopping_cart_items_path(art.art_items.find_by(format: "digital"), shopping_cart_item: { quantity: 1 }), class: "btn btn-cart", method: "post" do %>
-                  <i class="fas fa-plus"></i>
-                <% end %>
-
-                <h5><%= art.title %></h5>
-                <p><%= art.description %></p>
-              </div>
-           <% end %>
+                  <h5><%= art.title %></h5>
+                  <!-- <p><%= art.description %></p> -->
+                </div>
+             <% end %>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
     </div>
   </div>
+  </div>
 </div>
-
