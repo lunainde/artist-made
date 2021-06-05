@@ -1,0 +1,35 @@
+.search-btn {
+  color: grey;
+  background-color: #F4F4F4;
+  border: #F4F4F4;
+}
+
+input[type="text"] {
+  height: 45px;
+  font-size: 12px;
+  display: inline-block;
+  font-weight: 100;
+  border: none;
+  border-bottom: solid 1px grey;
+  outline: none;
+  color: #555;
+  padding: 3px;
+  padding-right: 60px;
+  width: 0px;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  cursor: pointer;
+}
+
+input[type="text"]:focus {
+  border: none;
+  border-bottom: solid 1px black;
+  outline: none !important;
+  background-color: #F4F4F4;
+  border:1px solid #F4F4F4;
+  box-shadow: 0 0 10px #F4F4F4;
+  border-bottom: solid 1px grey;
+}
+

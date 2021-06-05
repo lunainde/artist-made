@@ -46,12 +46,10 @@
     </li>
   </ul>
 
-
 <%= simple_form_for :search, method: :get, url: arts_path, wrapper: :inline_form, html: { class: "form-inline" }  do |f| %>
     <%= f.input :search_value, placeholder: "ARTIST, ART, or THEME", label: false %>
-    <button name="button" value="searched" type="submit" class="btn btn-outline-dark ml-2">
+    <button name="button" value="searched" type="submit" class="btn btn-outline-dark search-btn ml-2">
       <i class="fas fa-search"></i>
     </button>    
 <% end %>
-
 </div>

@@ -1,28 +1,32 @@
-<div class="menu-bar">
-  <h5>Meet the <strong>am-Creators</strong></h5>
-  <ul class="list-inline tabs-underlined">
-    <li><%= link_to "ART", arts_path, class: "tab-underlined" %></li>
-    <li><%= link_to "ARTIST", artists_path, class: "tab-underlined active" %></li>
-    <li><%= link_to "THEME", root_path, class: "tab-underlined" %></li>
-    <li><%= link_to "FORM", root_path, class: "tab-underlined" %></li>
-    <li><%= link_to "PRICE", root_path, class: "tab-underlined" %></li>
-  </ul>
-</div>
+<div class="container">
+  <div class="menu-bar">
+    <h5>Meet the <strong>am-Creators</strong></h5>
+    <ul class="list-inline tabs-underlined">
+      <li><%= link_to "ART", arts_path, class: "tab-underlined" %></li>
+      <li><%= link_to "ARTIST", artists_path, class: "tab-underlined active" %></li>
+      <li><%= link_to "THEME", root_path, class: "tab-underlined" %></li>
+      <li><%= link_to "FORM", root_path, class: "tab-underlined" %></li>
+      <li><%= link_to "PRICE", root_path, class: "tab-underlined" %></li>
+    </ul>
+  </div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="column">
-      <div class="cards">
-         <% @artists.each do |artist| %>
-         <%= link_to artist_path(artist) do %>
-           <div class="image">
-            <%= image_tag artist.url_artists_photo unless artist.url_artists_photo.nil? %>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="container">
+        <div class="column">
+          <div class="cards">
+             <% @artists.each do |artist| %>
+             <%= link_to artist_path(artist) do %>
+               <div class="image">
+                <%= image_tag artist.url_artists_photo unless artist.url_artists_photo.nil? %>
 
-            <h5><%= artist.last_name %></h5>
-            <p><%= artist.art_type %></p>
-           </div>
-          <% end %>
-        <% end %>
+                <h5><%= artist.last_name %></h5>
+                <p><%= artist.art_type %></p>
+               </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
