@@ -10,4 +10,7 @@ class ArtPolicy < ApplicationPolicy
   def show?
     true
   end
+  def create_one_item?
+    true
+  end
 end
