@@ -1,13 +1,7 @@
 <div class="container">
   <div class="menu-bar">
   <h5>Select <strong>the perfect Gift</strong></h5>
-  <ul class="list-inline tabs-underlined">
-    <li><%= link_to "ART", arts_path, class: "tab-underlined" %></li>
-    <li><%= link_to "ARTIST", artists_path, class: "tab-underlined" %></li>
-    <li><%= link_to "THEME", root_path, class: "tab-underlined" %></li>
-    <li><%= link_to "FORM", root_path, class: "tab-underlined" %></li>
-    <li><%= link_to "PRICE", root_path, class: "tab-underlined" %></li>
-  </ul>
+  <%= render "shared/search_form" %>
 </div>
 <div class="container">
 <%= render "shared/tablets" if @art_item.format == "tablets" %>
