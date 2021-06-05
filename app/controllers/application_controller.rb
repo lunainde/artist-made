@@ -2,8 +2,8 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   include Pundit
  # Pundit: white-list approach.
- after_action :verify_authorized, except: [:index, :paid_shopping_carts, :all_favorites], unless: :skip_pundit?
- after_action :verify_policy_scoped, only: [:index, :paid_shopping_carts, :all_favorites], unless: :skip_pundit?
+  after_action :verify_authorized, except: [:index, :paid_shopping_carts, :all_favorites], unless: :skip_pundit?
+  after_action :verify_policy_scoped, only: [:index, :paid_shopping_carts, :all_favorites], unless: :skip_pundit?
 
  # Uncomment when you *really understand* Pundit!
  # rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
@@ -14,9 +14,12 @@ class ApplicationController < ActionController::Base
 #  before_action :find_shopping_cart
 #  @users_shopping_cart = ShoppingCart.where(user: current_user).find_by(paid: false) if current_user
 
-def default_url_options
-  { host: ENV["DOMAIN"] || "localhost:3000" }
-end
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
+  
+
+
 
  private
 
