@@ -1,4 +1,3 @@
-<%= cache art do %>
   <%  if current_user
     current_user.favorited?(art) ? @heart_icon = "<i class=\"fas fa-heart\"></i>" : @heart_icon = "<i class=\"far fa-heart\"></i>"
     end %>
@@ -18,4 +17,3 @@
         <!-- <p><%= art.description %></p> -->
         </div>
     <% end %>
-<% end %>
