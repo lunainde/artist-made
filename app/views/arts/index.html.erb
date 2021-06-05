@@ -3,7 +3,21 @@
     <h5>Discover unique and limited <strong>Artwork</strong></h5>
     <%= render "shared/search_form" %>
   </div>
-  
-  <%= render 'shared/arts' %>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="container">
+        <div class="column">
+          <div class="cards">
+            <% @arts.each do |art| %>
+                <%= render 'shared/arts', art: art %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
 </div>
