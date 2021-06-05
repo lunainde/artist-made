@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_22_201106) do
+ActiveRecord::Schema.define(version: 2021_05_29_224637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,9 @@ ActiveRecord::Schema.define(version: 2021_05_22_201106) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "img_url"
+    t.string "artist"
+    t.string "art_theme"
+    t.string "art_format"
     t.index ["artist_id"], name: "index_arts_on_artist_id"
   end
 
@@ -116,7 +119,7 @@ ActiveRecord::Schema.define(version: 2021_05_22_201106) do
   create_table "shopping_carts", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.boolean "paid", default: false
-    t.decimal "total", precision: 8, scale: 2
+    t.decimal "total", precision: 8, scale: 2, default: "0.0"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "checkout_session_id"

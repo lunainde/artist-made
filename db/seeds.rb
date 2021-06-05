@@ -7,9 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'csv'
+# ShoppingCartItem.destroy_all
 Artist.destroy_all
-ArtItem.destroy_all
-Art.destroy_all
+# ArtItem.destroy_all
+# Art.destroy_all
+
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'am-artists-seed.csv'))
 csv = CSV.parse(csv_text, :headers => true, header_converters: :symbol)
 csv.each do |row|
@@ -32,6 +34,9 @@ csv.each do |row|
     t.category = row[:category]
     t.img_url = row[:img_url]
     t.artist = Artist.all.sample
+    t.art_theme = row[:art_theme]
+    t.art_format = row[:art_format]
+
     t.save
     #--creating corrosponding art_item for art
     ArtItem.create(art: t, format: "digital", price: rand(100.00..10000.00) , quantity: rand(1..10))
