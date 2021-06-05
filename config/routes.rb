@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :art_items, only: [:index, :show] do
     resources :shopping_cart_items, only: [:create, :update]
   end
+  post '/one_shopping_cart_item/', to: 'shopping_cart_items#create_one_item', as: 'one_shopping_cart_item'
+
   resources :shopping_carts, only: [:show]
   get '/paid_shopping_carts/', to: 'shopping_carts#paid_shopping_carts', as: 'paid_shopping_carts'
 

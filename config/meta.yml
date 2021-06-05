@@ -1,3 +1,4 @@
 meta_product_name: "ArtistMade"
 meta_title: "ArtistMade - For the Love of the Art"
 meta_description: "Let the beauty what you love be what you do"
+meta_image: "home-banner-art.png" # should exist in `app/assets/images/`

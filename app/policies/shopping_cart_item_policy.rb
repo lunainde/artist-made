@@ -7,6 +7,9 @@ class ShoppingCartItemPolicy < ApplicationPolicy
   def create?
     user ? true : false
   end
+  def create_one_item?
+    user ? true : false
+  end
   def update?
     user ? true : false
   end

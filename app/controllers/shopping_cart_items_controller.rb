@@ -13,6 +13,16 @@ class ShoppingCartItemsController < ApplicationController
       # raise
     end
   end
+
+  def create_one_item
+    art = Art.find(params[:art_id])
+    authorize art
+    art_item = art.art_items.find_by(format: "digital")
+    params[:art_item_id] = art_item.id
+    params[:shopping_cart_item] = { quantity: "1" }
+    create
+  end
+
   def update
     create_update_init
     @shopping_cart_item = @shopping_cart.shopping_cart_items.find_by(art_item: @art_item)
