@@ -13,6 +13,11 @@ class ApplicationController < ActionController::Base
  # end
 #  before_action :find_shopping_cart
 #  @users_shopping_cart = ShoppingCart.where(user: current_user).find_by(paid: false) if current_user
+
+def default_url_options
+  { host: ENV["DOMAIN"] || "localhost:3000" }
+end
+
  private
 
   # def find_shopping_cart
