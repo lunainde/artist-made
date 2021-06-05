@@ -19,14 +19,14 @@
                 <%= link_to art_path(art) do %>
                     <div class="image">
                     <%= image_tag art.img_url unless art.img_url.nil? %>
-                    <%= link_to art_items_path(art_id: art.art_items[0].art_id), class: "btn btn-gift" do %>
-                        <i class="fas fa-gift"></i>
+                    <%= link_to art_items_path(art_id: art.id), class: "btn btn-gift" do %>
+                      <i class="fas fa-gift"></i>
                     <% end %>
                     <%= link_to "#", class: "btn btn-fav", data: { artid: art.id } do %>
                         <%= sanitize @heart_icon %>
                     <% end %>
-                    <%= link_to root_path, class: "btn btn-cart" do %>
-                        <i class="fas fa-plus"></i>
+                    <%= link_to one_shopping_cart_item_path(art_id: art.id), class: "btn btn-cart", method: "post" do %>
+                      <i class="fas fa-plus"></i>
                     <% end %>
 
                     <h5><%= art.title %></h5>
