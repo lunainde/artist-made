@@ -1,46 +1,24 @@
 // Specific CSS for your home-page
-
 .event-container {
 margin-top: 48px;
 }
-
 .mission-container {
 margin-top: 48px;
 }
-
 .container {
   @media (min-width: 1600px) {
     max-width: 1550px;
   }
 }
-
 .page-container {
   min-height: calc(100vh - 179px);
 }
-
 .home-icons {
   min-height: 400px;
-  // object-fit: cover;
   background-repeat: no-repeat;
-  // justify-content: center;
-  // align-items: center;
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
-  // align-items: center;
-  // background-size: cover;
   background-position: center;
-  // min-height: 400px;
-  // min-width: 800px;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  // margin-top: 20px;
-  // margin-bottom: 50px;
-  // background-position: center;
-  // background-attachment: fixed;
 }
 .home-footer {
   bottom: 0px;
