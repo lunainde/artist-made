@@ -1,0 +1,39 @@
+<div class="booking">
+  <div class="container">
+      <% unless @shopping_cart.paid || @shopping_cart.shopping_cart_items.empty? %>
+
+        <div class="order-header">
+          <h4>Checkout summary</h4>
+        </div>
+        <div class="order-table">
+          <div class="order-description">
+            <p><strong>Subtotal</strong></p>
+            <p><strong>Delivery</strong></p>
+            <p><strong>Total (incl. Taxes)</strong></p>
+          </div>
+          <div class="order-price">
+            <p>€ <%= @shopping_cart.total %></p>
+            <p>Free</p>
+            <p>€ <%= @shopping_cart.total %></p>
+          </div>
+        </div>
+          <button id="pay" class="btn-flat">Continue to pay</button>
+          <script src="https://js.stripe.com/v3/"></script>
+          <script>
+            const paymentButton = document.getElementById('pay');
+            paymentButton.addEventListener('click', () => {
+              const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+              stripe.redirectToCheckout({
+                sessionId: '<%= @shopping_cart.checkout_session_id %>'
+              });
+            });
+          </script>
+        <div class="order-promotional">
+          <p>Promotinal Code</p>
+          <div class="promotional-plus">
+            <p><strong>+</strong></p>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>

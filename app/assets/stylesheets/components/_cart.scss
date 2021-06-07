@@ -6,17 +6,19 @@
     display: flex;
     align-items: center;
     margin-left: 30px;
+    // width: 20%;
   }
   
   .cart-product img {
     height: 100%;
     width: 120px;
     object-fit: cover;
+
   }
   
   .cart-product h2 {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 14px;
+    // font-weight: bold;
     margin: 0;
   }
   
@@ -32,13 +34,24 @@
     padding: 16px;
   }
 
+  .cart-product-infos {
+    width: 80%;
+
+  }
+
+  .cart-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .booking {
     overflow: hidden;
-    height: 256px;
+    min-height: 256px;
     background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-right: 30px;
 
     p {
