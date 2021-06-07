@@ -3,12 +3,13 @@
   <h5>Select <strong>the perfect Gift</strong></h5>
   <%= render "shared/search_form" %>
 </div>
-<div class="container">
-<%= render "shared/tablets" if @art_item.format == "tablets" %>
-<%= render "shared/hoodie" if @art_item.format == "hoodie" %>
-<%= render "shared/postcards" if @art_item.format == "postcards" %>
-<%= render "shared/posters" if @art_item.format == "posters" %>
-<%= render "shared/t-shirts" if @art_item.format == "t-shirt" %>
-<%= render "shared/cellphones" if @art_item.format == "cellphones" %>
-<%= render "shared/bag" if @art_item.format == "bag" %>
+  <div class="container">
+    <%= render "shared/tablets" if @art_item.format == "tablets" %>
+    <%= render "shared/hoodie" if @art_item.format == "hoodie" %>
+    <%= render "shared/postcards" if @art_item.format == "postcards" %>
+    <%= render "shared/posters" if @art_item.format == "posters" %>
+    <%= render "shared/t-shirts" if @art_item.format == "t-shirt" %>
+    <%= render "shared/cellphones" if @art_item.format == "cellphones" %>
+    <%= render "shared/bag" if @art_item.format == "bag" %>
+  </div>
 </div>
