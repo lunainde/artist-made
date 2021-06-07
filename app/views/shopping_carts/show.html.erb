@@ -1,69 +1,20 @@
 <div class="container">
 
-<div class="menu-bar">
-  <h4>Your collection cart</h4>
-
-  <ul class="list-inline tabs-underlined">
-    <li>
-      <%= link_to "art", arts_path, class: "tab-underlined active" %>
-    </li>
-    <li>
-      <%= link_to "artist", artists_path, class: "tab-underlined" %>
-    </li>
-
-    <li>
-      <%= link_to "theme", root_path, class: "tab-underlined" %>
-    </li>
-    <li>
-      <%= link_to "form", root_path, class: "tab-underlined" %>
-    </li>
-    <li>
-      <%= link_to "price", root_path, class: "tab-underlined" %>
-    </li>
-  </ul>
-
-</div>
-
-<div class="row">
-  <div class="col-8">
-    <% @shopping_cart.shopping_cart_items.each do |shopping_cart_item| %>
-      <div class="cart-product mt-3">
-        <%= image_tag image_url shopping_cart_item.art_item.art.img_url %>
-        <div class="cart-product-infos">
-          <h2><%= shopping_cart_item.art_item.art.title %></h2>
-          <p><strong>Type:</strong><%= shopping_cart_item.art_item.format %></p>
-          <p><strong>Quantity:</strong><%= shopping_cart_item.quantity %></p>
-          <p><strong>Price per Piece:</strong> <%= shopping_cart_item.art_item.price %> €</p>
-        </div>
-      </div>
-    <% end %>
+  <div class="menu-bar">
+    <h4>Your collection cart</h4>
+    <%= render "shared/search_form" %>
   </div>
 
-
-  <div class="col-4 mt-3">
-    <div class="booking">
-      <div class="container">
-          <% unless @shopping_cart.paid || @shopping_cart.shopping_cart_items.empty? %>
-              <h1>Checkout summary</h1>
-              <p><strong>Total:</strong> <%= @shopping_cart.total %> €</p>
-              <button id="pay" class="btn btn-primary">Pay</button>
-              <script src="https://js.stripe.com/v3/"></script>
-              <script>
-                const paymentButton = document.getElementById('pay');
-                paymentButton.addEventListener('click', () => {
-                  const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-                  stripe.redirectToCheckout({
-                    sessionId: '<%= @shopping_cart.checkout_session_id %>'
-                  });
-                });
-              </script>
+  <div class="row">
+    <div class="shopping-cart col-8">
+      <%= render "shared/shopping_cart_overview" %>
+    </div>
 
 
-        <% end %>
-      </div>
+    <div class="col-4 mt-3">
+      <%= render "shared/order_form" %>
     </div>
   </div>
-
 
 
  <div id="multi-item-example" class="carousel slide carousel-multi-item mt-4" data-ride="carousel">
