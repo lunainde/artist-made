@@ -1,13 +1,13 @@
 <div class="container">
 <div class="container">
-  <div class="menu-bar mb-4">
+  <div class="menu-bar">
   <h5>Visualize your <strong>selection</strong></h5>
   <%= render "shared/search_form" %>
 </div>
 
-<!-- ----------IMAGE CARD----------- -->
-    <div class="row">
 
+    <div class="row">
+      <!-- ----------IMAGE CARD----------- -->
         <div class="col-8" id="card-main-mockup">
           <div class="card-category" id="main-art-picture" style="background-image: url(<%= image_path @art.img_url  %>)">
             <div class="card-trip-infos" id="art-card-overlay">
@@ -31,7 +31,7 @@
             </div>
           </div>
 
-  <!-- ---------- FORM ----------- -->
+    <!-- ---------- FORM ----------- -->
     <div class="col-4">
       <div class="card-body p-4">
         <h5><%= @art.title %></h5>
@@ -55,7 +55,7 @@
             <% end %>
         </div>
 
-  <!-- ---------- GIFT ICONS ----------- -->
+        <!-- ---------- GIFT ICONS ----------- -->
         <p class="small-text-14 mt-2">Explore our <strong>gift shop</strong> and <strong>customize</strong> the perfect gift with a touch of art</p>
 
         <div class="row">
