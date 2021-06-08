@@ -134,7 +134,21 @@
   margin-right: auto;
   max-width: 250px;
   max-height: 300px;
-  box-shadow: 6px 8px 5px rgba(52,37,25,0.6);
+  box-shadow: 3px 4px 2px rgba(52,37,25,0.2);
+  // margin-top: 2px;
+  // position: relative;
+  // right: 42%;
+  // top: 27%;
+  // width: 30%;
+  // border: rgba(52,37,25,0.6) 4px solid;
+  // .card-trip-infos .card-trip-user {
+  //   position: relative;
+  //   right: -99px;
+  //   top: 110px;
+  //   width: 165px;
+  //   height: 213px;
+  //   border: rgba(52,37,25,0.9) 4px solid;
+  //   opacity: 0.8;
 }
   
 .card-trip-user-square {
@@ -143,18 +157,24 @@
   margin-right: auto;
   max-width: 250px;
   max-height: 300px;
-  box-shadow: 6px 8px 5px rgba(52,37,25,0.6);
+  box-shadow: 3px 4px 2px rgba(52,37,25,0.2);
+//   position: relative;
+//   right: -70px;
+//   top: 167px;
+//   width: 200px;
+//   height: 200px;
+//   border: rgba(52,37,25,0.6) 4px solid;
+//   opacity: 0.85;
 }
 
 .card-trip-user-circle {
   position: absolute;
-  // position: relative;
   border-radius: 50%;
-  right: 36%;
-  top: 38%;
-  width: 225px;
-  height: 225px;
-  border: rgba(0, 0, 0, 0.3) 8px solid;
+  right: 34%;
+  top: 34%;
+  width: 215px;
+  height: 215px;
+  border: rgba(0, 0, 0, 0.2) 8px solid;
 }
   
 .avatar-bordered {
