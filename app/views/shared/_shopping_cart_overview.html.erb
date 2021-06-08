@@ -7,7 +7,7 @@
       <div class="cart-row">
         <p><%= shopping_cart_item.art_item.format.capitalize %></p>
         <p><%= shopping_cart_item.quantity %></p>
-        <p>€ <%= shopping_cart_item.art_item.price %></p>
+        <p> <%= number_with_precision(shopping_cart_item.art_item.price, precision: 2) %> €</p>
 <!--               <p><strong>Type: </strong><%= shopping_cart_item.art_item.format %></p>
         <p><strong>Quantity:</strong><%= shopping_cart_item.quantity %></p>
         <p><strong>Price per Piece:</strong> <%= shopping_cart_item.art_item.price %> €</p> -->
