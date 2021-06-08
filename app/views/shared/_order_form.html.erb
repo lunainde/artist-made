@@ -12,9 +12,9 @@
             <p><strong>Total (incl. Taxes)</strong></p>
           </div>
           <div class="order-price">
-            <p>€ <%= @shopping_cart.total %></p>
+            <p><%= number_with_precision(@shopping_cart.total, precision: 2) %> €</p>
             <p>Free</p>
-            <p>€ <%= @shopping_cart.total %></p>
+            <p><%= number_with_precision(@shopping_cart.total, precision: 2) %> €</p>
           </div>
         </div>
           <button id="pay" class="btn-flat">Continue to pay</button>

@@ -18,13 +18,38 @@
       </div>
 
       <div class="price mt-2">
-        <p><i class="fas fa-euro-sign"></i>
-        <%= @art_item.price %></p>
+        <p>
+        <%= number_with_precision(@art_item.price, precision: 2) %> €</p>
       </div>
         <% if @existing_shopping_cart_item %>
         <%= simple_form_for [@art_item, @existing_shopping_cart_item] do |f| %>
+        <!-- ---------DROPDOWN MENU--------- -->
+        <div class="product-color">
+              <h4>Colour</h4>
+            <ul class="ul-color">
+              <li><a href="#" class="black"></a></li>
+              <li><a href="#" class="grey"></a></li>
+              <li><a href="#" class="white active"></a></li>
+              <li><a href="#" class="red"></a></li>
+              <li><a href="#" class="green"></a></li>
+              <li><a href="#" class="blue"></a></li>
+            </ul>
+          </div>
+        <div>
+        <nav class="dropdownmenu">
+            <ul>
+              <li><a href="#">TEXTILE ▾</a>
+                <ul id="submenu">
+                  <li><a href="#">Cotton (w)</a></li>
+                  <li><a href="#">Canvas(m)</a></li>
+                  <li><a href="#">Nylon</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
-        <%= f.submit "ADD TO CART",:class => "btn btn-flat" %>
+        <%= f.submit "ADD TO CART",:class => "btn btn-flat", style: "width:100%" %>
         <% end %>
       <% else %>
       <%= simple_form_for [@art_item, @shopping_cart_item] do |f| %>
@@ -57,7 +82,7 @@
 
       <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
       <div class="center">
-        <%= f.submit "ADD TO CART",:class => "btn btn-flat" %>
+        <%= f.submit "ADD TO CART",:class => "btn btn-flat", style: "width:100%" %>
       </div>
       <% end %>
       <% end %>
