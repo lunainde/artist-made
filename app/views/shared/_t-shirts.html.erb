@@ -18,13 +18,48 @@
       </div>
 
       <div class="price mt-2">
-        <p><i class="fas fa-euro-sign"></i>
-        <%= @art_item.price %></p>
+        <p>
+        <%= number_with_precision(@art_item.price, precision: 2) %> €</p>
       </div>
         <% if @existing_shopping_cart_item %>
           <%= simple_form_for [@art_item, @existing_shopping_cart_item] do |f| %>
+          <!-- ---------DROPDOWN MENU--------- -->
+        <div class="product-color">
+            <h4>color</h4>
+          <ul class="ul-color">
+            <li><a href="#" class="black active"></a></li>
+            <li><a href="#" class="grey"></a></li>
+            <li><a href="#" class="white"></a></li>
+            <li><a href="#" class="red"></a></li>
+            <li><a href="#" class="green"></a></li>
+            <li><a href="#" class="blue"></a></li>
+          </ul>
+        </div>
+        <div class="product-size">
+            <h4>SIZE</h4>
+          <ul class="ul-size">
+            <li><a href="#">XS</a></li>
+            <li><a href="#">S</a></li>
+            <li><a href="#">M</a></li>
+            <li><a href="#" class="active">L</a></li>
+            <li><a href="#">XL</a></li>
+          </ul>
+        </div>
+        <div class="textile">
+          <nav class="dropdownmenu">
+            <ul>
+              <li><a href="#">SELECT W/M ▾</a>
+                <ul id="submenu">
+                  <li><a href="#">T-shirt (w)</a></li>
+                  <li><a href="#">T-shirt (m)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
           <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
-          <%= f.submit "ADD TO CART",:class => "btn btn-flat" %>
+          <%= f.submit "ADD TO CART",:class => "btn btn-flat", style: "width:100%" %>
           <% end %>
         <% else %>
         <%= simple_form_for [@art_item, @shopping_cart_item] do |f| %>
@@ -66,7 +101,7 @@
 
         <%= f.input :quantity, input_html: { min: "1", value: 1 } %>
         <div class="center">
-          <%= f.submit "ADD TO CART",:class => "btn btn-flat" %>
+          <%= f.submit "ADD TO CART",:class => "btn btn-flat", style: "width:100%" %>
         </div>
         <% end %>
         <% end %>

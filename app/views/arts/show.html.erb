@@ -25,14 +25,14 @@
           <p class="small-text-14">In this craft or sullen art, exercised in the still night, when only the moon rages and the lovers lie abed, artists create singing light, not for ambition or bread, but from their most secrect heart for the lovers of art. </p>
 
           <div class = "price mt-2">
-            <p><i class="fas fa-euro-sign"></i>
-            <span id="price"><%= @digital_art_item.price %></span></p>
+            <p>
+            <span id="price"><%= number_with_precision(@digital_art_item.price, precision: 2) %> €</span></p>
           </div>
 
             <%= simple_form_for [@digital_art_item, @shopping_cart_item] do |f| %>
               <%= f.input :quantity, as: :hidden, input_html: { value: 1 } %>
             <div class="center">
-              <%= f.submit "ADD TO CART", :class => "btn btn-flat" %>
+              <%= f.submit "ADD TO CART", :class => "btn btn-flat", style: "width:100%" %>
             </div>
             <% end %>
         </div>
