@@ -132,8 +132,8 @@
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  max-width: 200px;
-  max-height: 250px;
+  max-width: 250px;
+  max-height: 300px;
   box-shadow: 3px 4px 2px rgba(52,37,25,0.2);
   // margin-top: 2px;
   // position: relative;
@@ -155,8 +155,8 @@
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  max-width: 200px;
-  max-height: 250px;
+  max-width: 250px;
+  max-height: 300px;
   box-shadow: 3px 4px 2px rgba(52,37,25,0.2);
 //   position: relative;
 //   right: -70px;
@@ -197,7 +197,7 @@
 }
   
 .col.item {
-  margin-top: 20px;
+  // margin-top: 20px;
 }
 
 // #card-main-mockup {
@@ -221,3 +221,45 @@
 // .social-media a:hover {
 //   opacity: 1;
 // }
+
+// .card-trip-user {
+//   display: flex;
+//   margin-left: auto;
+//   margin-right: auto;
+//   max-width: 250px;
+//   max-height: 300px;
+//   box-shadow: 6px 8px 5px rgba(52,37,25,0.6);
+//   margin-top: 2px;
+//   position: relative;
+//   right: 42%;
+//   top: 27%;
+//   width: 30%;
+//   border: rgba(52,37,25,0.6) 4px solid;
+// }
+
+//   .card-trip-infos .card-trip-user {
+//     position: relative;
+//     right: -99px;
+//     top: 110px;
+//     width: 165px;
+//     height: 213px;
+//     border: rgba(52,37,25,0.6) 4px solid;
+//     opacity: 0.8;
+// }
+
+// .card-trip-user-square {
+//   display: flex;
+//   margin-left: auto;
+//   margin-right: auto;
+//   max-width: 250px;
+//   max-height: 300px;
+//   box-shadow: 6px 8px 5px rgba(52,37,25,0.6);
+//   position: relative;
+//   right: -70px;
+//   top: 167px;
+//   width: 200px;
+//   height: 200px;
+//   border: rgba(52,37,25,0.6) 4px solid;
+//   opacity: 0.85;
+// }
+

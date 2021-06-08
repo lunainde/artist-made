@@ -14,21 +14,6 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-// .card-art-item {
-//   background-size: cover;
-//   background-position: center;
-//   height: 100px;
-//   display: flex;
-//   justify-content: center;
-//   // vertical-align: bottom;
-//   align-items: center;
-//   color: white;
-//   font-size: 12px;
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-//   border-radius: 2px;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-// }
-
 .cards-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -104,45 +89,6 @@
   border-radius: 3px;
 }
 
-
-// 3. PRODUCT PERSONALIZATION CARDS
-
-// .card-head {
-//   position: relative;
-//   height: 252px;
-//   color: black;
-//   background: white;
-//   border-radius: 3px 3px 0 0;
-// }
-
-// .product-detail {
-//   font-size: 11px;
-//   color: black;
-// }
-
-// .product-detail h2 {
-//   font-size: 18px;
-//   font-weight: 500;
-//   letter-spacing: 2px;
-//   padding-bottom: 10px;
-//   text-transform: uppercase;
-// }
-
-// .back-text {
-//   color: black;
-//   display: inline-block;
-//   font-size: 50px;
-//   font-weight: 900;
-//   align-content: center;
-//   margin-top: 20px;
-//   opacity: 0.1;
-// }
-
-// .art-info h4 {
-//   font-size: 14px;
-//   color: white;
-//   padding: 0 20px;
-// }
 .art-info h5 {
   font-size: 14px;
   color: white;
@@ -155,7 +101,8 @@
   border-radius: 3px;
   display: flex;
   flex-direction: column;
-  min-height: 750px;
+  min-height: 718px;
+  max-width: 350px;
 }
 
 .product-title {
@@ -565,4 +512,57 @@ margin-bottom: 0;
 }
 
 
+// 3. PRODUCT PERSONALIZATION CARDS
 
+// .card-head {
+//   position: relative;
+//   height: 252px;
+//   color: black;
+//   background: white;
+//   border-radius: 3px 3px 0 0;
+// }
+
+// .product-detail {
+//   font-size: 11px;
+//   color: black;
+// }
+
+// .product-detail h2 {
+//   font-size: 18px;
+//   font-weight: 500;
+//   letter-spacing: 2px;
+//   padding-bottom: 10px;
+//   text-transform: uppercase;
+// }
+
+// .back-text {
+//   color: black;
+//   display: inline-block;
+//   font-size: 50px;
+//   font-weight: 900;
+//   align-content: center;
+//   margin-top: 20px;
+//   opacity: 0.1;
+// }
+
+// .art-info h4 {
+//   font-size: 14px;
+//   color: white;
+//   padding: 0 20px;
+// }
+
+
+// .card-art-item {
+//   background-size: cover;
+//   background-position: center;
+//   height: 100px;
+//   display: flex;
+//   justify-content: center;
+//   // vertical-align: bottom;
+//   align-items: center;
+//   color: white;
+//   font-size: 12px;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   border-radius: 2px;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+// }
