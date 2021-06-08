@@ -92,6 +92,9 @@
   filter: opacity(1);
 }
 
+
+
+
 .card-mockup {
   background-size: cover;
   background-position: center;
@@ -120,36 +123,25 @@
 .card-category {
   // position: relative;
   // background-size: contain;
-  // background-repeat: no-repeat;
-  // background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 640px;
   width: 500px;
   border-radius: 3px;
-  background-color: white;
+  // background-color: white;
   background-size: cover;
-display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: block;
+  // display: block;
   margin-left: auto;
   margin-right: auto;
   padding-top: 100px;
-
   padding-right: 85px;
   padding-left: 85px;
+  padding-bottom: 200px;
 }
-// .card-category img{
-//   position: relative;
-//   right: -9px;
-//   top: -2px;
-//   height: 487px;
-//   width: 373px;
-// }
 
-
-#main-art-picture {
-
-}
 
 .card-trip {
   padding: 16px;
