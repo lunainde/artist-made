@@ -68,47 +68,25 @@
 }
 
 /* ART SHOW CARD */
-.card-category {
-  position: relative;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 640px;
-  border-radius: 3px;
 
-}
 
-.card-art-item {
-  background-size: cover;
-  background-position: center;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  vertical-align: bottom;
-  color: white;
-  font-size: 18px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 2px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
+// /* ART SHOW CARD Info */
+// .social-media {
+//   display: flex;
+//   align-items: center;
+// }
+// .social-media a {
+//   color: black;
+//   opacity: 0.15;
+//   text-decoration: none;
+//   font-size: 20px;
+//   padding: 0px 10px;
+// }
+// .social-media a:hover {
+//   opacity: 1;
+// }
 
-/* ART SHOW CARD Info */
-.social-media {
-  display: flex;
-  align-items: center;
-}
-.social-media a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 0px 10px;
-}
-.social-media a:hover {
-  opacity: 1;
-}
-
-/* ART SHOW CARD Mockup //box-shadow: 0 0 15px rgba (0,0,0,0.2); */
+/* ART SHOW CARD Mockup */
 
 .card-mini-visibe {
   filter: opacity(1);
@@ -137,13 +115,43 @@
   // padding-left: 16px;
 
 }
-#card-main-mockup {
-  // background-color: white;
-  // padding-top: 16px;
-  // margin-top: 0px;
+
+
+.card-category {
+  // position: relative;
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  height: 640px;
+  width: 500px;
+  border-radius: 3px;
+  background-color: white;
+  background-size: cover;
+display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+
+  padding-right: 85px;
+  padding-left: 85px;
+}
+// .card-category img{
+//   position: relative;
+//   right: -9px;
+//   top: -2px;
+//   height: 487px;
+//   width: 373px;
+// }
+
+
+#main-art-picture {
+
 }
 
-.card-trip .card-trip-infos {
+.card-trip {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -151,32 +159,38 @@
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 41.2%;
-  top: 17%;
-  width: 23.5%;
-  height: 35%;
-  border: rgba(52,37,25,0.6) 4px solid;
+.card-trip-user {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+  max-height: 350px;
+  box-shadow: 6px 8px 5px rgba(52,37,25,0.6);
+    // margin-top: 2px;
+  // position: relative;
+  // right: 42%;
+  // top: 27%;
+  // width: 30%;
+  // border: rgba(52,37,25,0.6) 4px solid;
 }
-
 .card-trip-user-square {
-  position: absolute;
-  right: 42%;
-  top: 27%;
-  width: 30%;
-  height: 30%;
-  border: rgba(52,37,25,0.6) 4px solid;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+  max-height: 350px;
+  box-shadow: 6px 8px 5px rgba(52,37,25,0.6);
+
 }
 
 .card-trip-user-circle {
   position: absolute;
   border-radius: 50%;
-  right: 40%;
-  top: 55%;
-  width: 20%;
-  height: 20%;
-  border: rgba(52,37,25,0.6) 4px solid;
+  right: 35%;
+  top: 32%;
+  width: 225px;
+  height: 225px;
+  border: rgba(0, 0, 0, 0.3) 8px solid;
 }
 .avatar-bordered {
   width: 40px;
@@ -187,6 +201,7 @@
 .mockup-square {
   border-radius: 2px;
   border: rgba(52,37,25,0.6) 4px solid;
+
 }
 
 .active {
@@ -202,4 +217,23 @@
   margin-top: 20px;
 }
 
+// .card-art-item {
+//   background-size: cover;
+//   background-position: center;
+//   height: 100px;
+//   display: flex;
+//   justify-content: center;
+//   // vertical-align: bottom;
+//   color: white;
+//   font-size: 18px;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   border-radius: 2px;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+// }
+
+// #card-main-mockup {
+  // background-color: white;
+  // padding-top: 16px;
+  // margin-top: 0px;
+// }
 
