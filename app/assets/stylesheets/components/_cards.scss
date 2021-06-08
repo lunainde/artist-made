@@ -67,61 +67,14 @@
   }
 }
 
-/* ART SHOW CARD */
-.card-category {
-  // position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  // height: 640px; // for landscape
-  height: 570px;
-  width: 400px;
-  border-radius: 3px;
-  align-items: center;
-
-}
-
-.card-art-item {
-  background-size: cover;
-  background-position: center;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  vertical-align: bottom;
-  color: white;
-  font-size: 18px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 2px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-/* ART SHOW CARD Info */
-.social-media {
-  display: flex;
-  align-items: center;
-}
-.social-media a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 0px 10px;
-}
-.social-media a:hover {
-  opacity: 1;
-}
-
-/* ART SHOW CARD Mockup //box-shadow: 0 0 15px rgba (0,0,0,0.2); */
-
+/* ART SHOW CARD Mockup */
 .card-mini-visibe {
   filter: opacity(1);
 }
-
 .card-mockup {
   background-size: cover;
   background-position: center;
   height: 100px;
-  // width: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,29 +87,39 @@
 .card-mockup:hover {
   filter: opacity(1);
 }
-
 #card-mockup-container {
   justify-content: center;
-  // padding-left: 16px;
-
 }
 
-#main-art-container {
+.card-category {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  width: 460px;
+  border-radius: 3px;
+  background-size: cover;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-right: 45px;
+  padding-left: 45px;
+  padding-bottom: 150px;
 }
 
-#card-main-mockup {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  // justify-content: center;
-  // background-color: white;
-  // padding-top: 16px;
-  // margin-top: 0px;
-}
+// #main-art-container {
+//   display: flex;
+//   justify-content: center;
+// }
 
-.card-trip .card-trip-infos {
+// #card-main-mockup {
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+ 
+.card-trip {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -164,58 +127,97 @@
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
-  position: relative;
-  right: -99px;
-  top: 110px;
-  width: 165px;
-  height: 213px;
-  border: rgba(52,37,25,0.6) 4px solid;
-  opacity: 0.8;
+.card-trip-user {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+  max-height: 250px;
+  box-shadow: 6px 8px 5px rgba(52,37,25,0.6);
+  // margin-top: 2px;
+  // position: relative;
+  // right: 42%;
+  // top: 27%;
+  // width: 30%;
+  // border: rgba(52,37,25,0.6) 4px solid;
+  // .card-trip-infos .card-trip-user {
+  //   position: relative;
+  //   right: -99px;
+  //   top: 110px;
+  //   width: 165px;
+  //   height: 213px;
+  //   border: rgba(52,37,25,0.6) 4px solid;
+  //   opacity: 0.8;
 }
-
+  
 .card-trip-user-square {
-  position: relative;
-  right: -70px;
-  top: 167px;
-  width: 200px;
-  height: 200px;
-  border: rgba(52,37,25,0.6) 4px solid;
-  opacity: 0.85;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+  max-height: 250px;
+  box-shadow: 6px 8px 5px rgba(52,37,25,0.6);
+//   position: relative;
+//   right: -70px;
+//   top: 167px;
+//   width: 200px;
+//   height: 200px;
+//   border: rgba(52,37,25,0.6) 4px solid;
+//   opacity: 0.85;
 }
 
 .card-trip-user-circle {
+  //   position: absolute;
   position: relative;
   border-radius: 50%;
-  right: -120px;
-  top: 327px;
+  right: 35%;
+  top: 32%;
   width: 150px;
   height: 150px;
-  border: rgba(52,37,25,0.6) 4px solid;
-  opacity: 0.8;
+  border: rgba(0, 0, 0, 0.3) 8px solid;
 }
+  
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;
   border: white 1px solid;
 }
-
+  
 .mockup-square {
   border-radius: 2px;
   border: rgba(52,37,25,0.6) 4px solid;
 }
-
+  
 .active {
   filter: opacity(1);
 }
-
+  
 #art-card-overlay {
   visibility: hidden;
-
 }
-
+  
 .col.item {
   margin-top: 20px;
 }
 
-
+// #card-main-mockup {
+  // background-color: white;
+  // padding-top: 16px;
+  // margin-top: 0px;
+// }
+  
+  /* ART SHOW CARD Info */
+// .social-media {
+//   display: flex;
+//   align-items: center;
+// }
+// .social-media a {
+//   color: black;
+//   opacity: 0.15;
+//   text-decoration: none;
+//   font-size: 20px;
+//   padding: 0px 10px;
+// }
+// .social-media a:hover {
+//   opacity: 1;
+// }
