@@ -3,7 +3,7 @@
       <% unless @shopping_cart.paid || @shopping_cart.shopping_cart_items.empty? %>
 
         <div class="order-header">
-          <h4>Checkout summary</h4>
+          <h5 class="center">Checkout Summary</h5>
         </div>
         <div class="order-table">
           <div class="order-description">
@@ -17,7 +17,7 @@
             <p><%= number_with_precision(@shopping_cart.total, precision: 2) %> €</p>
           </div>
         </div>
-          <button id="pay" class="btn-flat">Continue to pay</button>
+          <button id="pay" class="btn-flat">CONTINUE TO PAY</button>
           <script src="https://js.stripe.com/v3/"></script>
           <script>
             const paymentButton = document.getElementById('pay');
@@ -29,9 +29,9 @@
             });
           </script>
         <div class="order-promotional">
-          <p>Promotional Code</p>
+          <p class="small-text-14" style="color:grey">Promotional Code</p>
           <div class="promotional-plus">
-            <p><strong>+</strong></p>
+            <p style="color:grey"><strong>+</strong></p>
           </div>
         </div>
       <% end %>

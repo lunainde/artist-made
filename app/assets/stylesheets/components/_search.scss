@@ -2,6 +2,7 @@
   color: grey;
   background-color: #F4F4F4;
   border: #F4F4F4;
+  // padding: 2px;
 }
 
 input[type="text"] {
@@ -13,8 +14,8 @@ input[type="text"] {
   border-bottom: solid 1px grey;
   outline: none;
   color: grey;
-  padding: 3px;
-  // padding-right: 60px;
+  padding: 0px;
+  margin-right: 4px;
   width: 0px;
   top: 0;
   right: 0;
@@ -31,4 +32,13 @@ input[type="text"]:focus {
   border:1px solid #F4F4F4;
   box-shadow: 0 0 10px #F4F4F4;
   border-bottom: solid 1px grey;
+}
+
+.dropdown-menu {
+  font-size: 12px;
+ border: none;
+}
+
+.dropdown-item {
+  color: grey;
 }
