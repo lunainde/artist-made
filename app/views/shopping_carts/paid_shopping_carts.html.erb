@@ -12,7 +12,7 @@
                 <strong><% paid_shopping_cart.shopping_cart_items.each do |item| %>
                 <p> <%= item.art_item.art.title %> - <%= item.art_item.format %> </p>
                 <% end %>
-                </strong> for <strong><%= number_with_precision(paid_shopping_cart.total, precision: 2) %> €</strong></p>
+                </strong> for <strong><%= number_with_precision(paid_shopping_cart.total, precision: 2, delimiter: ",") %> €</strong></p>
                 </div>
                 <h3>Thank you for your purchase! </h3>
               </div> 
