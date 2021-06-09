@@ -5,7 +5,7 @@
           <div class="container">
             <div class="row py-4">
              
-              <div class="col" style="margin-left:100px; width:100%;">
+              <div class="col" style="margin-left:20px; width:100%;">
                 <h3>Checkout summary</h3>
                 <div class="orders">
                 <p>You have ordered: </p>
@@ -14,7 +14,7 @@
                 <% end %>
                 </strong> for <strong><%= paid_shopping_cart.total %> €</strong></p>
                 </div>
-                <h3>Thank you for your purchase! </h3>
+                <h5>Thank you for your purchase! </h5>
               </div> 
               <div class="col-md-3">
                 <%= image_tag paid_shopping_cart.shopping_cart_items.first.art_item.art.img_url, width: '100%' %>
