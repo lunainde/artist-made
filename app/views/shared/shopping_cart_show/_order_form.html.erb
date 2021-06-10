@@ -5,6 +5,12 @@
         <div class="order-header">
           <h5>Order Summary</h5>
         </div>
+          <div class="order-promotional">
+            <p class="small-text-14" style="color:grey">Promotional Code</p>
+            <div class="promotional-plus">
+              <p style="color:grey"><strong>+</strong></p>
+            </div>
+          </div>
         <div class="order-table">
           <div class="order-description">
             <p><strong>Subtotal</strong></p>
@@ -14,14 +20,12 @@
           <div class="order-price">
             <p><%= number_with_precision(@shopping_cart.total, precision: 2, delimiter: ",") %> €</p>
             <p>Free</p>
-            <p><%= number_with_precision(@shopping_cart.total, precision: 2, delimiter: ",") %> €</p>
+            <p><strong><%= number_with_precision(@shopping_cart.total, precision: 2, delimiter: ",") %> €</strong></p>
           </div>
         </div>
-        <div class="order-promotional">
-          <p class="small-text-14" style="color:grey">Promotional Code</p>
-          <div class="promotional-plus">
-            <p style="color:grey"><strong>+</strong></p>
-          </div>
+
+        <div class="total">
+          <h5><%= number_with_precision(@shopping_cart.total, precision: 2, delimiter: ",") %> €</h5>
         </div>
           <button id="pay" class="btn-flat">CHECKOUT</button>
           <script src="https://js.stripe.com/v3/"></script>

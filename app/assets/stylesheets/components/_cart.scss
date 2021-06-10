@@ -49,11 +49,12 @@
     overflow: hidden;
     // min-height: 256px;
     background: white;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
     display: flex;
     align-items: flex-start;
     margin-right: 30px;
-   height: 460px;
+    height: 460px;
+    border-radius: 3px;
 
     p {
       font-size: 16px;
