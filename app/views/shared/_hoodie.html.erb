@@ -19,7 +19,7 @@
 
       <div class="price mt-2">
         <p>
-        <%= number_with_precision(@art_item.price, precision: 2) %> €</p>
+        <%= number_with_precision(@art_item.price, precision: 2, delimiter: ",") %> €</p>
       </div>
         <% if @existing_shopping_cart_item %>
         <%= simple_form_for [@art_item, @existing_shopping_cart_item] do |f| %>

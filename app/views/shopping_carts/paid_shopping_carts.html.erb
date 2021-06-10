@@ -14,10 +14,17 @@
                     </strong> for <strong><%= number_with_precision(@paid_shopping_carts.last.total, precision: 2) %> €</strong></p>
                   </div>
                   <h5>Thank you for your purchase! </h5>
-                </div> 
+                </div>
                 <div class="col-md-3">
                   <%= image_tag @paid_shopping_carts.last.shopping_cart_items.first.art_item.art.img_url, width: '100%' %>
                 </div>
+<!-- <<<<<<< HEAD
+                <h3>Thank you for your purchase! </h3>
+              </div>
+              <div class="col-md-3">
+                <%= image_tag @paid_shopping_carts.last.shopping_cart_items.first.art_item.art.img_url, width: '100%' %>
+              </div>
+======= -->
               <% end %>
             </div>
           </div>
@@ -37,7 +44,7 @@
                 <strong><% paid_shopping_cart.shopping_cart_items.each do |item| %>
                 <p> <%= item.art_item.art.title %> - <%= item.art_item.format %> </p>
                 <% end %>
-                </strong> for <strong><%= number_with_precision(paid_shopping_cart.total, precision: 2) %> €</strong></p>
+                </strong> for <strong><%= number_with_precision(paid_shopping_cart.total, precision: 2, delimiter: ",") %> €</strong></p>
                 </div>
                 <h5>Thank you for your purchase! </h5>
               </div> 
@@ -50,4 +57,3 @@
       </div>
 </div>
 
--->

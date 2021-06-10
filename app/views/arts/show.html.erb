@@ -25,7 +25,7 @@
 
           <div class = "price mt-2">
             <p>
-            <span id="price"><%= number_with_precision(@digital_art_item.price, precision: 2) %> €</span></p>
+            <span id="price"><%= number_with_precision(@digital_art_item.price, precision: 2, delimiter: ",") %> €</span></p>
           </div>
 
             <%= simple_form_for [@digital_art_item, @shopping_cart_item] do |f| %>
