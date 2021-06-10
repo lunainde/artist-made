@@ -16,7 +16,135 @@
     border-radius: 3px;
   }
 
-  .summary h3{
+  .summary h3 {
     margin-top: 50px;
     text-align: center;
   }
+
+// #multi-item-example {
+//   background-color: white;
+// }
+
+.fa.fa-chevron-left, .fa.fa-chevron-right {
+  color: black;
+}
+
+
+.art-details {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 8px;
+  // justify-content: center;
+
+}
+
+.art-details h8 {
+  padding-bottom: 16px;
+  font-size: 11px;
+  font-weight: bold;
+  font-family: orbitron;
+  letter-spacing: 1px;
+
+  // text-overflow: ellipsis;
+  // white-space: nowrap;
+  // overflow: hidden;
+}
+
+.art-details p {
+  font-size: 13px;
+}
+
+.cart-quantity {
+  width: 10%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 13px;
+}
+
+.art-price {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 8px;
+  font-size: 13px;
+}
+
+.art-total {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 13px;
+}
+
+.cart-numbers {
+  width: 52%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  // padding-bottom: 16px;
+}
+
+.card-product-art {
+  overflow: hidden;
+  height: 154px;
+  // height: 120px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 32px;
+  border-bottom: rgba(0,0,0,0.2) 1px solid;
+  padding-left: 16px;
+}
+
+.container.cart {
+  background-color: white;
+  width: 100%;
+  min-height: 256px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.description-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 28%;
+}
+
+.details-header {
+  padding: 14px 0px;
+  border-bottom: solid 1.5px grey;
+}
+
+.details-header h5, .description-details h6 {
+  margin-bottom: 0px;
+  color: grey;
+}
+
+.header-description {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 24px;
+}
+
+.product-image {
+  width: 120px;
+}
+
+.product-image img {
+  // height: 100%;
+  // width: 100px;
+  object-fit: cover;
+  width: 100px;
+  height: 120px;
+  // margin-right: 16px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  padding-bottom: 24px;
+}

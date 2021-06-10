@@ -6,17 +6,18 @@
 
   <div class="row">
     <div class="shopping-cart col-8">
-      <%= render "shared/shopping_cart_overview" %>
+      <!-- for old view render: "shared/shopping_cart_show/shopping_cart_overview" -->
+      <%= render "shared/shopping_cart_show/cart_details" %>
     </div>
 
 
     <div class="col-4 mt-3">
-      <%= render "shared/order_form" %>
+      <%= render "shared/shopping_cart_show/order_form" %>
     </div>
   </div>
 
 
- <div id="multi-item-example" class="carousel slide carousel-multi-item mt-4" data-ride="carousel">
+ <div id="multi-item-example" class="carousel slide carousel-multi-item mt-4" data-interval="10000">
 
     <div class="container">
     <div class="menu-bar">
