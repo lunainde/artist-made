@@ -1,36 +1,26 @@
 .confirmation {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-image: image-url("home-banner-art.png");
-    background-size: cover; 
-    // backdrop-filter: blur(6px); 
-    -webkit-filter: blur(6px); 
-  }
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
 .orders{
-  margin-top: 20px;
+margin-top: 20px;
 }
 .summary{
-  z-index: 10;
-    margin: auto;
-    width: 50%;
-    height: 50%;
-    background-color: #F4F4F4;
-    position: relative;
-    top: 200px;
-    // right: 350px;
-    // width: 800px;
-    // height: 300px;
-    border-radius: 3px;
-  }
-
-  .summary h3 {
-    margin-top: 0px;
-    // text-align: center;
-  }
-  .summary h5 {
-    margin-top: 95px;
-  };
+  background-color: #F4F4F4;
+  position: absolute;
+  top: 200px;
+  right: 350px;
+  width: 800px;
+  height: 300px;
+  border-radius: 3px;
+}
+.summary h3{  
+  margin-top: 0px;
+}
+.summary h5{
+  margin-top: 33px;
+}
 
 // #multi-item-example {
 //   background-color: white;
