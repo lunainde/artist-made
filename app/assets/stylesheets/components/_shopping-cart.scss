@@ -1,18 +1,26 @@
 .confirmation {
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 400px;
+    height: 100vh;
+    background-image: url("home-banner-art.png");
+    background-size: cover; 
+    // backdrop-filter: blur(6px); 
+    -webkit-filter: blur(6px); 
   }
 .orders{
   margin-top: 20px;
 }
 .summary{
+  z-index: 10;
+    margin: auto;
+    width: 50%;
+    height: 50%;
     background-color: #F4F4F4;
-    position: absolute;
+    position: relative;
     top: 200px;
-    right: 350px;
-    width: 800px;
-    height: 300px;
+    // right: 350px;
+    // width: 800px;
+    // height: 300px;
     border-radius: 3px;
   }
 
