@@ -47,13 +47,13 @@
 
   .booking {
     overflow: hidden;
-    min-height: 256px;
+    // min-height: 256px;
     background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     display: flex;
     align-items: flex-start;
     margin-right: 30px;
-   // height: 460px;
+   height: 460px;
 
     p {
       font-size: 16px;

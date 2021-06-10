@@ -17,6 +17,12 @@
             <p><%= number_with_precision(@shopping_cart.total, precision: 2, delimiter: ",") %> €</p>
           </div>
         </div>
+        <div class="order-promotional">
+          <p class="small-text-14" style="color:grey">Promotional Code</p>
+          <div class="promotional-plus">
+            <p style="color:grey"><strong>+</strong></p>
+          </div>
+        </div>
           <button id="pay" class="btn-flat">CHECKOUT</button>
           <script src="https://js.stripe.com/v3/"></script>
           <script>
@@ -28,12 +34,10 @@
               });
             });
           </script>
-        <div class="order-promotional">
-          <p class="small-text-14" style="color:grey">Promotional Code</p>
-          <div class="promotional-plus">
-            <p style="color:grey"><strong>+</strong></p>
+          <div class="support">
+            <p>Need help? Contact us under</p>
+            <p>artist-made@support.com</p>
           </div>
-        </div>
       <% end %>
   </div>
 </div>
