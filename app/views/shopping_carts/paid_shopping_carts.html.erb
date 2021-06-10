@@ -18,12 +18,36 @@
             </div> 
             <div class="col-md-3">
               <%= image_tag @paid_shopping_carts.last.shopping_cart_items.first.art_item.art.img_url, width: '100%' %>
+
+ <!--              
+              
+<div class="confirmation">
+    <%= image_tag("home-banner-art.png", style: "background-size: cover; backdrop-filter: blur(6px); -webkit-filter: blur(6px); width: 100%; height: 100vh;") %>
+      <div class="summary">
+          <div class="container">
+            <div class="row py-4">
+              <% if @paid_shopping_carts.present? %>
+                <div class="col" style="margin-left:20px; width:100%;">
+                  <h3>Checkout summary</h3>
+                  <div class="orders">
+                    <p>You have ordered: </p>
+                    <strong><% @paid_shopping_carts.last.shopping_cart_items.each do |item| %>
+                    <p> <%= item.art_item.art.title %> - <%= item.art_item.format %> </p>
+                    <% end %>
+                    </strong> for <strong><%= number_with_precision(@paid_shopping_carts.last.total, precision: 2) %> €</strong></p>
+                  </div>
+                  <h5>Thank you for your purchase! </h5>
+                </div>
+                <div class="col-md-3">
+                  <%= image_tag @paid_shopping_carts.last.shopping_cart_items.first.art_item.art.img_url, width: '100%' %>
+                </div>
+              <% end %>
+                -->
             </div>
           <% end %>
         </div>
       </div>
   </div>
-
 
       <!--
         <% @paid_shopping_carts.each do |paid_shopping_cart| %>
@@ -37,7 +61,7 @@
                 <strong><% paid_shopping_cart.shopping_cart_items.each do |item| %>
                 <p> <%= item.art_item.art.title %> - <%= item.art_item.format %> </p>
                 <% end %>
-                </strong> for <strong><%= number_with_precision(paid_shopping_cart.total, precision: 2) %> €</strong></p>
+                </strong> for <strong><%= number_with_precision(paid_shopping_cart.total, precision: 2, delimiter: ",") %> €</strong></p>
                 </div>
                 <h5>Thank you for your purchase! </h5>
               </div> 
@@ -50,4 +74,3 @@
       </div>
 </div>
 
--->

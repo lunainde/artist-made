@@ -1,0 +1,39 @@
+<div class="container cart mt-3">
+  <div class="details-header">
+    <h5>Details</h5>
+  </div>
+
+  <div class="header-description mt-3">
+    <div class="description-details">
+      <h6>Quantity</h6>
+      <h6>Price</h6>
+<!--       <h6>Total</h6> -->
+    </div>
+  </div>
+
+  <% @shopping_cart.shopping_cart_items.each do |shopping_cart_item| %>
+    <div class="card-product-art">
+      <div class="product-image">
+        <%= image_tag image_url shopping_cart_item.art_item.art.img_url %>
+      </div>
+      <div class="product-details">
+        <div class="art-details">
+          <h8><%= shopping_cart_item.art_item.art.title %></h8>
+          <p><strong>Artist: </strong> <%= shopping_cart_item.art_item.art.artist.first_name %> <%= shopping_cart_item.art_item.art.artist.last_name %> </p>
+          <p><%= shopping_cart_item.art_item.format.capitalize %></p>
+        </div>
+        <div class="cart-numbers">
+          <div class="cart-quantity">
+            <p><%= shopping_cart_item.quantity %></p>
+          </div>
+          <div class="art-price">
+            <p> <%= number_with_precision(shopping_cart_item.art_item.price, precision: 2, delimiter: ",") %> €</p>
+          </div>
+<!--           <div class="art-total">
+            <p> <%= number_with_precision(shopping_cart_item.art_item.price, precision: 2, delimiter: ",") %> €</p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
