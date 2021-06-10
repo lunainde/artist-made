@@ -24,26 +24,56 @@
   flex-direction: row;
   justify-content: space-between;
   color: grey;
+  padding-top: 16px;
+
+  p {
+    font-size: 16px;
+  }
+
 }
 
 .promotional-plus {
   justify-content: center;
   padding: 0px 30px;
   cursor: pointer;
+
+
+  p {
+    font-size: 16px;
+  }
 }
 
 .order-table {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 15px;
+  padding-top: 20px;
+  border-bottom:  rgba(0,0,0,0.2) 1px solid;
+  padding-bottom: 25px;
 }
 
 #pay {
     width: 100%;
-    margin-top: 8px;
-    margin-bottom: 24px;
+    margin-top: 24px;
+    margin-bottom: 16px;
     margin-left: 0px;
     margin-right: 0px;
     border-color: black;
+}
+
+.support {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.support p {
+  color: grey;
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+.total {
+  padding-top: 28px;
+  display: flex;
+  justify-content: center;
 }
