@@ -3,20 +3,22 @@
       <div class="summary">
           <div class="container">
             <div class="row py-4">
-              <div class="col" style="margin-left:20px; width:100%;">
-                <h3>Checkout summary</h3>
-                <div class="orders">
-                <p>You have ordered: </p>
-                <strong><% @paid_shopping_carts.last.shopping_cart_items.each do |item| %>
-                <p> <%= item.art_item.art.title %> - <%= item.art_item.format %> </p>
-                <% end %>
-                </strong> for <strong><%= number_with_precision(@paid_shopping_carts.last.total, precision: 2) %> €</strong></p>
+              <% if @paid_shopping_carts.present? %>
+                <div class="col" style="margin-left:20px; width:100%;">
+                  <h3>Checkout summary</h3>
+                  <div class="orders">
+                    <p>You have ordered: </p>
+                    <strong><% @paid_shopping_carts.last.shopping_cart_items.each do |item| %>
+                    <p> <%= item.art_item.art.title %> - <%= item.art_item.format %> </p>
+                    <% end %>
+                    </strong> for <strong><%= number_with_precision(@paid_shopping_carts.last.total, precision: 2) %> €</strong></p>
+                  </div>
+                  <h5>Thank you for your purchase! </h5>
+                </div> 
+                <div class="col-md-3">
+                  <%= image_tag @paid_shopping_carts.last.shopping_cart_items.first.art_item.art.img_url, width: '100%' %>
                 </div>
-                <h5>Thank you for your purchase! </h5>
-              </div> 
-              <div class="col-md-3">
-                <%= image_tag @paid_shopping_carts.last.shopping_cart_items.first.art_item.art.img_url, width: '100%' %>
-              </div>
+              <% end %>
             </div>
           </div>
       </div>
